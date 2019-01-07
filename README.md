@@ -1,6 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-scss-starter
 
-Zzplin [sketchs](https://app.zeplin.io/project/5c13c89ccdb0832449555a60/dashboard)
+A little starter to work with @react &amp; @sass, using @create-react-app &amp; @gulp
+
+Zeplin [sketchs](https://app.zeplin.io/project/5c13c89ccdb0832449555a60/dashboard)
+
+
+
+## Run it
+
+- `yarn` or `npm i` to install all depedencies
+- `gulp` to build a compiled CSS file (⚠️  save one file to begin the compilation)
+- `yarn start` to build the project
+  
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
