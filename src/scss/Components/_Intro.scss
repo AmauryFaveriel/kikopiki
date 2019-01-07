@@ -1,0 +1,13 @@
+.Intro {
+    border: 1px red solid;
+    background: rgb(185, 213, 255);
+    width: 500px;
+    height: calc(100vh - 2px);
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 666;
+}
