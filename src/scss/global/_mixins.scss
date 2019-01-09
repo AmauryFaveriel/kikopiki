@@ -1,0 +1,76 @@
+// Responsive -----------------------------------
+@mixin resp($point) {
+    @if $point == 'small' {
+        @media only screen and (max-width: $bp-small) { @content; }
+    }
+    @else if $point == 'medium' {
+        @media only screen and (max-width: $bp-medium) { @content; }
+    }
+    @else if $point == 'large' {
+        @media only screen and (max-width: $bp-large) { @content; }
+    }
+    @else if $point == 'xLarge' {
+        @media only screen and (max-width: $bp-xLarge) { @content; }
+    }
+}
+
+// add multibrowsers keyframes prefixers --------
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// add multibrowsers animation prefixers --------
+@mixin animation($content) {
+    -webkit-animation: #{$content};
+    -moz-animation: #{$content};
+    -ms-animation: #{$content};
+    -o-animation: #{$content};
+    animation: #{$content};      
+}
+
+// add multibrowsers transition prefixers -------
+@mixin transition($content) {
+    -webkit-transition: #{$content};
+    -moz-transition: #{$content};
+    -ms-transition: #{$content};
+    -o-transition: #{$content};
+    transition: #{$content};
+}
+
+// add multibrowsers transform prefixers -------
+@mixin transform($content) {
+    -webkit-transform: #{$content};
+    -moz-transform: #{$content};
+    -ms-transform: #{$content};
+    -o-transform: #{$content};
+    transform: #{$content};
+}
+
+// transform + translate ------------------------
+@mixin tlNrt($x, $y, $deg) {
+    -webkit-transform: translate($x, $y) rotate($deg);
+    -moz-transform: translate($x, $y) rotate($deg);
+    -ms-transform: translate($x, $y) rotate($deg);
+    -o-transform: translate($x, $y) rotate($deg);
+    transform: translate($x, $y) rotate($deg);
+}
+
+// add px font-size if rem is not supported -----
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: ( $size / 10px ) * 1rem;
+}
