@@ -3,7 +3,7 @@ import data from './data';
 class Article extends Component {
     render = () => {
         return (
-            <article className={this.props.articleStyle}>
+            <article className={this.props.style}>
                 <section className="Article__imgBox">
                     <img src={data.paintings[this.props.index].first_painting} alt="" className="Article__imgBox__img"/>
                     <img src={data.paintings[this.props.index].second_painting} alt="" className="Article__imgBox__img"/>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LittlePaiting from './LittlePainting';
 import data from './data';
 
 class Menu extends Component {
@@ -13,17 +14,21 @@ class Menu extends Component {
     hideMenu = () => this.setState({isMenuHidden: this.state.isMenuHidden ? false : true})
     render = () => {
         return (
-            <section className="Menu">
+            <section className={this.props.style}>
                 <img src="https://via.placeholder.com/150.jpg" alt="" className="Menu__logo" onClick={this.hideMenu}/>
                 <nav className="Menu__nav">
                     <button className="Menu__nav__toggleSound"></button>
                     <ul className={this.state.isMenuHidden ? this.state.navPaintingsStyleHidden : this.state.navPaintingsStyle}> 
                     {data.paintings.map((x, i) => 
-                        <li 
-                            className={this.props.index === i ? 'Menu__nav__painting hidden' : 'Menu__nav__painting'} 
-                            key={i}>
-                            <img src={x.first_painting} alt={x.title}/>
-                        </li>
+                        <LittlePaiting
+                            style={this.props.theIndex === i ? 'Menu__nav__painting hidden' : 'Menu__nav__painting'}
+                            key={i}
+                            index={i}
+                            painting={x.first_painting}
+                            title={x.title}
+                            updateArticle={() => this.props.updateArticle(i)}
+
+                        />
                     )}
                     </ul>
                 </nav>
