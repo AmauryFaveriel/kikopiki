@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Article from './Article';
+import Header from './Header.js';
 import Intro from './Intro'
 import Paintings from './Paintings';
 import Menu from './Menu';
@@ -39,19 +40,27 @@ class App extends Component {
     };
     showArticle = (i) => {
         this.setState({
-            articleHidden: this.state.articleHidden ? false : true,
+            articleHidden: true,
             menuHidden: true
         })
         console.log(i)
         this.setState({index: i})
         window.history.pushState("object or string", "Title", `/painting-${i}`);
-        return i
-        
+        return i 
+    }
+    hideArticle = () => {
+        this.setState({
+            articleHidden: false,
+            menuHidden: false
+        }) 
     }
     updateArticle = (i) => this.setState({index: i});
     render() {
         return (
             <div className={!this.state.appHidden ? this.state.appStyleHidden :      this.state.appStyle}>
+                <Header
+                    hideArticle={this.hideArticle}
+                />
                 <Intro
                     style={this.state.introHidden ? this.state.introStyleHidden :      this.state.introStyle}
                     overlayStyle={!this.state.introHidden ? this.state.overlayStyle :      this.state.overlayStyleHidden}

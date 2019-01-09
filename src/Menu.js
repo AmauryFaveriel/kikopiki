@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LittlePaiting from './LittlePainting';
+import logo from './assets/imgs/logo.svg'
 import data from './data';
 
 class Menu extends Component {
@@ -15,9 +16,12 @@ class Menu extends Component {
     render = () => {
         return (
             <section className={this.props.style}>
-                <img src="https://via.placeholder.com/150.jpg" alt="" className="Menu__logo" onClick={this.hideMenu}/>
+                <img src={logo} alt="" className="Menu__logo" onClick={this.hideMenu}/>
                 <nav className="Menu__nav">
-                    <button className="Menu__nav__toggleSound"></button>
+                    <button className="Menu__nav__toggleSound">
+                        <i className="fas fa-volume-up"></i>
+                        <i className="fas fa-volume-mute"></i>
+                    </button>
                     <ul className={this.state.isMenuHidden ? this.state.navPaintingsStyleHidden : this.state.navPaintingsStyle}> 
                     {data.paintings.map((x, i) => 
                         <LittlePaiting
