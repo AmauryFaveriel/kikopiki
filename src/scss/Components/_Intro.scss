@@ -1,8 +1,8 @@
 .Intro {
-    border: 1px red solid;
+    border: 5px #777 solid;
     background: rgb(185, 213, 255);
     width: 500px;
-    height: calc(100vh - 2px);
+    height: calc(100vh - 10px);
     display: flex; 
     flex-direction: column;
     justify-content: space-around;
@@ -11,7 +11,20 @@
     left: 0;
     z-index: 666;
     transition: all 0.5s ease;
+    
     &--hidden {
-        left: -500px;
+        left: -505px;
+    }
+}
+.overlay {
+    content: '';
+    background: red;
+    width: calc(100% - 510px);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 510px;
+    &--hidden {
+        display: none;
     }
 }
