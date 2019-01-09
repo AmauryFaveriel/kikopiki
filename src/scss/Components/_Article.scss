@@ -10,4 +10,20 @@
         opacity: 0;
         pointer-events: none;
     }
+    &__imgBox {
+        &__img {
+            width: 250px;
+            height: auto;
+        }
+    }
+    &__content {
+        &__title {
+            
+        }
+        &__subtitle {
+        }
+        &__text {
+                
+        }
+    }
 }
