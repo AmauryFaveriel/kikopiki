@@ -9,27 +9,32 @@ const data = {
         {
             author: 'Francis Bacon',
             desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez - 1953',
-            color: 'ffdbdb'
+            first_painting: 'https://via.placeholder.com/500x1000.png/ffdbdb',
+            second_painting: 'https://via.placeholder.com/500x1000.png/bdbdff',
         },
         {
             author: 'Excellent dessert',
             desc: 'Have a such a beautiful a imaginable a wonderful a gorgeous day',
-            color: 'e0e6ff'
+            first_painting: 'https://via.placeholder.com/500x1000.png/e0e6ff',
+            second_painting: 'https://via.placeholder.com/500x1000.png/ff6e0e',
         },
         {
             author: 'Eat watermelon',
             desc: 'Watermelon is rich in water, about 72%, bettar than juste a bottle of water',
-            color: 'e0fcff'
+            first_painting: 'https://via.placeholder.com/500x1000.png/e0fcff',
+            second_painting: 'https://via.placeholder.com/500x1000.png/ffcf0e',
         },
         {
             author: 'Drink food',
             desc: 'HIH II H IH I I I  IH IH HHIHIHIH IHI HI HIHIH HIHIHIIHIHHHIHI HIIHHIHI',
-            color: 'e0ffee'
+            first_painting: 'https://via.placeholder.com/500x1000.png/e0ffee',
+            second_painting: 'https://via.placeholder.com/500x1000.png/eeff0e',
         },
         {
             author: 'Slow down',
             desc: 'Everything burns, everybody lies, everyday is getting worse',
-            color: 'f8ffe0'
+            first_painting: 'https://via.placeholder.com/500x1000.png/f8ffe0',
+            second_painting: 'https://via.placeholder.com/500x1000.png/0eff8f',
         }
     ],
     cta: 'Découvrir'
