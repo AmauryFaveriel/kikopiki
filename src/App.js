@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Intro from './Intro'
 import Paintings from './Paintings';
 import Article from './Article';
+import { throttleTime } from 'rxjs/operators';
 
 class App extends Component {
     constructor(props) {
@@ -11,11 +12,17 @@ class App extends Component {
             style: {
                 border: '10px red solid',
             },
-            articleStyle: 'Article Article--hidden'
+            articleStyle: 'Article Article--hidden',
+            index: 0
         }
     }
     showArticle = () => {
         this.setState({articleStyle: 'Article'})
+    }
+    gatchaBitch = (i) => {
+        console.log(i)
+        this.setState({index: i})
+        return i
     }
     render() {
         return (
@@ -23,11 +30,11 @@ class App extends Component {
                 <Intro/>
                 <Paintings 
                     showArticle={this.showArticle}
+                    catchIndex={(i) => this.gatchaBitch(i)}
                 />
                 <Article 
                     articleStyle={this.state.articleStyle}
-                    index={0}
-                    catchIndex={(i) => console.log(i)}
+                    index={this.state.index}
                 />
             </div>
         );

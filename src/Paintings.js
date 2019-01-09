@@ -6,7 +6,8 @@ class Paintings extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            index: "lol"
+            index: "lol",
+            error: ''
         }
     }
     componentDidMount = () => {
@@ -23,12 +24,15 @@ class Paintings extends Component {
             left: '-200px'
         }
     }
-    updateIndex = (i) => {
-
-        this.setState({index: i})
-        console.log('index: ' + i);
-        console.log('state: ' + this.state.index);
-    }
+    // catchIndex = (i) => {
+    //     const newIndex = i
+    //     this.setState({index: newIndex}, this.trigger)
+    //     console.log('index: ' + i);
+    //     console.log(this.state.index);
+    // }
+    // trigger = () => {
+    //     console.log('state: ' + this.state.index)
+    // }
     render = () => {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
@@ -39,7 +43,7 @@ class Paintings extends Component {
                     key={i}
                     index={i}
                     showArticle={this.props.showArticle}
-                    catchIndex={(i) => this.updateIndex(i)}
+                    catchIndex={(i) => this.props.catchIndex(i)}
                 />)}
             </section>
         )
