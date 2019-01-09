@@ -10,15 +10,18 @@
     top: 0;
     left: 0;
     z-index: 666;
-    transition: all 0.5s ease;
-    
+    transition: all 0.5s ease; 
     &--hidden {
         left: -505px;
+    }
+    &__cta {
+        border: 2px red solid;
+        cursor: pointer;
     }
 }
 .overlay {
     content: '';
-    background: red;
+    background: rgba(0,0,0,0.75);
     width: calc(100% - 510px);
     height: 100vh;
     position: fixed;
