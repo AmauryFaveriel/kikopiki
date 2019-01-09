@@ -1,8 +1,10 @@
 .Article {
-    width: 1100px;
-    height: 1000px;
+    width: calc(100% - 20px - 150px);
+    height: calc(100vh - 20px);
     background: red;
-    position: relative;
+    border: 5px #222 solid;
+    display: flex;
+    position: fixed;
     z-index: 666;
     transition: all 0.2s ease;
     &--hidden {
@@ -17,13 +19,17 @@
         }
     }
     &__content {
+        background: orange;
+        height: 100vh;
+        overflow: scroll;
         &__title {
             
         }
         &__subtitle {
         }
         &__text {
-                
+              font-size: 20px;
+              line-height: 100px;  
         }
     }
 }
