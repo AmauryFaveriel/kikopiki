@@ -16,7 +16,6 @@ class App extends Component {
     }
     showArticle = () => {
         this.setState({articleStyle: 'Article'})
-        console.log('wow')
     }
     render() {
         return (

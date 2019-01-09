@@ -6,7 +6,7 @@ class Paintings extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            index: 0
+            index: "lol"
         }
     }
     componentDidMount = () => {
@@ -23,6 +23,12 @@ class Paintings extends Component {
             left: '-200px'
         }
     }
+    updateIndex = (i) => {
+
+        this.setState({index: i})
+        console.log('index: ' + i);
+        console.log('state: ' + this.state.index);
+    }
     render = () => {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
@@ -33,7 +39,7 @@ class Paintings extends Component {
                     key={i}
                     index={i}
                     showArticle={this.props.showArticle}
-                    catchIndex={(i) => console.log(i)}
+                    catchIndex={(i) => this.updateIndex(i)}
                 />)}
             </section>
         )
