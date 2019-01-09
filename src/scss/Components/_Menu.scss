@@ -7,9 +7,15 @@
     right: 0;
     z-index: 667;
     &__nav {
+        &__paintings {
+            &--hidden {
+                display: none;
+            }
+        }
         &__painting img {
             width: 150px;
-            height: auto;
+            height: 150px;
         }
+        
     }
 }
