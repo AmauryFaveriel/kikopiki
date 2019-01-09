@@ -12,6 +12,14 @@ class App extends Component {
             style: {
                 border: '10px red solid',
             },
+            appHidden: false,
+            appStyle: 'App',
+            appStyleHidden: 'App App--overflow',
+            introHidden: false,
+            introStyle: 'Intro',
+            introStyleHidden: 'Intro Intro--hidden',
+            overlayStyle: 'overlay',
+            overlayStyleHidden: 'overlay overlay--hidden',
             articleHidden: false,
             articleStyle: 'Article',
             articleStyleHidden: 'Article Article--hidden',
@@ -21,6 +29,14 @@ class App extends Component {
             index: 0
         }
     }
+
+    hideIntro = () => {
+        this.setState({
+            introHidden: this.state.introHidden ? false : true,
+            appHidden: this.state.appHidden ? false : true,
+        })
+        console.log('wow')
+    };
     showArticle = (i) => {
         this.setState({
             articleHidden: this.state.articleHidden ? false : true,
@@ -35,8 +51,12 @@ class App extends Component {
     updateArticle = (i) => this.setState({index: i});
     render() {
         return (
-            <div className="App">
-                <Intro/>
+            <div className={!this.state.appHidden ? this.state.appStyleHidden :      this.state.appStyle}>
+                <Intro
+                    style={this.state.introHidden ? this.state.introStyleHidden :      this.state.introStyle}
+                    overlayStyle={!this.state.introHidden ? this.state.overlayStyle :      this.state.overlayStyleHidden}
+                    hideIntro={this.hideIntro}
+                />
                 <Paintings 
                     showArticle={(i) => this.showArticle(i)}
                 />

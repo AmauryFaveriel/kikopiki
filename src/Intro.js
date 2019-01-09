@@ -3,19 +3,16 @@ import data from './data';
 
 class Intro extends Component {
     constructor(props) {
-        super(props); 
-        this.state = {
-            introStyle: 'Intro'
-        }
+        super(props);
     }
-    hideIntro = () => this.setState({introStyle: 'Intro Intro--hidden'});
     render = () => {
         return (
-            <section className={this.state.introStyle}>
+            <section className={this.props.style}>
                 <h1>{data.intro.title}</h1>
                 <p>{data.intro.intro_1}</p>
                 <p>{data.intro.intro_2}</p>
-                <button onClick={this.hideIntro}>{data.intro.cta}</button>
+                <button onClick={this.props.hideIntro}>{data.intro.cta}</button>
+                <section className={this.props.overlayStyle}></section>
             </section>
         )
     }
