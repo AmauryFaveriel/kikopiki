@@ -1,0 +1,15 @@
+.Menu {
+    width: 150px;
+    height: 100vh;
+    background: green;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 667;
+    &__nav {
+        &__painting img {
+            width: 150px;
+            height: auto;
+        }
+    }
+}
