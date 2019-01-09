@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
+import Article from './Article';
 import Intro from './Intro'
 import Paintings from './Paintings';
-import Article from './Article';
-import { throttleTime } from 'rxjs/operators';
+import Menu from './Menu';
 
 class App extends Component {
     constructor(props) {
@@ -36,6 +36,7 @@ class App extends Component {
                     articleStyle={this.state.articleStyle}
                     index={this.state.index}
                 />
+                <Menu/>
             </div>
         );
     }
