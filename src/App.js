@@ -19,7 +19,7 @@ class App extends Component {
     showArticle = () => {
         this.setState({articleStyle: 'Article'})
     }
-    gatchaBitch = (i) => {
+    catchIndex = (i) => {
         console.log(i)
         this.setState({index: i})
         return i
@@ -30,13 +30,15 @@ class App extends Component {
                 <Intro/>
                 <Paintings 
                     showArticle={this.showArticle}
-                    catchIndex={(i) => this.gatchaBitch(i)}
+                    catchIndex={(i) => this.catchIndex(i)}
                 />
                 <Article 
                     articleStyle={this.state.articleStyle}
                     index={this.state.index}
                 />
-                <Menu/>
+                <Menu
+                    index={this.state.index}
+                />
             </div>
         );
     }
