@@ -1,28 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './css/master.min.css';
+
+import Intro from './Intro'
+import Paintings from './Paintings';
+import Article from './Article';
+import { throttleTime } from 'rxjs/operators';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            style: {
+                border: '10px red solid',
+            },
+            articleStyle: 'Article Article--hidden',
+            index: 0
+        }
+    }
+    showArticle = () => {
+        this.setState({articleStyle: 'Article'})
+    }
+    gatchaBitch = (i) => {
+        console.log(i)
+        this.setState({index: i})
+        return i
+    }
+    render() {
+        return (
+            <div className="App">
+                <Intro/>
+                <Paintings 
+                    showArticle={this.showArticle}
+                    catchIndex={(i) => this.gatchaBitch(i)}
+                />
+                <Article 
+                    articleStyle={this.state.articleStyle}
+                    index={this.state.index}
+                />
+            </div>
+        );
+    }
 }
 
 export default App;
