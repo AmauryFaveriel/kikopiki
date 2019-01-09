@@ -1,0 +1,27 @@
+.Menu {
+    width: 150px;
+    height: 100vh;
+    background: green;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 667;
+    transition: all 0.2s ease;
+    &--hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+    &__nav {
+        &__paintings {
+            &--hidden {
+                display: none;
+            }
+        }
+        &__painting img {
+            width: 150px;
+            height: 150px;
+        }
+        
+    }
+}

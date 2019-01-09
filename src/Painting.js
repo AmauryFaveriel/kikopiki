@@ -8,8 +8,7 @@ class Painting extends Component {
                 <p>{this.props.desc}</p>
                 <img src={this.props.first_painting} alt={this.props.author}/>
                 <button onClick={() => {
-                    this.props.showArticle();
-                    this.props.catchIndex(this.props.index)
+                    this.props.showArticle(this.props.index)
                 }}>{data.cta}</button>
             </article>
         )

@@ -24,15 +24,6 @@ class Paintings extends Component {
             left: '-200px'
         }
     }
-    // catchIndex = (i) => {
-    //     const newIndex = i
-    //     this.setState({index: newIndex}, this.trigger)
-    //     console.log('index: ' + i);
-    //     console.log(this.state.index);
-    // }
-    // trigger = () => {
-    //     console.log('state: ' + this.state.index)
-    // }
     render = () => {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
@@ -42,8 +33,7 @@ class Paintings extends Component {
                     first_painting={x.first_painting}
                     key={i}
                     index={i}
-                    showArticle={this.props.showArticle}
-                    catchIndex={(i) => this.props.catchIndex(i)}
+                    showArticle={(i) => this.props.showArticle(i)}
                 />)}
             </section>
         )

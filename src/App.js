@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
+import Article from './Article';
 import Intro from './Intro'
 import Paintings from './Paintings';
-import Article from './Article';
-import { throttleTime } from 'rxjs/operators';
+import Menu from './Menu';
 
 class App extends Component {
     constructor(props) {
@@ -12,29 +12,42 @@ class App extends Component {
             style: {
                 border: '10px red solid',
             },
-            articleStyle: 'Article Article--hidden',
+            articleHidden: false,
+            articleStyle: 'Article',
+            articleStyleHidden: 'Article Article--hidden',
+            menuHidden: false,
+            menuStyle: 'Menu',
+            menuStyleHidden: 'Menu Menu--hidden',
             index: 0
         }
     }
-    showArticle = () => {
-        this.setState({articleStyle: 'Article'})
-    }
-    gatchaBitch = (i) => {
+    showArticle = (i) => {
+        this.setState({
+            articleHidden: this.state.articleHidden ? false : true,
+            menuHidden: true
+        })
         console.log(i)
         this.setState({index: i})
+        window.history.pushState("object or string", "Title", `/painting-${i}`);
         return i
+        
     }
+    updateArticle = (i) => this.setState({index: i});
     render() {
         return (
             <div className="App">
                 <Intro/>
                 <Paintings 
-                    showArticle={this.showArticle}
-                    catchIndex={(i) => this.gatchaBitch(i)}
+                    showArticle={(i) => this.showArticle(i)}
                 />
                 <Article 
-                    articleStyle={this.state.articleStyle}
+                    style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle}
                     index={this.state.index}
+                />
+                <Menu
+                    style={!this.state.menuHidden ? this.state.menuStyleHidden : this.state.menuStyle}
+                    theIndex={this.state.index}
+                    updateArticle={(i) => this.updateArticle(i)}
                 />
             </div>
         );
