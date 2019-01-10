@@ -4,8 +4,6 @@ A little starter to work with @react &amp; @sass, using @create-react-app &amp; 
 
 Zeplin [sketchs](https://app.zeplin.io/project/5c13c89ccdb0832449555a60/dashboard)
 
-
-
 ## Run it
 
 - `yarn` or `npm i` to install all depedencies
@@ -56,3 +54,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+----
