@@ -36,7 +36,12 @@ class App extends Component {
             introHidden: this.state.introHidden ? false : true,
             appHidden: this.state.appHidden ? false : true,
         })
-        console.log('wow')
+        console.log('wow');
+        setTimeout(() => {
+            setInterval(() => {
+                window.scrollBy(2, 0)
+            }, 16)
+        }, 2000)
     };
     showArticle = (i) => {
         this.setState({
