@@ -1,0 +1,35 @@
+.Painting {
+    position: relative;
+    &:hover {
+        h2, p, button {
+            opacity: 1;
+        }
+    }
+    h2, p, button {
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+    h2 {
+        @include font-size(36px);
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    p {
+        @include font-size(22px);
+        position: absolute;
+        top: 250px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    button {
+        border: 2px red solid;
+        @include font-size(26px);
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        cursor: pointer;
+    }
+}

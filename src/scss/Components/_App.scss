@@ -1,0 +1,11 @@
+.App {
+  width: calc(100% - 10px);
+  height: calc(100vh - 10px);
+  text-align: center;
+  border: 5px #999 solid;
+  position: relative;
+  overflow-y: hidden;
+  &--overflow {
+    overflow: hidden;
+  }
+}
