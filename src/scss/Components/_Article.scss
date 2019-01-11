@@ -48,6 +48,7 @@
     }
     &__content {
         background: orange;
+        width: calc(100% - 500px);
         height: 100vh;
         overflow: scroll;
         &__title {
