@@ -30,7 +30,7 @@ class Paintings extends Component {
                 {data.paintings.map((x, i) => <Painting 
                     author={x.author}
                     desc={x.desc}
-                    first_painting={x.first_painting}
+                    main_painting={x.main_painting}
                     key={i}
                     index={i}
                     showArticle={(i) => this.props.showArticle(i)}
