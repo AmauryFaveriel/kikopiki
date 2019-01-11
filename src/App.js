@@ -39,7 +39,7 @@ class App extends Component {
         console.log('wow');
         setTimeout(() => {
             setInterval(() => {
-                window.scrollBy(2, 0)
+                document.querySelector('.Paintings').scrollBy(2, 0)
             }, 16)
         }, 2000)
     };
