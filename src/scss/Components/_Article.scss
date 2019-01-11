@@ -48,9 +48,10 @@
     }
     &__content {
         background: orange;
-        width: calc(100% - 500px);
+        width: calc(100% - 550px);
         height: 100vh;
         overflow: scroll;
+        padding: 25px;
         &__title {
             
         }
@@ -58,7 +59,13 @@
         }
         &__text {
               font-size: 20px;
-              line-height: 100px;  
+              line-height: 50px; 
+              text-align: justify; 
+              margin-bottom: 100px;
+              border-left: 5px #F1F1F1 solid;
+              &--active {
+                border-left: 5px darkorchid solid;
+              }
         }
     }
 }
