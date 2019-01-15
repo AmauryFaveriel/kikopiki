@@ -7,92 +7,289 @@ const data = {
     },
     paintings: [
         {
-            author: 'Francis Bacon',
-            title: 'I\'m a title bitch',
-            desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez - 1953',
-            main_painting: 'https://via.placeholder.com/500x750.png/db2020',
-            other_paintings: [
-                'https://via.placeholder.com/500x750.png/0202bd',
-                'https://via.placeholder.com/500x750.png/4040bc',
-                'https://via.placeholder.com/500x750.png/7c7cbf',
-                'https://via.placeholder.com/500x750.png/9e9ebc',
+            title: 'Un portrait horrifiant',
+            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.<br>Derrière ce tableau bien effrayant au nom à rallonge, se cache une obsession. En effet notre cher Francis a étudié pendant 20 ans un portrait du pape Innocent X peint par Velázquez en 1650.',
+            inspired_painting: {
+                author: 'Francis Bacon',
+                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez',
+                date: 1953,
+                visual: 'http://mediationsemiotiques.com/wp-content/uploads/2014/12/1953_Study-after-Velazquezs-Portrait-of-Pope-Innocent-X.jpg',
+            },
+            main_painting: {
+                author: 'Diego Velasquez',
+                desc: 'Portrait d\'Innocent X',
+                date: 1650,
+                visual: 'http://www.colineblot.fr/wp-content/uploads/2015/04/francis-bacon-portrait-pape-innocent-x-L-8Fxc5U.jpeg',
+            },
+            zooms: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 100,
+                            y: 300
+                        },
+                        inspired: {
+                            x: 200,
+                            y: 500
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 10,
+                            y: 30
+                        },
+                        inspired: {
+                            x: 20,
+                            y: 50
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 1000,
+                            y: 3000
+                        },
+                        inspired: {
+                            x: 2000,
+                            y: 5000
+                        },
+                    }
+                }
             ],
-            content: [
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-            ]
+            other_paintings: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/4040bc'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/7c7cbf'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/9e9ebc'
+                }
+            ],
         },
         {
-            author: 'Excellent dessert',
-            title: 'I\'m NOT a title bitch',
-            desc: 'Have a such a beautiful a imaginable a wonderful a gorgeous day',
-            main_painting: 'https://via.placeholder.com/500x750.png/dbbf20',
-            other_paintings: [
-                'https://via.placeholder.com/500x750.png/02fbbd',
-                'https://via.placeholder.com/500x750.png/55fcd2',
-                'https://via.placeholder.com/500x750.png/96ffe4',
-                'https://via.placeholder.com/500x750.png/d3fff4',
+            title: 'Un portrait horrifiant 2',
+            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
+            inspired_painting: {
+                author: 'Francis Bacon JAMBON',
+                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
+                date: 195390,
+                visual: 'http://mediationsemiotiques.com/wp-content/uploads/2014/12/1953_Study-after-Velazquezs-Portrait-of-Pope-Innocent-X.jpg',
+            },
+            main_painting: {
+                author: 'Diego VelasquezAWI',
+                desc: 'Portrait d\'InnocenFEZG"Et X',
+                date: 165098,
+                visual: 'http://www.colineblot.fr/wp-content/uploads/2015/04/francis-bacon-portrait-pape-innocent-x-L-8Fxc5U.jpeg',
+            },
+            zooms: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 100,
+                            y: 300
+                        },
+                        inspired: {
+                            x: 200,
+                            y: 500
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 10,
+                            y: 30
+                        },
+                        inspired: {
+                            x: 20,
+                            y: 50
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 1000,
+                            y: 3000
+                        },
+                        inspired: {
+                            x: 2000,
+                            y: 5000
+                        },
+                    }
+                }
             ],
-            content: [
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? ',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-            ]
+            other_paintings: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/4040bc'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/7c7cbf'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/9e9ebc'
+                }
+            ],
         },
         {
-            author: 'Eat watermelon',
-            title: 'MAYBE I\'m a title bitch',
-            desc: 'Watermelon is rich in water, about 72%, bettar than juste a bottle of water',
-            main_painting: 'https://via.placeholder.com/500x750.png/24db20',
-            other_paintings: [
-                'https://via.placeholder.com/500x750.png/02bd42',
-                'https://via.placeholder.com/500x750.png/3bba65',
-                'https://via.placeholder.com/500x750.png/65bc82',
-                'https://via.placeholder.com/500x750.png/91ba9e',
+            title: 'Un portrait horrifiant 2',
+            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
+            inspired_painting: {
+                author: 'Francis Bacon JAMBON',
+                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
+                date: 195390,
+                visual: 'http://mediationsemiotiques.com/wp-content/uploads/2014/12/1953_Study-after-Velazquezs-Portrait-of-Pope-Innocent-X.jpg',
+            },
+            main_painting: {
+                author: 'Diego VelasquezAWI',
+                desc: 'Portrait d\'InnocenFEZG"Et X',
+                date: 165098,
+                visual: 'http://www.colineblot.fr/wp-content/uploads/2015/04/francis-bacon-portrait-pape-innocent-x-L-8Fxc5U.jpeg',
+            },
+            zooms: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 100,
+                            y: 300
+                        },
+                        inspired: {
+                            x: 200,
+                            y: 500
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 10,
+                            y: 30
+                        },
+                        inspired: {
+                            x: 20,
+                            y: 50
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 1000,
+                            y: 3000
+                        },
+                        inspired: {
+                            x: 2000,
+                            y: 5000
+                        },
+                    }
+                }
             ],
-            content: [
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-            ]
+            other_paintings: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/4040bc'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/7c7cbf'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/9e9ebc'
+                }
+            ],
         },
         {
-            author: 'Drink food',
-            title: 'PRETTY SURE THAT I\'m a title bitch',
-            desc: 'HIH II H IH I I I  IH IH HHIHIHIH IHI HI HIHIH HIHIHIIHIHHHIHI HIIHHIHI',
-            main_painting: 'https://via.placeholder.com/500x750.png/207adb',
-            other_paintings: [
-                'https://via.placeholder.com/500x750.png/bda702',
-                'https://via.placeholder.com/500x750.png/bcab38',
-                'https://via.placeholder.com/500x750.png/bfb367',
-                'https://via.placeholder.com/500x750.png/c1bc97',
+            title: 'Un portrait horrifiant 2',
+            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
+            inspired_painting: {
+                author: 'Francis Bacon JAMBON',
+                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
+                date: 195390,
+                visual: 'http://mediationsemiotiques.com/wp-content/uploads/2014/12/1953_Study-after-Velazquezs-Portrait-of-Pope-Innocent-X.jpg',
+            },
+            main_painting: {
+                author: 'Diego VelasquezAWI',
+                desc: 'Portrait d\'InnocenFEZG"Et X',
+                date: 165098,
+                visual: 'http://www.colineblot.fr/wp-content/uploads/2015/04/francis-bacon-portrait-pape-innocent-x-L-8Fxc5U.jpeg',
+            },
+            zooms: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 100,
+                            y: 300
+                        },
+                        inspired: {
+                            x: 200,
+                            y: 500
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 10,
+                            y: 30
+                        },
+                        inspired: {
+                            x: 20,
+                            y: 50
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 1000,
+                            y: 3000
+                        },
+                        inspired: {
+                            x: 2000,
+                            y: 5000
+                        },
+                    }
+                }
             ],
-            content: [
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? ',
-            ]
+            other_paintings: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/4040bc'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/7c7cbf'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://via.placeholder.com/500x750.png/9e9ebc'
+                }
+            ],
         },
-        {
-            author: 'Slow down',
-            title: 'DEFENETTLY NOT a title bitch',
-            desc: 'Everything burns, everybody lies, everyday is getting worse',
-            main_painting: 'https://via.placeholder.com/500x750.png/ac20db',
-            other_paintings: [
-                'https://via.placeholder.com/500x750.png/bd02ca',
-                'https://via.placeholder.com/500x750.png/d759e0',
-                'https://via.placeholder.com/500x750.png/da8de0',
-                'https://via.placeholder.com/500x750.png/e8c5ea',
-            ],
-            content: [
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-            ]
-        }
     ],
     cta: 'Découvrir',
     lorem_1: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
