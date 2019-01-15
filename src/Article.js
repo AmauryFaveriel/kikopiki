@@ -15,17 +15,18 @@ class Article extends Component {
         }
     }
     logScroll = () =>{
-        const windowMiddleHeight = window.innerHeight / 2;
-        const DOMzoomsTexts = document.querySelectorAll('.Article__zooms__text')
+        const winCenterHeight = window.innerHeight / 2;
+        const DOMzoomsTexts = document.querySelectorAll('.Article__zooms__text');
+        const activeClass = 'Article__zooms__text--active'
         for (let i = 0; i < DOMzoomsTexts.length; i++) {
-            let DOMzoomsTextTop = DOMzoomsTexts[i].getBoundingClientRect().top;
-            let DOMzoomsTextBottom = DOMzoomsTexts[i].getBoundingClientRect().bottom;
-            console.log(i + ' : ' + DOMzoomsTextTop / i + ' : ' + DOMzoomsTextBottom);
-            if (DOMzoomsTextTop <= windowMiddleHeight) {
-                DOMzoomsTexts[i].style.borderLeft = '5px darkorchid solid';
-                if (DOMzoomsTextBottom <= windowMiddleHeight) DOMzoomsTexts[i].style.borderLeft = '5px #f1f1f1 solid';
+            const text = DOMzoomsTexts[i]
+            let textTop = text.getBoundingClientRect().top;
+            let textBottom = text.getBoundingClientRect().bottom;
+            if (textTop <= winCenterHeight) {
+                text.classList.add(activeClass);
+                if (textBottom <= winCenterHeight) text.classList.remove(activeClass);
             }
-            else DOMzoomsTexts[i].style.borderLeft = '5px #f1f1f1 solid';
+            else text.classList.remove(activeClass);
         }
     }
     render = () => {
@@ -35,7 +36,7 @@ class Article extends Component {
                     index={this.props.index}
                     otherIndex={this.state.otherIndex}
                 />
-                <article id="wow" className="Article__content" 
+                <article className="Article__content" 
                 onScroll={this.logScroll}
                 >
                     <ArticleHeader
