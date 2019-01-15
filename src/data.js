@@ -155,13 +155,13 @@ const data = {
                 author: 'Francis Bacon JAMBON',
                 desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
                 date: 195390,
-                visual: 'https://picsum.photos/500/750?image=0',
+                visual: 'https://picsum.photos/500/750?image=8',
             },
             main_painting: {
                 author: 'Diego VelasquezAWI',
                 desc: 'Portrait d\'InnocenFEZG"Et X',
                 date: 165098,
-                visual: 'https://picsum.photos/500/750?image=0',
+                visual: 'https://picsum.photos/500/750?image=9',
             },
             zooms: [
                 {
@@ -207,15 +207,15 @@ const data = {
             other_paintings: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: 'https://picsum.photos/500/750?image=10'
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: 'https://picsum.photos/500/750?image=11'
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: 'https://picsum.photos/500/750?image=12'
                 }
             ],
         },
@@ -226,13 +226,13 @@ const data = {
                 author: 'Francis Bacon JAMBON',
                 desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
                 date: 195390,
-                visual: 'https://picsum.photos/500/750?image=0',
+                visual: 'https://picsum.photos/500/750?image=13',
             },
             main_painting: {
                 author: 'Diego VelasquezAWI',
                 desc: 'Portrait d\'InnocenFEZG"Et X',
                 date: 165098,
-                visual: 'https://picsum.photos/500/750?image=0',
+                visual: 'https://picsum.photos/500/750?image=14',
             },
             zooms: [
                 {
@@ -278,15 +278,86 @@ const data = {
             other_paintings: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: 'https://picsum.photos/500/750?image=15'
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: 'https://picsum.photos/500/750?image=16'
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: 'https://picsum.photos/500/750?image=17'
+                }
+            ],
+        },
+        {
+            title: 'Un portrait horrifiant 2',
+            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
+            inspired_painting: {
+                author: 'Francis Bacon JAMBON',
+                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
+                date: 195390,
+                visual: 'https://picsum.photos/500/750?image=18',
+            },
+            main_painting: {
+                author: 'Diego VelasquezAWI',
+                desc: 'Portrait d\'InnocenFEZG"Et X',
+                date: 165098,
+                visual: 'https://picsum.photos/500/750?image=19',
+            },
+            zooms: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 100,
+                            y: 300
+                        },
+                        inspired: {
+                            x: 200,
+                            y: 500
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 10,
+                            y: 30
+                        },
+                        inspired: {
+                            x: 20,
+                            y: 50
+                        },
+                    }
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    zoom: {
+                        main: {
+                            x: 1000,
+                            y: 3000
+                        },
+                        inspired: {
+                            x: 2000,
+                            y: 5000
+                        },
+                    }
+                }
+            ],
+            other_paintings: [
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://picsum.photos/500/750?image=20'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://picsum.photos/500/750?image=21'
+                },
+                {
+                    desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
+                    visual: 'https://picsum.photos/500/750?image=22'
                 }
             ],
         },
