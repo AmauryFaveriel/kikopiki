@@ -15,25 +15,18 @@ class Article extends Component {
         }
     }
     logScroll = () =>{
-        let contentScrollTop = document.getElementById('wow').scrollTop;
-        const contentTexts = document.querySelectorAll('.Article__content__text')
-        if (contentScrollTop <= 200) {
-            this.setState({otherIndex: 0})
-            contentTexts[0].classList.toggle(this.state.contentTextActiveStyle)
+        const windowMiddleHeight = window.innerHeight / 2;
+        const DOMzoomsTexts = document.querySelectorAll('.Article__zooms__text')
+        for (let i = 0; i < DOMzoomsTexts.length; i++) {
+            let DOMzoomsTextTop = DOMzoomsTexts[i].getBoundingClientRect().top;
+            let DOMzoomsTextBottom = DOMzoomsTexts[i].getBoundingClientRect().bottom;
+            console.log(i + ' : ' + DOMzoomsTextTop / i + ' : ' + DOMzoomsTextBottom);
+            if (DOMzoomsTextTop <= windowMiddleHeight) {
+                DOMzoomsTexts[i].style.borderLeft = '5px darkorchid solid';
+                if (DOMzoomsTextBottom <= windowMiddleHeight) DOMzoomsTexts[i].style.borderLeft = '5px #f1f1f1 solid';
+            }
+            else DOMzoomsTexts[i].style.borderLeft = '5px #f1f1f1 solid';
         }
-        else if (contentScrollTop <= 400) {
-            this.setState({otherIndex: 1})
-            contentTexts[1].classList.toggle(this.state.contentTextActiveStyle)
-        }
-        else if (contentScrollTop <= 600) {
-            this.setState({otherIndex: 2})
-            contentTexts[2].classList.toggle(this.state.contentTextActiveStyle)
-        }
-        else  {
-            this.setState({otherIndex: 3})
-            contentTexts[3].classList.toggle(this.state.contentTextActiveStyle)
-        }
-        return console.log(contentScrollTop)
     }
     render = () => {
         return (
@@ -43,7 +36,7 @@ class Article extends Component {
                     otherIndex={this.state.otherIndex}
                 />
                 <article id="wow" className="Article__content" 
-                // onScroll={this.logScroll}
+                onScroll={this.logScroll}
                 >
                     <ArticleHeader
                         index={this.props.index}

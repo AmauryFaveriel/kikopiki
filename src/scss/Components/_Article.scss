@@ -57,7 +57,11 @@
         &__text {
             font-size: 22px;
             line-height: 50px;
-            margin-bottom: 50px;
+            margin: 25px 0;
+            border-left: 5px #F1F1F1 solid;
+            &--active {
+            border-left: 5px darkorchid solid;
+            }
         }
     }
     &__content {
