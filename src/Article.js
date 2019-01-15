@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import data from './data';
 
 import ArticleHeader from './ArticleHeader';
+import ArticleZooms from './ArticleZooms';
+import ArticleOthers from './ArticleOthers';
 import TwoPaitings from './TwoPaintings';
 class Article extends Component {
     constructor(props) {
@@ -41,11 +43,18 @@ class Article extends Component {
                     otherIndex={this.state.otherIndex}
                 />
                 <article id="wow" className="Article__content" 
-                onScroll={this.logScroll}>
+                // onScroll={this.logScroll}
+                >
                     <ArticleHeader
                         index={this.props.index}
                     />
-                   {data.paintings[this.props.index].zooms.map((x, i) => <p key={i}>{x.desc}</p>)}
+                    <h3 className="Article__intro">{data.paintings[this.props.index].intro}</h3>
+                    <ArticleZooms
+                        index={this.props.index}
+                    />
+                    <ArticleOthers
+                        index={this.props.index}
+                    />
                 </article>
             </article>
         )

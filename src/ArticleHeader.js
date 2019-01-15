@@ -5,9 +5,7 @@ import ArticleHeaderItem from './ArticleHeaderItem';
 class ArticleHeader extends Component { 
     constructor(props) {
         super(props);
-        this.state = {
-            painting: data.paintings[this.props.index]
-        }
+        this.state = {painting: data.paintings[this.props.index]}
     }
     UNSAFE_componentWillUpdate = (nextProps) => {
         if (nextProps.index !== this.props.index) this.setState({painting: data.paintings[nextProps.index]})
