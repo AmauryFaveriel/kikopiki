@@ -5,6 +5,9 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -36,5 +39,38 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      const makeResizableDiv = () => {
+        console.log('go')
+        const DOMimgBox = document.querySelector('.Article__imgBoxes__imgBox__resizable');
+        const DOMresizer = document.querySelector('.Article__imgBoxes__imgBox__resizable__resizer')
+        const minimum_size = 0;
+        const maximum_size = 500;
+        let original_width = 0;
+        let original_x = 0;
+        let original_mouse_x = 0;
+        DOMresizer.addEventListener('mousedown', (e) => {
+          e.preventDefault()
+          original_width = parseFloat(getComputedStyle(DOMimgBox, null).getPropertyValue('width').replace('px', ''));
+          original_x = DOMimgBox.getBoundingClientRect().left;
+          original_mouse_x = e.pageX;
+          window.addEventListener('mousemove', resize)
+          window.addEventListener('mouseup', stopResize)
+        })
+      
+        resize = (e) => {
+            const width = original_width + (e.pageX - original_mouse_x);
+            if (width > minimum_size && width < maximum_size) DOMimgBox.style.width = width + 'px';
+        }
+        stopResize = () => window.removeEventListener('mousemove', resize);
+      }
+
+      const tick = setInterval(() => {
+        if (document.querySelector('.Article__imgBoxes__imgBox__resizable')) {
+          makeResizableDiv();
+          clearInterval(tick);
+        }
+      }, 200);
+    </script>
   </body>
 </html>
