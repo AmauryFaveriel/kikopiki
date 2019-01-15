@@ -13,6 +13,10 @@
         opacity: 0;
         pointer-events: none;
     }
+    &__intro {
+        font-size: 24px;
+        margin-bottom: 100px;
+    }
     &__imgBoxes {
         width: 500px;
         height: calc(100vh - 20px);
@@ -46,17 +50,20 @@
             }
         }
     }
+    &__zooms {
+        &__text {
+            font-size: 22px;
+            line-height: 50px;
+            margin-bottom: 50px;
+        }
+    }
     &__content {
         background: orange;
         width: calc(100% - 550px);
         height: 100vh;
         overflow: scroll;
         padding: 25px;
-        &__title {
-            
-        }
-        &__subtitle {
-        }
+        
         &__text {
               font-size: 20px;
               line-height: 50px; 
