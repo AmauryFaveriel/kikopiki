@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from './data';
 
+import ArticleHeader from './ArticleHeader';
 import TwoPaitings from './TwoPaintings';
 class Article extends Component {
     constructor(props) {
@@ -41,9 +42,10 @@ class Article extends Component {
                 />
                 <article id="wow" className="Article__content" 
                 onScroll={this.logScroll}>
-                    <h2 className="Article__content__title">{data.paintings[this.props.index].title}</h2>
-                    <h3 className="Article__content__subtitle">{data.paintings[this.props.index].desc}</h3>
-                    {data.paintings[this.props.index].content.map((x, i) => <p key={i} className="Article__content__text">{x}</p>)}
+                    <ArticleHeader
+                        index={this.props.index}
+                    />
+                   {data.paintings[this.props.index].zooms.map((x, i) => <p key={i}>{x.desc}</p>)}
                 </article>
             </article>
         )
