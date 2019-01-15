@@ -36,7 +36,7 @@ class Menu extends Component {
                             style={this.props.theIndex === i ? 'Menu__nav__painting hidden' : 'Menu__nav__painting'}
                             key={i}
                             index={i}
-                            painting={x.main_painting}
+                            painting={x.main_painting.visual}
                             title={x.title}
                             updateArticle={() => this.props.updateArticle(i)}
 

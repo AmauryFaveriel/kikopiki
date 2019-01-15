@@ -28,9 +28,9 @@ class Paintings extends Component {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
                 {data.paintings.map((x, i) => <Painting 
-                    author={x.author}
-                    desc={x.desc}
-                    main_painting={x.main_painting}
+                    author={x.title}
+                    desc={x.intro}
+                    main_painting={x.main_painting.visual}
                     key={i}
                     index={i}
                     showArticle={(i) => this.props.showArticle(i)}
