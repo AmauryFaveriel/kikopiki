@@ -8,6 +8,9 @@ import main3 from './assets/imgs/paintings/3/3_main.jpg';
 import inspired3 from './assets/imgs/paintings/3/3_inspired.jpg';
 import main4 from './assets/imgs/paintings/4/4_main.jpg';
 import inspired4 from './assets/imgs/paintings/4/4_inspired.jpg';
+import other0_0 from './assets/imgs/paintings/0/0_other_0.jpg';
+import other0_1 from './assets/imgs/paintings/0/0_other_1.jpg';
+import other0_2 from './assets/imgs/paintings/0/0_other_2.jpg';
 
 const data = {
     intro: {
@@ -82,15 +85,15 @@ const data = {
             other_paintings: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: other0_0
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=1'
+                    visual: other0_1
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=2'
+                    visual: other0_2
                 }
             ],
         },
