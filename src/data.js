@@ -1,3 +1,14 @@
+import main0 from './assets/imgs/paintings/0/0_main.jpeg';
+import inspired0 from './assets/imgs/paintings/0/0_inspired.jpg';
+import main1 from './assets/imgs/paintings/1/1_main.jpg';
+import inspired1 from './assets/imgs/paintings/1/1_inspired.jpg';
+import main2 from './assets/imgs/paintings/2/2_main.jpg';
+import inspired2 from './assets/imgs/paintings/2/2_inspired.jpg';
+import main3 from './assets/imgs/paintings/3/3_main.jpg';
+import inspired3 from './assets/imgs/paintings/3/3_inspired.jpg';
+import main4 from './assets/imgs/paintings/4/4_main.jpg';
+import inspired4 from './assets/imgs/paintings/4/4_inspired.jpg';
+
 const data = {
     intro: {
         title: 'Kikopiki',
@@ -13,13 +24,13 @@ const data = {
                 author: 'Francis Bacon',
                 desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez',
                 date: 1953,
-                visual: 'http://mediationsemiotiques.com/wp-content/uploads/2014/12/1953_Study-after-Velazquezs-Portrait-of-Pope-Innocent-X.jpg',
+                visual: inspired0,
             },
             main_painting: {
                 author: 'Diego Velasquez',
                 desc: 'Portrait d\'Innocent X',
                 date: 1650,
-                visual: 'http://www.colineblot.fr/wp-content/uploads/2015/04/francis-bacon-portrait-pape-innocent-x-L-8Fxc5U.jpeg',
+                visual: main0,
             },
             zooms: [
                 {
@@ -84,13 +95,13 @@ const data = {
                 author: 'Francis Bacon JAMBON',
                 desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
                 date: 195390,
-                visual: 'https://picsum.photos/500/750?image=3',
+                visual: inspired1,
             },
             main_painting: {
                 author: 'Diego VelasquezAWI',
                 desc: 'Portrait d\'InnocenFEZG"Et X',
                 date: 165098,
-                visual: 'https://picsum.photos/500/750?image=4',
+                visual: main1,
             },
             zooms: [
                 {
@@ -149,19 +160,19 @@ const data = {
             ],
         },
         {
-            title: 'Un portrait horrifiant 2',
+            title: 'Portrait de femme pensive',
             intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
             inspired_painting: {
-                author: 'Francis Bacon JAMBON',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
-                date: 195390,
-                visual: 'https://picsum.photos/500/750?image=8',
+                author: 'Pablo Picasso',
+                desc: 'Portrait de Dora Maar (muse)',
+                date: 1937,
+                visual: inspired2,
             },
             main_painting: {
-                author: 'Diego VelasquezAWI',
-                desc: 'Portrait d\'InnocenFEZG"Et X',
-                date: 165098,
-                visual: 'https://picsum.photos/500/750?image=9',
+                author: 'Jean-Auguste Dominique Ingres',
+                desc: 'Madame Moitessier',
+                date: 1856,
+                visual: main2,
             },
             zooms: [
                 {
@@ -226,13 +237,13 @@ const data = {
                 author: 'Francis Bacon JAMBON',
                 desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
                 date: 195390,
-                visual: 'https://picsum.photos/500/750?image=13',
+                visual: inspired3,
             },
             main_painting: {
                 author: 'Diego VelasquezAWI',
                 desc: 'Portrait d\'InnocenFEZG"Et X',
                 date: 165098,
-                visual: 'https://picsum.photos/500/750?image=14',
+                visual: main3,
             },
             zooms: [
                 {
@@ -297,13 +308,13 @@ const data = {
                 author: 'Francis Bacon JAMBON',
                 desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
                 date: 195390,
-                visual: 'https://picsum.photos/500/750?image=18',
+                visual: inspired4,
             },
             main_painting: {
                 author: 'Diego VelasquezAWI',
                 desc: 'Portrait d\'InnocenFEZG"Et X',
                 date: 165098,
-                visual: 'https://picsum.photos/500/750?image=19',
+                visual: main4,
             },
             zooms: [
                 {
