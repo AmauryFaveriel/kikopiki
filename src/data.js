@@ -37,12 +37,14 @@ const data = {
                     desc: 'hihihihihLorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
-                            x: 100,
-                            y: 300
+                            scale: 1.5,
+                            x: 25,
+                            y: 75
                         },
                         inspired: {
-                            x: 200,
-                            y: 500
+                            scale: 2,
+                            x: 50,
+                            y: 50
                         },
                     }
                 },
@@ -50,12 +52,14 @@ const data = {
                     desc: 'hahahahhahaLorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
-                            x: 10,
-                            y: 30
+                            scale: 2.2,
+                            x: 150,
+                            y: 10
                         },
                         inspired: {
-                            x: 20,
-                            y: 50
+                            scale: 1.1,
+                            x: 100,
+                            y: 0
                         },
                     }
                 },
@@ -63,12 +67,14 @@ const data = {
                     desc: 'hyhyhyhyhyhyhLorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
-                            x: 1000,
-                            y: 3000
+                            scale: 1.2,
+                            x: 200,
+                            y: 20
                         },
                         inspired: {
-                            x: 2000,
-                            y: 5000
+                            scale: 1.3,
+                            x: 175,
+                            y: 125
                         },
                     }
                 }
@@ -108,10 +114,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -121,10 +129,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -134,10 +144,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
@@ -179,10 +191,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -192,10 +206,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -205,10 +221,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
@@ -250,10 +268,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -263,10 +283,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -276,10 +298,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
@@ -321,10 +345,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -334,10 +360,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -347,10 +375,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
