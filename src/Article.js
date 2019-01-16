@@ -12,9 +12,12 @@ class Article extends Component {
             otherIndex: 0,
             contentTextStyle: 'Article__content__text',
             contentTextActiveStyle: 'Article__content__text--active',
+            isDraggable: true,
+            resizerStyle: 'Article__imgBoxes__imgBox__resizable__resizer',
+            resizerHiddenStyle: 'Article__imgBoxes__imgBox__resizable__resizer--hidden',
         }
     }
-    logScroll = () =>{
+    focusBorder = () => {
         const winCenterHeight = window.innerHeight / 2;
         const DOMzoomsTexts = document.querySelectorAll('.Article__zooms__text');
         const activeClass = 'Article__zooms__text--active'
@@ -24,9 +27,11 @@ class Article extends Component {
             let textBottom = text.getBoundingClientRect().bottom;
             if (textTop <= winCenterHeight) {
                 text.classList.add(activeClass);
+                if (i === 0) this.setState({isDraggable: false});
                 if (textBottom <= winCenterHeight) text.classList.remove(activeClass);
             }
             else text.classList.remove(activeClass);
+            if (textTop >= winCenterHeight && i === 0) this.setState({isDraggable: true});
         }
     }
     render = () => {
@@ -35,9 +40,10 @@ class Article extends Component {
                 <TwoPaitings
                     index={this.props.index}
                     otherIndex={this.state.otherIndex}
+                    style={this.state.isDraggable ? this.state.resizerStyle : this.state.resizerHiddenStyle}
                 />
                 <article className="Article__content" 
-                onScroll={this.logScroll}
+                onScroll={this.focusBorder}
                 >
                     <ArticleHeader
                         index={this.props.index}
