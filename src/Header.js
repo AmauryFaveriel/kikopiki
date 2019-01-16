@@ -3,9 +3,9 @@ import logo from './assets/imgs/logo.svg'
 import data from './data';
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
     render = () => {
         return (
             <header className="Header">

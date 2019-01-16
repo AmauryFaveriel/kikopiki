@@ -1,60 +1,38 @@
 import React, { Component } from 'react';
 import data from './data';
 
-import ArticleHeader from './ArticleHeader';
-import ArticleZooms from './ArticleZooms';
-import ArticleOthers from './ArticleOthers';
-import TwoPaitings from './TwoPaintings';
+class TwoPaitings extends Component {
+    render = () => {
+        return (
+            // <section className="Article__imgBox">
+            //     <img src={data.paintings[this.props.index].first_painting} alt="" className="Article__imgBox__img"/>
+            //     <img src={data.paintings[this.props.index].second_painting} alt="" className="Article__imgBox__img"/>
+            // </section>
+            <section className="Article__imgBoxes">
+                <div className='Article__imgBoxes__imgBox Article__imgBoxes__imgBox__resizable'>
+                    <div className='Article__imgBoxes__imgBox__resizable__resizer'></div>
+                    <img className='Article__imgBoxes__imgBox__img' src="https://images.unsplash.com/photo-1544027549-4f862509c707?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=670&q=80" alt=""/>
+                </div>
+                <div className='Article__imgBoxes__imgBox'>
+                    <img className='Article__imgBoxes__imgBox__img' src="https://images.unsplash.com/photo-1540483761890-a1f7be05d99f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=690&q=80" alt=""/>
+                </div>
+            </section>
+        )
+    }
+}
 class Article extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            otherIndex: 0,
-            contentTextStyle: 'Article__content__text',
-            contentTextActiveStyle: 'Article__content__text--active',
-            isDraggable: true,
-            resizerStyle: 'Article__imgBoxes__imgBox__resizable__resizer',
-            resizerHiddenStyle: 'Article__imgBoxes__imgBox__resizable__resizer--hidden',
-        }
-    }
-    focusBorder = () => {
-        const winCenterHeight = window.innerHeight / 2;
-        const DOMzoomsTexts = document.querySelectorAll('.Article__zooms__text');
-        const activeClass = 'Article__zooms__text--active'
-        for (let i = 0; i < DOMzoomsTexts.length; i++) {
-            const text = DOMzoomsTexts[i]
-            let textTop = text.getBoundingClientRect().top;
-            let textBottom = text.getBoundingClientRect().bottom;
-            if (textTop <= winCenterHeight) {
-                text.classList.add(activeClass);
-                if (i === 0) this.setState({isDraggable: false});
-                if (textBottom <= winCenterHeight) text.classList.remove(activeClass);
-            }
-            else text.classList.remove(activeClass);
-            if (textTop >= winCenterHeight && i === 0) this.setState({isDraggable: true});
-        }
-    }
     render = () => {
         return (
             <article className={this.props.style}>
                 <TwoPaitings
                     index={this.props.index}
-                    otherIndex={this.state.otherIndex}
-                    style={this.state.isDraggable ? this.state.resizerStyle : this.state.resizerHiddenStyle}
                 />
-                <article className="Article__content" 
-                onScroll={this.focusBorder}
-                >
-                    <ArticleHeader
-                        index={this.props.index}
-                    />
-                    <h3 className="Article__intro">{data.paintings[this.props.index].intro}</h3>
-                    <ArticleZooms
-                        index={this.props.index}
-                    />
-                    <ArticleOthers
-                        index={this.props.index}
-                    />
+                <article className="Article__content">
+                    <h2 className="Article__content__title">{data.paintings[this.props.index].title}</h2>
+                    <h3 className="Article__content__subtitle">{data.paintings[this.props.index].desc}</h3>
+                    <p className="Article__content__text">{data.lorem_1}</p>
+                    <p className="Article__content__text">{data.lorem_2}</p>
+                    <p className="Article__content__text">{data.lorem_3}</p>
                 </article>
             </article>
         )

@@ -46,8 +46,6 @@
         const DOMresizer = document.querySelector('.Article__imgBoxes__imgBox__resizable__resizer')
         const minimum_size = 0;
         const maximum_size = 500;
-        let width = 250;
-        DOMimgBox.style.width = width + 'px'
         let original_width = 0;
         let original_x = 0;
         let original_mouse_x = 0;
@@ -61,7 +59,7 @@
         })
       
         resize = (e) => {
-            width = original_width + (e.pageX - original_mouse_x);
+            const width = original_width + (e.pageX - original_mouse_x);
             if (width > minimum_size && width < maximum_size) DOMimgBox.style.width = width + 'px';
         }
         stopResize = () => window.removeEventListener('mousemove', resize);
