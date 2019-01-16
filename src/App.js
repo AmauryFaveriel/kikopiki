@@ -36,7 +36,6 @@ class App extends Component {
             introHidden: this.state.introHidden ? false : true,
             appHidden: this.state.appHidden ? false : true,
         })
-        console.log('wow');
         setTimeout(() => {
             setInterval(() => {
                 document.querySelector('.Paintings').scrollBy(2, 0)
