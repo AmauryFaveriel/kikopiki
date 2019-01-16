@@ -36,11 +36,11 @@ class App extends Component {
             introHidden: this.state.introHidden ? false : true,
             appHidden: this.state.appHidden ? false : true,
         })
-        setTimeout(() => {
-            setInterval(() => {
-                document.querySelector('.Paintings').scrollBy(2, 0)
-            }, 16)
-        }, 2000)
+        // setTimeout(() => {
+        //     setInterval(() => {
+        //         document.querySelector('.Paintings').scrollBy(2, 0)
+        //     }, 16)
+        // }, 2000)
     };
     showArticle = (i) => {
         this.setState({

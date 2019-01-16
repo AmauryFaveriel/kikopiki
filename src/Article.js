@@ -10,9 +10,9 @@ class Article extends Component {
         super(props);
         this.state = {
             painting: data.paintings[this.props.index],
-            otherIndex: 0,
-            contentTextStyle: 'Article__content__text',
-            contentTextActiveStyle: 'Article__content__text--active',
+            isTwoPaintingsHidden: false,
+            TwoPaintingsStyle: 'TwoPaintings',
+            TwoPaintingsHiddenStyle: 'TwoPaintings hidden',
             isDraggable: true,
             resizerStyle: 'Article__imgBoxes__imgBox__resizable__resizer',
             resizerHiddenStyle: 'Article__imgBoxes__imgBox__resizable__resizer--hidden',
@@ -23,7 +23,8 @@ class Article extends Component {
             inspiredZoomIn: {
                 transformOrigin: '0 0',
                 transform: 'scale(1)'
-            }
+            },
+            otherIndex: 0
         }
     }
     UNSAFE_componentWillMount = () => this.setState({painting: data.paintings[this.props.index]});
@@ -39,6 +40,7 @@ class Article extends Component {
         const activeClass = 'Article__zooms__text--active'
         // for every text
         for (let i = 0; i < DOMzoomsTexts.length; i++) {
+            
             // recove the current text
             const that = DOMzoomsTexts[i]
             // recove the top and bottom of the current text
@@ -46,6 +48,18 @@ class Article extends Component {
             let textBottom = that.getBoundingClientRect().bottom;
             // if the text's top is above the middle of the window
             if (textTop <= winCenterHeight) {
+                if (i >= 3) {
+                    this.setState({
+                        isTwoPaintingsHidden: true,
+                        otherIndex: (i - this.state.painting.zooms.length)
+                    });
+                    console.log(this.state.painting.other_paintings[this.state.otherIndex].visual)
+                }
+                else {
+                    this.setState({
+                        isTwoPaintingsHidden: false,
+                    })
+                };
                 this.setFocus(i);
                 // add the focus border
                 that.classList.add(activeClass);
@@ -100,11 +114,12 @@ class Article extends Component {
         return (
             <article className={this.props.style}>
                 <TwoPaitings
+                    theStyle={this.state.isTwoPaintingsHidden ? this.state.TwoPaintingsHiddenStyle : this.state.TwoPaintingsStyle}
                     painting={this.state.painting}
-                    otherIndex={this.state.otherIndex}
                     style={this.state.isDraggable ? this.state.resizerStyle : this.state.resizerHiddenStyle}
                     mainStyle={this.state.mainZoomIn}
                     inspiredStyle={this.state.inspiredZoomIn}
+                    otherIndex={this.state.otherIndex}
                 />
                 <article className="Article__content" 
                 onScroll={this.focusBorder}
