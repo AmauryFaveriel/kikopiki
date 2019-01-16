@@ -61,13 +61,13 @@ class App extends Component {
     updateArticle = (i) => this.setState({index: i});
     render() {
         return (
-            <div className={!this.state.appHidden ? this.state.appStyleHidden :      this.state.appStyle}>
+            <div className={!this.state.appHidden ? this.state.appStyleHidden : this.state.appStyle}>
                 <Header
                     hideArticle={this.hideArticle}
                 />
                 <Intro
-                    style={this.state.introHidden ? this.state.introStyleHidden :      this.state.introStyle}
-                    overlayStyle={!this.state.introHidden ? this.state.overlayStyle :      this.state.overlayStyleHidden}
+                    style={this.state.introHidden ? this.state.introStyleHidden : this.state.introStyle}
+                    overlayStyle={!this.state.introHidden ? this.state.overlayStyle : this.state.overlayStyleHidden}
                     hideIntro={this.hideIntro}
                 />
                 <Paintings 
