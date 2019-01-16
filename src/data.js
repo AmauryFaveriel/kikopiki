@@ -20,17 +20,17 @@ const data = {
         {
             title: 'Un portrait horrifiant',
             intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.\nDerrière ce tableau bien effrayant au nom à rallonge, se cache une obsession. En effet notre cher Francis a étudié pendant 20 ans un portrait du pape Innocent X peint par Velázquez en 1650.',
-            inspired_painting: {
-                author: 'Francis Bacon',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez',
-                date: 1953,
-                visual: inspired0,
-            },
             main_painting: {
                 author: 'Diego Velasquez',
                 desc: 'Portrait d\'Innocent X',
                 date: 1650,
                 visual: main0,
+            },
+            inspired_painting: {
+                author: 'Francis Bacon',
+                desc: 'Étude d\'après le portrait du pape Ixnnocent X par Velázquez',
+                date: 1953,
+                visual: inspired0,
             },
             zooms: [
                 {
@@ -89,19 +89,19 @@ const data = {
             ],
         },
         {
-            title: 'Un portrait horrifiant 2',
-            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
-            inspired_painting: {
-                author: 'Francis Bacon JAMBON',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
-                date: 195390,
-                visual: inspired1,
-            },
+            title: 'Vegans not allowed ( cc Clara )',
+            intro: 'C’est un tableau particulier dans les oeuvres de Rembrandt, car il s’agit d’une des rares nature morte parmi ses oeuvres. Cette oeuvre a pour portée générale un memento mori, rappelant au spectateur sa proximité avec la mort.',
             main_painting: {
-                author: 'Diego VelasquezAWI',
-                desc: 'Portrait d\'InnocenFEZG"Et X',
-                date: 165098,
+                author: 'Rembrandt Harmenszoon van Rijn',
+                desc: ' Le boeuf écorché',
+                date: 1655,
                 visual: main1,
+            },
+            inspired_painting: {
+                author: 'Marc Chagall',
+                desc: 'Le boeuf écorché',
+                date: 1947,
+                visual: inspired1,
             },
             zooms: [
                 {
@@ -161,18 +161,18 @@ const data = {
         },
         {
             title: 'Portrait de femme pensive',
-            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
-            inspired_painting: {
-                author: 'Pablo Picasso',
-                desc: 'Portrait de Dora Maar (muse)',
-                date: 1937,
-                visual: inspired2,
-            },
+            intro: 'En apparence, Ingres n’a rien d’un excentrique : sa peinture est claire, parfaitement maîtrisée les formes sont définies par des contours précis qui cernent les couleurs; rien d’excessif, rien qui ne dépasse. Tout l’opposée de Picasso pourrait-on penser, et pourtant c’est chez lui que l’Espagnol trouve l’une de ses principales sources d’inspirations pour la représentation des femmes.',
             main_painting: {
                 author: 'Jean-Auguste Dominique Ingres',
                 desc: 'Madame Moitessier',
                 date: 1856,
                 visual: main2,
+            },
+            inspired_painting: {
+                author: 'Pablo Picasso',
+                desc: 'Portrait de Dora Maar (muse)',
+                date: 1937,
+                visual: inspired2,
             },
             zooms: [
                 {
@@ -231,19 +231,19 @@ const data = {
             ],
         },
         {
-            title: 'Un portrait horrifiant 2',
+            title: 'Je suis une enfant en jupe',
             intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
-            inspired_painting: {
-                author: 'Francis Bacon JAMBON',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
-                date: 195390,
-                visual: inspired3,
-            },
             main_painting: {
-                author: 'Diego VelasquezAWI',
-                desc: 'Portrait d\'InnocenFEZG"Et X',
-                date: 165098,
+                author: 'Diego Velasquez',
+                desc: 'Infante Marguerite Thérèse en bleu',
+                date: 1651,
                 visual: main3,
+            },
+            inspired_painting: {
+                author: 'Fernando Botero',
+                desc: 'D’après Velasquez (Infante Marguerite Thérèse en bleu)',
+                date: 2005,
+                visual: inspired3,
             },
             zooms: [
                 {
