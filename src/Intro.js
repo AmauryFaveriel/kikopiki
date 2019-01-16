@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import data from './data';
 
 class Intro extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+    }
     render = () => {
         return (
             <section className={this.props.style}>
