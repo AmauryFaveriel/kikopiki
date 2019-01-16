@@ -1,0 +1,25 @@
+.ArticleHeader {
+    margin-bottom: 100px;
+    &__title {
+        font-size: 72px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &__item {
+            width: calc(50% - 50px);
+            margin: 25px;
+            &__desc {
+                font-size: 18px;
+            }
+            &__author {
+                margin: 25px 0;
+                font-size: 22px;
+            }
+            &__date {
+                font-size: 20px;
+            }
+        }
+    }
+}
