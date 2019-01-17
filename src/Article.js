@@ -5,6 +5,7 @@ import ArticleHeader from './ArticleHeader';
 import ArticleZooms from './ArticleZooms';
 import ArticleOthers from './ArticleOthers';
 import TwoPaitings from './TwoPaintings';
+
 class Article extends Component {
     constructor(props) {
         super(props);
@@ -42,7 +43,7 @@ class Article extends Component {
                     otherIndex={this.state.otherIndex}
                     style={this.state.isDraggable ? this.state.resizerStyle : this.state.resizerHiddenStyle}
                 />
-                <article className="Article__content" 
+                <article className="Article__content"
                 onScroll={this.focusBorder}
                 >
                     <ArticleHeader
