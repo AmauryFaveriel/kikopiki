@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import data from "./data";
+
 class Painting extends Component {
   render = () => {
     return (
