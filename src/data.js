@@ -41,13 +41,13 @@ const data = {
                     zoom: {
                         main: {
                             scale: 1.5,
-                            x: 25,
-                            y: 75
+                            x: 0,
+                            y: 0
                         },
                         inspired: {
-                            scale: 2,
-                            x: 50,
-                            y: 50
+                            scale: 1.5,
+                            x: 0,
+                            y: 200
                         },
                     }
                 },

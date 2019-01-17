@@ -5,6 +5,7 @@ import ArticleHeader from './ArticleHeader';
 import ArticleZooms from './ArticleZooms';
 import ArticleOthers from './ArticleOthers';
 import TwoPaitings from './TwoPaintings';
+
 class Article extends Component {
     constructor(props) {
         super(props);
@@ -121,7 +122,7 @@ class Article extends Component {
                     inspiredStyle={this.state.inspiredZoomIn}
                     otherIndex={this.state.otherIndex}
                 />
-                <article className="Article__content" 
+                <article className="Article__content"
                 onScroll={this.focusBorder}
                 >
                     <ArticleHeader
