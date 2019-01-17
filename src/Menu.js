@@ -24,12 +24,12 @@ class Menu extends Component {
             <section className={this.props.style}>
                 <img src={logo} alt="" className="Menu__logo" onClick={this.hideMenu}/>
                 <nav className="Menu__nav">
-                  //  <button
-                  //    className={!this.state.isMenuHidden ? this.state.navToggleSoundStyle : this.state.navToggleSoundStyleHidden}
-                  //    onClick={this.toggleSound}>
-                  //        <i className={`fas fa-volume-up ${this.state.isSoundOn ? this.state.navToggleSoundIconStyle : this.state.navToggleSoundIconStyleHidden}`}></i>
-                //          <i className={`fas fa-volume-mute ${!this.state.isSoundOn ? this.state.navToggleSoundIconStyle : this.state.navToggleSoundIconStyleHidden}`}></i>
-                  //  </button>
+                    <button
+                      className={!this.state.isMenuHidden ? this.state.navToggleSoundStyle : this.state.navToggleSoundStyleHidden}
+                      onClick={this.toggleSound}>
+                          <i className={`fas fa-volume-up ${this.state.isSoundOn ? this.state.navToggleSoundIconStyle : this.state.navToggleSoundIconStyleHidden}`}></i>
+                          <i className={`fas fa-volume-mute ${!this.state.isSoundOn ? this.state.navToggleSoundIconStyle : this.state.navToggleSoundIconStyleHidden}`}></i>
+                    </button>
                     <ul className={this.state.isMenuHidden ? this.state.navPaintingsStyleHidden : this.state.navPaintingsStyle}>
                     {data.paintings.map((x, i) =>
                         <LittlePaiting
