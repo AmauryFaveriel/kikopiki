@@ -66,17 +66,17 @@
         }
     }
     &__content {
-        background: orange;
+        background: #ffffff;
         width: calc(100% - 550px);
         height: calc(100vh - 50vh);
         overflow: scroll;
         padding: 25px;
         padding-bottom: 50vh;
-        
+
         &__text {
               font-size: 20px;
-              line-height: 50px; 
-              text-align: justify; 
+              line-height: 50px;
+              text-align: justify;
               margin-bottom: 100px;
               border-left: 5px #F1F1F1 solid;
               &--active {

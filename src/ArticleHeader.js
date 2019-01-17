@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import data from './data';
 import ArticleHeaderItem from './ArticleHeaderItem';
 
-class ArticleHeader extends Component { 
+class ArticleHeader extends Component {
     constructor(props) {
         super(props);
         this.state = {painting: data.paintings[this.props.index]}
@@ -18,6 +18,7 @@ class ArticleHeader extends Component {
                     <ArticleHeaderItem
                         painting={this.state.painting.inspired_painting}
                     />
+                <span className="ArticleHeader__line"></span>
                     <ArticleHeaderItem
                         painting={this.state.painting.main_painting}
                     />
@@ -28,4 +29,3 @@ class ArticleHeader extends Component {
 }
 
 export default ArticleHeader;
-
