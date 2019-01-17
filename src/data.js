@@ -1,3 +1,17 @@
+import main0 from './assets/imgs/paintings/0/0_main.jpeg';
+import inspired0 from './assets/imgs/paintings/0/0_inspired.jpg';
+import main1 from './assets/imgs/paintings/1/1_main.jpg';
+import inspired1 from './assets/imgs/paintings/1/1_inspired.jpg';
+import main2 from './assets/imgs/paintings/2/2_main.jpg';
+import inspired2 from './assets/imgs/paintings/2/2_inspired.jpg';
+import main3 from './assets/imgs/paintings/3/3_main.jpg';
+import inspired3 from './assets/imgs/paintings/3/3_inspired.jpg';
+import main4 from './assets/imgs/paintings/4/4_main.jpg';
+import inspired4 from './assets/imgs/paintings/4/4_inspired.jpg';
+import other0_0 from './assets/imgs/paintings/0/0_other_0.jpg';
+import other0_1 from './assets/imgs/paintings/0/0_other_1.jpg';
+import other0_2 from './assets/imgs/paintings/0/0_other_2.jpg';
+
 const data = {
     intro: {
         title: 'Kikopiki',
@@ -9,29 +23,31 @@ const data = {
         {
             title: 'Un portrait horrifiant',
             intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.\nDerrière ce tableau bien effrayant au nom à rallonge, se cache une obsession. En effet notre cher Francis a étudié pendant 20 ans un portrait du pape Innocent X peint par Velázquez en 1650.',
-            inspired_painting: {
-                author: 'Francis Bacon',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez',
-                date: 1953,
-                visual: 'http://mediationsemiotiques.com/wp-content/uploads/2014/12/1953_Study-after-Velazquezs-Portrait-of-Pope-Innocent-X.jpg',
-            },
             main_painting: {
                 author: 'Diego Velasquez',
                 desc: 'Portrait d\'Innocent X',
                 date: 1650,
-                visual: 'http://www.colineblot.fr/wp-content/uploads/2015/04/francis-bacon-portrait-pape-innocent-x-L-8Fxc5U.jpeg',
+                visual: main0,
+            },
+            inspired_painting: {
+                author: 'Francis Bacon',
+                desc: 'Étude d\'après le portrait du pape Ixnnocent X par Velázquez',
+                date: 1953,
+                visual: inspired0,
             },
             zooms: [
                 {
                     desc: 'hihihihihLorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
-                            x: 100,
-                            y: 300
+                            scale: 1.5,
+                            x: 25,
+                            y: 75
                         },
                         inspired: {
-                            x: 200,
-                            y: 500
+                            scale: 2,
+                            x: 50,
+                            y: 50
                         },
                     }
                 },
@@ -39,12 +55,14 @@ const data = {
                     desc: 'hahahahhahaLorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
-                            x: 10,
-                            y: 30
+                            scale: 2.2,
+                            x: 150,
+                            y: 10
                         },
                         inspired: {
-                            x: 20,
-                            y: 50
+                            scale: 1.1,
+                            x: 100,
+                            y: 0
                         },
                     }
                 },
@@ -52,12 +70,14 @@ const data = {
                     desc: 'hyhyhyhyhyhyhLorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
-                            x: 1000,
-                            y: 3000
+                            scale: 1.2,
+                            x: 200,
+                            y: 20
                         },
                         inspired: {
-                            x: 2000,
-                            y: 5000
+                            scale: 1.3,
+                            x: 175,
+                            y: 125
                         },
                     }
                 }
@@ -65,42 +85,44 @@ const data = {
             other_paintings: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=0'
+                    visual: other0_0
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=1'
+                    visual: other0_1
                 },
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-                    visual: 'https://picsum.photos/500/750?image=2'
+                    visual: other0_2
                 }
             ],
         },
         {
-            title: 'Un portrait horrifiant 2',
-            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
-            inspired_painting: {
-                author: 'Francis Bacon JAMBON',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
-                date: 195390,
-                visual: 'https://picsum.photos/500/750?image=3',
-            },
+            title: 'Vegans not allowed ( cc Clara )',
+            intro: 'C’est un tableau particulier dans les oeuvres de Rembrandt, car il s’agit d’une des rares nature morte parmi ses oeuvres. Cette oeuvre a pour portée générale un memento mori, rappelant au spectateur sa proximité avec la mort.',
             main_painting: {
-                author: 'Diego VelasquezAWI',
-                desc: 'Portrait d\'InnocenFEZG"Et X',
-                date: 165098,
-                visual: 'https://picsum.photos/500/750?image=4',
+                author: 'Rembrandt Harmenszoon van Rijn',
+                desc: ' Le boeuf écorché',
+                date: 1655,
+                visual: main1,
+            },
+            inspired_painting: {
+                author: 'Marc Chagall',
+                desc: 'Le boeuf écorché',
+                date: 1947,
+                visual: inspired1,
             },
             zooms: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -110,10 +132,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -123,10 +147,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
@@ -149,29 +175,31 @@ const data = {
             ],
         },
         {
-            title: 'Un portrait horrifiant 2',
-            intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
-            inspired_painting: {
-                author: 'Francis Bacon JAMBON',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
-                date: 195390,
-                visual: 'https://picsum.photos/500/750?image=8',
-            },
+            title: 'Portrait de femme pensive',
+            intro: 'En apparence, Ingres n’a rien d’un excentrique : sa peinture est claire, parfaitement maîtrisée les formes sont définies par des contours précis qui cernent les couleurs; rien d’excessif, rien qui ne dépasse. Tout l’opposée de Picasso pourrait-on penser, et pourtant c’est chez lui que l’Espagnol trouve l’une de ses principales sources d’inspirations pour la représentation des femmes.',
             main_painting: {
-                author: 'Diego VelasquezAWI',
-                desc: 'Portrait d\'InnocenFEZG"Et X',
-                date: 165098,
-                visual: 'https://picsum.photos/500/750?image=9',
+                author: 'Jean-Auguste Dominique Ingres',
+                desc: 'Madame Moitessier',
+                date: 1856,
+                visual: main2,
+            },
+            inspired_painting: {
+                author: 'Pablo Picasso',
+                desc: 'Portrait de Dora Maar (muse)',
+                date: 1937,
+                visual: inspired2,
             },
             zooms: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -181,10 +209,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -194,10 +224,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
@@ -220,29 +252,31 @@ const data = {
             ],
         },
         {
-            title: 'Un portrait horrifiant 2',
+            title: 'Je suis une enfant en jupe',
             intro: 'Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.',
-            inspired_painting: {
-                author: 'Francis Bacon JAMBON',
-                desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
-                date: 195390,
-                visual: 'https://picsum.photos/500/750?image=13',
-            },
             main_painting: {
-                author: 'Diego VelasquezAWI',
-                desc: 'Portrait d\'InnocenFEZG"Et X',
-                date: 165098,
-                visual: 'https://picsum.photos/500/750?image=14',
+                author: 'Diego Velasquez',
+                desc: 'Infante Marguerite Thérèse en bleu',
+                date: 1651,
+                visual: main3,
+            },
+            inspired_painting: {
+                author: 'Fernando Botero',
+                desc: 'D’après Velasquez (Infante Marguerite Thérèse en bleu)',
+                date: 2005,
+                visual: inspired3,
             },
             zooms: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -252,10 +286,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -265,10 +301,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
@@ -297,23 +335,25 @@ const data = {
                 author: 'Francis Bacon JAMBON',
                 desc: 'Étude d\'après le portrait du pape Innocent X par Velázquez QUEZ',
                 date: 195390,
-                visual: 'https://picsum.photos/500/750?image=18',
+                visual: inspired4,
             },
             main_painting: {
                 author: 'Diego VelasquezAWI',
                 desc: 'Portrait d\'InnocenFEZG"Et X',
                 date: 165098,
-                visual: 'https://picsum.photos/500/750?image=19',
+                visual: main4,
             },
             zooms: [
                 {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 100,
                             y: 300
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 200,
                             y: 500
                         },
@@ -323,10 +363,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 10,
                             y: 30
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 20,
                             y: 50
                         },
@@ -336,10 +378,12 @@ const data = {
                     desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
                     zoom: {
                         main: {
+                            scale: 1.5,
                             x: 1000,
                             y: 3000
                         },
                         inspired: {
+                            scale: 1.5,
                             x: 2000,
                             y: 5000
                         },
