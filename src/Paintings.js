@@ -7,7 +7,7 @@ class Paintings extends Component {
         super(props);
         this.state = {
             index: "lol",
-            error: ''
+            error: '',
         }
     }
     componentDidMount = () => {
@@ -34,6 +34,7 @@ class Paintings extends Component {
                     key={i}
                     index={i}
                     showArticle={(i) => this.props.showArticle(i)}
+                    checkedPaintings={this.props.checkedPaintings}
                 />)}
             </section>
         )

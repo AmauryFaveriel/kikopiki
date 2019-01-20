@@ -30,6 +30,7 @@ class Menu extends Component {
                             painting={x.main_painting.visual}
                             title={x.title}
                             updateArticle={() => this.props.updateArticle(i)}
+                            checkedPaintings={this.props.checkedPaintings}
 
                         />
                     )}

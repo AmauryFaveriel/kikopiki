@@ -32,20 +32,8 @@ class App extends Component {
         }
     }
     UNSAFE_componentWillMount = () => {
-        if (localStorage.getItem('checkedPaintings')) {
-            this.setState({
-                checkedPaintings: JSON.parse(
-                    localStorage.getItem('checkedPaintings')
-                )
-            }, console.log(this.state.checkedPaintings))
-        }
-        if (!localStorage.getItem('checkedPaintings')) {
-            localStorage.setItem('checkedPaintings', JSON.stringify(
-                this.state.checkedPaintings
-            ))
-        }
-        console.log(this.state.checkedPaintings)
-        
+        if (localStorage.getItem('checkedPaintings')) this.setState({checkedPaintings: JSON.parse(localStorage.getItem('checkedPaintings'))})
+        else localStorage.setItem('checkedPaintings', JSON.stringify(this.state.checkedPaintings))
     }
     hideIntro = () => {
         this.setState({
@@ -63,11 +51,9 @@ class App extends Component {
         localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
         this.setState({
             articleHidden: true,
-            menuHidden: true
+            menuHidden: true,
+            index: i
         })
-        console.log(this.state.checkedPaintings);
-        this.setState({index: i})
-
         return i 
     }
     hideArticle = () => {
@@ -76,7 +62,11 @@ class App extends Component {
             menuHidden: false
         }) 
     }
-    updateArticle = (i) => this.setState({index: i});
+    updateArticle = (i) => {
+        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i)
+        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
+        this.setState({index: i});
+    }
     render() {
         return (
             <div className={!this.state.appHidden ? this.state.appStyleHidden :      this.state.appStyle}>
@@ -100,6 +90,7 @@ class App extends Component {
                     style={!this.state.menuHidden ? this.state.menuStyleHidden : this.state.menuStyle}
                     theIndex={this.state.index}
                     updateArticle={(i) => this.updateArticle(i)}
+                    checkedPaintings={this.state.checkedPaintings}
                 />
             </div>
         );
