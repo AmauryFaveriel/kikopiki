@@ -23,9 +23,13 @@
                 display: none;
             }
         }
-        &__painting img {
-            width: 150px;
-            height: 150px;
+        &__painting {
+            position: relative;
+            img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+            }
         }
         
     }

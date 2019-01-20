@@ -5,6 +5,7 @@ import Header from './Header.js';
 import Intro from './Intro'
 import Paintings from './Paintings';
 import Menu from './Menu';
+import Conclusion from './Conclusion'
 
 class App extends Component {
     constructor(props) {
@@ -27,10 +28,14 @@ class App extends Component {
             menuHidden: false,
             menuStyle: 'Menu',
             menuStyleHidden: 'Menu Menu--hidden',
-            index: 0
+            index: 0,
+            checkedPaintings: []
         }
     }
-
+    UNSAFE_componentWillMount = () => {
+        if (localStorage.getItem('checkedPaintings')) this.setState({checkedPaintings: JSON.parse(localStorage.getItem('checkedPaintings'))})
+        else localStorage.setItem('checkedPaintings', JSON.stringify(this.state.checkedPaintings))
+    }
     hideIntro = () => {
         this.setState({
             introHidden: this.state.introHidden ? false : true,
@@ -43,13 +48,13 @@ class App extends Component {
         // }, 2000)
     };
     showArticle = (i) => {
+        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i)
+        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
         this.setState({
             articleHidden: true,
-            menuHidden: true
+            menuHidden: true,
+            index: i
         })
-        console.log(i)
-        this.setState({index: i})
-        window.history.pushState("object or string", "Title", `/painting-${i}`);
         return i 
     }
     hideArticle = () => {
@@ -58,7 +63,11 @@ class App extends Component {
             menuHidden: false
         }) 
     }
-    updateArticle = (i) => this.setState({index: i});
+    updateArticle = (i) => {
+        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i)
+        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
+        this.setState({index: i});
+    }
     render() {
         return (
             <div className={!this.state.appHidden ? this.state.appStyleHidden :      this.state.appStyle}>
@@ -72,6 +81,7 @@ class App extends Component {
                 />
                 <Paintings 
                     showArticle={(i) => this.showArticle(i)}
+                    checkedPaintings={this.state.checkedPaintings}
                 />
                 <Article 
                     style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle}
@@ -81,7 +91,9 @@ class App extends Component {
                     style={!this.state.menuHidden ? this.state.menuStyleHidden : this.state.menuStyle}
                     theIndex={this.state.index}
                     updateArticle={(i) => this.updateArticle(i)}
+                    checkedPaintings={this.state.checkedPaintings}
                 />
+                <Conclusion/>
             </div>
         );
     }

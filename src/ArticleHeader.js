@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import data from './data';
 import ArticleHeaderItem from './ArticleHeaderItem';
 
 class ArticleHeader extends Component { 
@@ -11,6 +10,7 @@ class ArticleHeader extends Component {
                     <ArticleHeaderItem
                         painting={this.props.painting.inspired_painting}
                     />
+                <span className="ArticleHeader__line"></span>
                     <ArticleHeaderItem
                         painting={this.props.painting.main_painting}
                     />
@@ -21,4 +21,3 @@ class ArticleHeader extends Component {
 }
 
 export default ArticleHeader;
-

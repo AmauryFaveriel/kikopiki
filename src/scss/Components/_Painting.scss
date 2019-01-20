@@ -1,4 +1,5 @@
 .Painting {
+    width: 500px;
     position: relative;
     &:hover {
         h2, p, button {
@@ -10,6 +11,7 @@
         transition: all 0.2s ease;
     }
     h2 {
+        color: #ffffff;
         @include font-size(36px);
         position: absolute;
         top: 50px;
@@ -17,11 +19,18 @@
         transform: translate(-50%, 0);
     }
     p {
+        color: #ffffff;
         @include font-size(22px);
         position: absolute;
         top: 250px;
         left: 50%;
         transform: translate(-50%, 0);
+    }
+
+    img {
+        width: 500px;
+        height: calc(100vh - 20px);
+        object-fit: cover;
     }
     button {
         border: 2px red solid;
@@ -31,5 +40,12 @@
         left: 50%;
         transform: translate(-50%, 0);
         cursor: pointer;
+    }
+    &__checked {
+        width: 25px !important;
+        height: 25px !important;
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
     }
 }

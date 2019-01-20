@@ -41,13 +41,13 @@ const data = {
                     zoom: {
                         main: {
                             scale: 1.5,
-                            x: 25,
-                            y: 75
+                            x: 0,
+                            y: 0
                         },
                         inspired: {
-                            scale: 2,
-                            x: 50,
-                            y: 50
+                            scale: 1.5,
+                            x: 0,
+                            y: 200
                         },
                     }
                 },
@@ -407,9 +407,11 @@ const data = {
         },
     ],
     cta: 'Découvrir',
-    lorem_1: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-    lorem_2: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?',
-    lorem_3: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?'
+    conclusion: {
+        title: 'Conclusion',
+        content: 'Here is the conclusion. Special thanks to my computer to make this possible. Fuck it',
+        cta: 'go back to paintings'
+    }
 }
 
 export default data;
