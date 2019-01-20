@@ -27,10 +27,26 @@ class App extends Component {
             menuHidden: false,
             menuStyle: 'Menu',
             menuStyleHidden: 'Menu Menu--hidden',
-            index: 0
+            index: 0,
+            checkedPaintings: []
         }
     }
-
+    UNSAFE_componentWillMount = () => {
+        if (localStorage.getItem('checkedPaintings')) {
+            this.setState({
+                checkedPaintings: JSON.parse(
+                    localStorage.getItem('checkedPaintings')
+                )
+            }, console.log(this.state.checkedPaintings))
+        }
+        if (!localStorage.getItem('checkedPaintings')) {
+            localStorage.setItem('checkedPaintings', JSON.stringify(
+                this.state.checkedPaintings
+            ))
+        }
+        console.log(this.state.checkedPaintings)
+        
+    }
     hideIntro = () => {
         this.setState({
             introHidden: this.state.introHidden ? false : true,
@@ -43,13 +59,15 @@ class App extends Component {
         // }, 2000)
     };
     showArticle = (i) => {
+        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i)
+        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
         this.setState({
             articleHidden: true,
             menuHidden: true
         })
-        console.log(i)
+        console.log(this.state.checkedPaintings);
         this.setState({index: i})
-        window.history.pushState("object or string", "Title", `/painting-${i}`);
+
         return i 
     }
     hideArticle = () => {
@@ -72,6 +90,7 @@ class App extends Component {
                 />
                 <Paintings 
                     showArticle={(i) => this.showArticle(i)}
+                    checkedPaintings={this.state.checkedPaintings}
                 />
                 <Article 
                     style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle}
