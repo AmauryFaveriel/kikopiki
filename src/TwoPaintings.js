@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import data from './data';
 
 class TwoPaitings extends Component {
     render = () => {
@@ -23,7 +22,7 @@ class TwoPaitings extends Component {
                     </div>
                 </section>
                 <section className="OtherPaintings">
-                <img src={this.props.painting.other_paintings[this.props.otherIndex].visual}/>
+                <img src={this.props.painting.other_paintings[this.props.otherIndex].visual} alt="img"/>
                 </section>
             </section>
         )

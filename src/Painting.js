@@ -15,7 +15,7 @@ class Painting extends Component {
                 <button onClick={() => {
                     this.props.showArticle(this.props.index)
                 }}>{data.cta}</button>
-                <img className="Painting__checked" src={this.props.checkedPaintings.includes(this.props.index) ? checked : unchecked}/>
+                <img className="Painting__checked" alt="checked icon" src={this.props.checkedPaintings.includes(this.props.index) ? checked : unchecked}/>
             </article>
         )
     }

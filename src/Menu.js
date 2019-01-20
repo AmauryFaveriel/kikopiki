@@ -16,6 +16,13 @@ class Menu extends Component {
     }
     hideMenu = () => this.setState({isMenuHidden: this.state.isMenuHidden ? false : true})
     toggleSound = () => this.setState({isSoundOn: this.state.isSoundOn ? false : true})
+    goToConclusion = (e) => {
+        e.preventDefault();
+        if (this.props.checkedPaintings.length === data.paintings.length) {
+            alert('go to conclusion')
+        }
+        else alert(`${data.paintings.length - this.props.checkedPaintings.length}/${data.paintings.length} left !`)
+    }
     render = () => {
         return (
             <section className={this.props.style}>
@@ -35,7 +42,10 @@ class Menu extends Component {
                         />
                     )}
                     </ul>
-                    <button className={this.state.isMenuHidden ? this.state.navConclusionStyleHidden : this.state.navConclusionStyle}>GO TO CONCLUSION</button>
+                    <button 
+                        className={this.state.isMenuHidden ? this.state.navConclusionStyleHidden : this.state.navConclusionStyle}
+                        onClick={this.goToConclusion}
+                    >GO TO CONCLUSION</button>
                 </nav>
             </section>
         )

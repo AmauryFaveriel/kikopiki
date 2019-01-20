@@ -5,6 +5,7 @@ import Header from './Header.js';
 import Intro from './Intro'
 import Paintings from './Paintings';
 import Menu from './Menu';
+import Conclusion from './Conclusion'
 
 class App extends Component {
     constructor(props) {
@@ -92,6 +93,7 @@ class App extends Component {
                     updateArticle={(i) => this.updateArticle(i)}
                     checkedPaintings={this.state.checkedPaintings}
                 />
+                <Conclusion/>
             </div>
         );
     }

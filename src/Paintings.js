@@ -17,6 +17,12 @@ class Paintings extends Component {
         //         console.log("move your mouse");
         //     }, 500);
         // }
+
+        setTimeout(() => {
+            setInterval(() => {
+                document.querySelector('.Paintings').scrollBy(2, 0)
+            }, 16)
+        }, 2000)
     }
     
     updateStyle = () => {

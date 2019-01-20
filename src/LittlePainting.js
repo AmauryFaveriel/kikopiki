@@ -8,7 +8,7 @@ class LittlePaiting extends Component {
             <li className={this.props.style} 
                 onClick={() => this.props.updateArticle(this.props.index)}>
                 <img src={this.props.painting} alt={this.props.title}/>
-                <img className="Painting__checked" src={this.props.checkedPaintings.includes(this.props.index) ? checked : unchecked}/>
+                <img className="Painting__checked" alt="checked icon" src={this.props.checkedPaintings.includes(this.props.index) ? checked : unchecked}/>
             </li>
         )
     }
