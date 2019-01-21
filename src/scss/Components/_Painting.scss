@@ -26,6 +26,12 @@
         left: 50%;
         transform: translate(-50%, 0);
     }
+
+    img {
+        width: 500px;
+        height: calc(100vh - 20px);
+        object-fit: cover;
+    }
     button {
         border: 2px red solid;
         @include font-size(26px);
@@ -34,5 +40,12 @@
         left: 50%;
         transform: translate(-50%, 0);
         cursor: pointer;
+    }
+    &__checked {
+        width: 25px !important;
+        height: 25px !important;
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
     }
 }

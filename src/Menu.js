@@ -10,26 +10,24 @@ class Menu extends Component {
             isMenuHidden: false,
             navPaintingsStyle: 'Menu__nav__paintings',
             navPaintingsStyleHidden: 'Menu__nav__paintings Menu__nav__paintings--hidden',
-            navToggleSoundStyle: 'Menu__nav__toggleSound',
-            navToggleSoundStyleHidden: 'Menu__nav__toggleSound hidden',
-            isSoundOn: false,
-            navToggleSoundIconStyle: 'Menu__nav__toggleSound__icon',
-            navToggleSoundIconStyleHidden: 'Menu__nav__toggleSound__icon hidden',
+            navConclusionStyle: 'Menu__nav__conclusion',
+            navConclusionStyleHidden: 'Menu__nav__conclusion hidden',
         }
     }
     hideMenu = () => this.setState({isMenuHidden: this.state.isMenuHidden ? false : true})
     toggleSound = () => this.setState({isSoundOn: this.state.isSoundOn ? false : true})
+    goToConclusion = (e) => {
+        e.preventDefault();
+        if (this.props.checkedPaintings.length === data.paintings.length) {
+            alert('go to conclusion')
+        }
+        else alert(`${data.paintings.length - this.props.checkedPaintings.length}/${data.paintings.length} left !`)
+    }
     render = () => {
         return (
             <section className={this.props.style}>
                 <img src={logo} alt="" className="Menu__logo" onClick={this.hideMenu}/>
                 <nav className="Menu__nav">
-                    <button
-                      className={!this.state.isMenuHidden ? this.state.navToggleSoundStyle : this.state.navToggleSoundStyleHidden}
-                      onClick={this.toggleSound}>
-                          <i className={`fas fa-volume-up ${this.state.isSoundOn ? this.state.navToggleSoundIconStyle : this.state.navToggleSoundIconStyleHidden}`}></i>
-                          <i className={`fas fa-volume-mute ${!this.state.isSoundOn ? this.state.navToggleSoundIconStyle : this.state.navToggleSoundIconStyleHidden}`}></i>
-                    </button>
                     <ul className={this.state.isMenuHidden ? this.state.navPaintingsStyleHidden : this.state.navPaintingsStyle}>
                     {data.paintings.map((x, i) =>
                         <LittlePaiting
@@ -39,10 +37,15 @@ class Menu extends Component {
                             painting={x.main_painting.visual}
                             title={x.title}
                             updateArticle={() => this.props.updateArticle(i)}
+                            checkedPaintings={this.props.checkedPaintings}
 
                         />
                     )}
                     </ul>
+                    <button 
+                        className={this.state.isMenuHidden ? this.state.navConclusionStyleHidden : this.state.navConclusionStyle}
+                        onClick={this.goToConclusion}
+                    >GO TO CONCLUSION</button>
                 </nav>
             </section>
         )

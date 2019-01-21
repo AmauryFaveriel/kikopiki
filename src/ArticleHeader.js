@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import data from './data';
 import ArticleHeaderItem from './ArticleHeaderItem';
 
 class ArticleHeader extends Component { 
