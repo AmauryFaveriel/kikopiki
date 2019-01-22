@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import data from './data'
+import data from '../../data'
 
-import Article from './Article';
-import Header from './Header.js';
-import Intro from './Intro'
-import Paintings from './Paintings';
-import Menu from './Menu';
-import Conclusion from './Conclusion'
+import Article from '../Article/Article';
+import Header from '../Header/Header.js';
+import Intro from '../Intro/Intro'
+import Paintings from '../Paintings/Paintings';
+import Menu from '../Menu/Menu';
+import Conclusion from '../Conclusion/Conclusion'
 
 class App extends Component {
     constructor(props) {

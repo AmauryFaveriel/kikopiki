@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import data from './data';
+import data from '../../data';
 
-import checked from "./assets/imgs/checked.svg"
-import unchecked from "./assets/imgs/unchecked.svg"
+import checked from "../../assets/imgs/checked.svg"
+import unchecked from "../../assets/imgs/unchecked.svg"
 
 class Painting extends Component {
     

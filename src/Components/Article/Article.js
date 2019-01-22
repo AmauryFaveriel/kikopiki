@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import data from './data';
+import data from '../../data';
 
-import ArticleHeader from './ArticleHeader';
-import ArticleZooms from './ArticleZooms';
-import ArticleOthers from './ArticleOthers';
-import TwoPaitings from './TwoPaintings';
+import ArticleHeader from '../ArticleHeader/ArticleHeader';
+import ArticleZooms from '../ArticleZooms/ArticleZooms';
+import ArticleOthers from '../ArticleOthers/ArticleOthers';
+import TwoPaitings from '../TwoPaintings/TwoPaintings';
 
 class Article extends Component {
     constructor(props) {

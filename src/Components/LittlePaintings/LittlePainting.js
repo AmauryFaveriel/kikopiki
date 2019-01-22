@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import checked from "./assets/imgs/checked.svg"
-import unchecked from "./assets/imgs/unchecked.svg"
+import checked from "../../assets/imgs/checked.svg"
+import unchecked from "../../assets/imgs/unchecked.svg"
 class LittlePaiting extends Component {
     render() {
         return (

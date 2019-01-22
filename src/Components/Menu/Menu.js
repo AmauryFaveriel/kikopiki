@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import LittlePaiting from './LittlePainting';
-import logo from './assets/imgs/logo.svg'
-import data from './data';
+import LittlePaiting from '../LittlePaintings/LittlePainting';
+import logo from '../../assets/imgs/logo.svg'
+import data from '../../data';
 
 class Menu extends Component {
     constructor(props) {
