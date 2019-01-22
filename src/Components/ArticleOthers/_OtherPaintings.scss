@@ -2,4 +2,9 @@
     width: calc(100%);
     height: calc(100vh - 20px);
     background: blue;
+    img {
+        width: 666px;
+        height: 100vh;
+        object-fit: cover;
+    }
 }

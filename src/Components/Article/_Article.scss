@@ -1,8 +1,6 @@
 .Article {
     width: calc(100% - 20px - 150px);
     height: calc(100vh - 20px);
-    background: red;
-    border: 5px #222 solid;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -18,7 +16,10 @@
         margin-bottom: 100px;
     }
     &__imgBoxes {
-        width: 500px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 666px;
         height: calc(100vh - 20px);
         &__imgBox {
             position: absolute;
@@ -47,8 +48,8 @@
                 }
             }
             &__img {
-                width: 500px;
-                height: calc(100vh - 20px);
+                width: 666px;
+                height: 100vh;
                 object-fit: cover;
                 pointer-events: none;
                 transition: all 0.5s ease;
@@ -68,8 +69,11 @@
     }
     &__content {
         background: #ffffff;
-        width: calc(100% - 550px);
+        width: calc(100% - 666px - 170px);
         height: calc(100vh - 50vh);
+        position: fixed;
+        top: 0;
+        left: 666px;
         overflow: scroll;
         padding: 25px;
         padding-bottom: 50vh;
