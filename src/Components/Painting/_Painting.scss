@@ -29,11 +29,10 @@
 
     img {
         width: 500px;
-        height: calc(100vh - 20px);
+        height: 100vh;
         object-fit: cover;
     }
     button {
-        border: 2px red solid;
         @include font-size(26px);
         position: absolute;
         top: 500px;

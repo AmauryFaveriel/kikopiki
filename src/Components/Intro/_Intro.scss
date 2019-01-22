@@ -1,8 +1,7 @@
 .Intro {
-    border: 5px #777 solid;
     background: #4110c2;
     width: 500px;
-    height: calc(100vh - 10px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     // justify-content: space-around;
@@ -67,11 +66,11 @@
 .overlay {
     content: '';
     background: rgba(0,0,0,0.75);
-    width: calc(100% - 510px);
+    width: calc(100% - 500px);
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 510px;
+    left: 500px;
     &--hidden {
         display: none;
     }
