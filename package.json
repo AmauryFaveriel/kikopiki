@@ -7,6 +7,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
+    "react-scroll-horizontal": "^1.6.2",
     "sass-loader": "^7.1.0"
   },
   "scripts": {
