@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import data from '../../data'
-
-import Article from '../Article/Article';
 import Header from '../Header/Header.js';
 import Intro from '../Intro/Intro'
 import Paintings from '../Paintings/Paintings';
+import Article from '../Article/Article';
 import Menu from '../Menu/Menu';
-import Conclusion from '../Conclusion/Conclusion'
+import Conclusion from '../Conclusion/Conclusion';
 
 class App extends Component {
     constructor(props) {
@@ -31,59 +30,49 @@ class App extends Component {
             conclusionStyleHidden: 'Conclusion Conclusion--hidden',
             index: 0,
             checkedPaintings: []
-        }
-    }
+        };
+    };
     UNSAFE_componentWillMount = () => {
         if (localStorage.getItem('checkedPaintings')) this.setState({checkedPaintings: JSON.parse(localStorage.getItem('checkedPaintings'))})
         else localStorage.setItem('checkedPaintings', JSON.stringify(this.state.checkedPaintings))
-    }
-    hideIntro = () => {
-        this.setState({
-            introHidden: this.state.introHidden ? false : true,
-            appHidden: this.state.appHidden ? false : true,
-        })
-        // setTimeout(() => {
-        //     setInterval(() => {
-        //         document.querySelector('.Paintings').scrollBy(2, 0)
-        //     }, 16)
-        // }, 2000)
     };
+    hideIntro = () => this.setState({
+        introHidden: this.state.introHidden ? false : true,
+        appHidden: this.state.appHidden ? false : true,
+    });
+    hideArticle = () => this.setState({
+        articleHidden: false,
+        menuHidden: false
+    });
     showArticle = (i) => {
-        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i)
-        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
+        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i);
+        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings));
         this.setState({
             articleHidden: true,
             menuHidden: true,
             index: i
-        })
-        return i 
-    }
-    hideArticle = () => {
-        this.setState({
-            articleHidden: false,
-            menuHidden: false
-        }) 
-    }
+        });
+        return i;
+    };
     updateArticle = (i) => {
-        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i)
+        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i);
         localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
         this.setState({index: i});
-    }
+    };
     goToConclusion = (e) => {
-        console.log("<ow<")
         e.preventDefault();
         if (this.state.checkedPaintings.length === data.paintings.length) this.setState({conclusionHidden: false});
         else alert(`${data.paintings.length - this.state.checkedPaintings.length}/${data.paintings.length} left !`);
-    }
+    };
     render() {
         return (
-            <div className={!this.state.appHidden ? this.state.appStyleHidden :      this.state.appStyle}>
+            <div className={!this.state.appHidden ? this.state.appStyleHidden : this.state.appStyle}>
                 <Header
                     hideArticle={this.hideArticle}
                 />
                 <Intro
-                    style={this.state.introHidden ? this.state.introStyleHidden :      this.state.introStyle}
-                    overlayStyle={!this.state.introHidden ? this.state.overlayStyle :      this.state.overlayStyleHidden}
+                    style={this.state.introHidden ? this.state.introStyleHidden : this.state.introStyle}
+                    overlayStyle={!this.state.introHidden ? this.state.overlayStyle : this.state.overlayStyleHidden}
                     hideIntro={this.hideIntro}
                 />
                 <Paintings 
@@ -107,7 +96,6 @@ class App extends Component {
                 />
             </div>
         );
-    }
-}
-
+    };
+};
 export default App;
