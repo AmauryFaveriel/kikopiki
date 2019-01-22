@@ -66,7 +66,7 @@ class Article extends Component {
                 that.classList.add(activeClass);
                 // for the first element, disable drag
                 if (i === 0) {
-                    document.querySelector('.Article__imgBoxes__imgBox__resizable').style.width = '250px';
+                    document.querySelector('.Article__imgBoxes__imgBox__resizable').style.width = '333px';
                     this.setState({isDraggable: false});
                 };
                 // and if the text's bottom is above the middle of the window

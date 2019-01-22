@@ -12,9 +12,6 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            style: {
-                border: '10px red solid',
-            },
             appHidden: false,
             appStyle: 'App',
             appStyleHidden: 'App App--overflow',
