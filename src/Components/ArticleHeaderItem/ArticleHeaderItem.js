@@ -8,9 +8,8 @@ class ArticleHeaderItem extends Component {
                 <h3 className="ArticleHeader__list__item__author">{this.props.painting.author}</h3>
                 <span className="ArticleHeader__list__item__date">{this.props.painting.date}</span>
             </li>
-        )
-    }
-}
-
+        );
+    };
+};
 export default ArticleHeaderItem;
 

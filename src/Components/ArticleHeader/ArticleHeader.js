@@ -16,8 +16,7 @@ class ArticleHeader extends Component {
                     />
                 </ul>
             </header>
-        )
-    }
-}
-
+        );
+    };
+};
 export default ArticleHeader;
