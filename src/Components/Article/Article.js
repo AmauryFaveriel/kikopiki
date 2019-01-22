@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import data from './data';
+import data from '../../data';
 
-import ArticleHeader from './ArticleHeader';
-import ArticleZooms from './ArticleZooms';
-import ArticleOthers from './ArticleOthers';
-import TwoPaitings from './TwoPaintings';
+import ArticleHeader from '../ArticleHeader/ArticleHeader';
+import ArticleZooms from '../ArticleZooms/ArticleZooms';
+import ArticleOthers from '../ArticleOthers/ArticleOthers';
+import TwoPaitings from '../TwoPaintings/TwoPaintings';
 
 class Article extends Component {
     constructor(props) {
@@ -65,7 +65,10 @@ class Article extends Component {
                 // add the focus border
                 that.classList.add(activeClass);
                 // for the first element, disable drag
-                if (i === 0) this.setState({isDraggable: false});
+                if (i === 0) {
+                    document.querySelector('.Article__imgBoxes__imgBox__resizable').style.width = '250px';
+                    this.setState({isDraggable: false});
+                };
                 // and if the text's bottom is above the middle of the window
                 if (textBottom <= winCenterHeight) {
                     // remove the focus border

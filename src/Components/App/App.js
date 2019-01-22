@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import data from '../../data'
 
-import Article from './Article';
-import Header from './Header.js';
-import Intro from './Intro'
-import Paintings from './Paintings';
-import Menu from './Menu';
-import Conclusion from './Conclusion'
+import Article from '../Article/Article';
+import Header from '../Header/Header.js';
+import Intro from '../Intro/Intro'
+import Paintings from '../Paintings/Paintings';
+import Menu from '../Menu/Menu';
+import Conclusion from '../Conclusion/Conclusion'
 
 class App extends Component {
     constructor(props) {
@@ -28,6 +29,9 @@ class App extends Component {
             menuHidden: false,
             menuStyle: 'Menu',
             menuStyleHidden: 'Menu Menu--hidden',
+            conclusionHidden: true,
+            conclusionStyle: 'Conclusion',
+            conclusionStyleHidden: 'Conclusion Conclusion--hidden',
             index: 0,
             checkedPaintings: []
         }
@@ -68,6 +72,12 @@ class App extends Component {
         localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
         this.setState({index: i});
     }
+    goToConclusion = (e) => {
+        console.log("<ow<")
+        e.preventDefault();
+        if (this.state.checkedPaintings.length === data.paintings.length) this.setState({conclusionHidden: false});
+        else alert(`${data.paintings.length - this.state.checkedPaintings.length}/${data.paintings.length} left !`);
+    }
     render() {
         return (
             <div className={!this.state.appHidden ? this.state.appStyleHidden :      this.state.appStyle}>
@@ -92,8 +102,12 @@ class App extends Component {
                     theIndex={this.state.index}
                     updateArticle={(i) => this.updateArticle(i)}
                     checkedPaintings={this.state.checkedPaintings}
+                    click={this.goToConclusion}
                 />
-                <Conclusion/>
+                <Conclusion 
+                    style={this.state.conclusionHidden ? this.state.conclusionStyleHidden : this.state.conclusionStyle}
+                    click={() => this.setState({conclusionHidden: true})}
+                />
             </div>
         );
     }

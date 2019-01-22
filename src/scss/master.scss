@@ -14,15 +14,15 @@
 // IMPORT COMPONENT FILES
 // ==============================================
 
-@import './Components/App';
-@import './Components/Article';
-@import './Components/ArticleHeader';
-@import './Components/Footer';
-@import './Components/Header';
-@import './Components/Intro';
-@import './Components/Menu';
-@import './Components/OtherPaintings';
-@import './Components/Painting';
-@import './Components/Paintings';
-
+@import '../Components/App/App';
+@import '../Components/Article/Article';
+@import '../Components/ArticleHeader/ArticleHeader';
+@import '../Components/Conclusion/Conclusion';
+@import '../Components/Footer/Footer';
+@import '../Components/Header/Header';
+@import '../Components/Intro/Intro';
+@import '../Components/Menu/Menu';
+@import '../Components/ArticleOthers/OtherPaintings';
+@import '../Components/Painting/Painting';
+@import '../Components/Paintings/Paintings';
 
