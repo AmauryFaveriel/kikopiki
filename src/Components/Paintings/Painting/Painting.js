@@ -9,13 +9,14 @@ class Painting extends Component {
     render = () => {
         return (
             <article className='Painting'>
-                <h2>{this.props.author}</h2>
-                <p>{this.props.desc}</p>
-                <img src={this.props.main_painting} alt={this.props.author}/>
+                <h2>{this.props.x.title}</h2>
+                <h3>{this.props.x.inspired_painting.author}</h3>
+                <p>{this.props.x.inspired_painting.desc}</p>
+                <img src={this.props.x.main_painting.visual} alt={this.props.x.author}/>
                 <button onClick={() => {
                     this.props.showArticle(this.props.index)
                 }}>{data.cta}</button>
-                <img className="Painting__checked" alt="checked icon" src={this.props.visitedPaintings.includes(this.props.index) ? checked : unchecked}/>
+                <img className="visitedIcon" alt="checked icon" src={this.props.visitedPaintings.includes(this.props.index) ? checked : unchecked}/>
             </article>
         )
     }

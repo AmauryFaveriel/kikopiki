@@ -1,9 +1,37 @@
 body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
   scroll-behavior: smooth;
+  letter-spacing: -0.7px;
 }
 .hidden {
   display: none;
+}
+.visitedIcon {
+  width: 25px !important;
+  height: 25px !important;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  &--bigPaintings {
+    &:before {
+      content: ''
+    }
+  }
+}
+
+.scrollFocus {
+  @include font-size(18px);
+  line-height: 40px;
+  text-align: justify;
+  margin: 0 0 50px;
+  padding-left: 10px;
+  border-left: 5px #F1F1F1 solid;
+  border-radius: 5px;
+  @extend %mainTransition;
+  &--active {
+    border-left: 5px darkorchid solid;
+  }
 }
 ::-webkit-scrollbar {
   width: 10px;
