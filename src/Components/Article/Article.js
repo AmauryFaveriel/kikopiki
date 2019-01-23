@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import data from '../../data';
 
-import ArticleHeader from '../ArticleHeader/ArticleHeader';
-import ArticleZooms from '../ArticleZooms/ArticleZooms';
-import ArticleOthers from '../ArticleOthers/ArticleOthers';
-import TwoPaitings from '../TwoPaintings/TwoPaintings';
+import ArticleHeader from './ArticleContent/ArticleHeader/ArticleHeader';
+import ArticleZooms from './ArticleContent/ArticleZooms/ArticleZooms';
+import ArticleOthers from './ArticleContent/ArticleOthers/ArticleOthers';
+import DraggablePaintings from './DraggablePaintings/DraggablePaintings';
 
 class Article extends Component {
     constructor(props) {
         super(props);
         this.state = {
             painting: data.paintings[this.props.index],
-            isTwoPaintingsHidden: false,
-            TwoPaintingsStyle: 'TwoPaintings',
-            TwoPaintingsHiddenStyle: 'TwoPaintings hidden',
+            isDraggablePaintingsHidden: false,
+            DraggablePaintingsStyle: 'DraggablePaintings',
+            DraggablePaintingsHiddenStyle: 'DraggablePaintings hidden',
             isDraggable: true,
             resizerStyle: 'Article__imgBoxes__imgBox__resizable__resizer',
             resizerHiddenStyle: 'Article__imgBoxes__imgBox__resizable__resizer--hidden',
@@ -50,10 +50,10 @@ class Article extends Component {
             // if the text's top is above the middle of the window
             if (textTop <= winCenterHeight) {
                 if (i >= 3) this.setState({
-                    isTwoPaintingsHidden: true,
+                    isDraggablePaintingsHidden: true,
                     otherIndex: (i - this.state.painting.zooms.length)
                 });
-                else this.setState({isTwoPaintingsHidden: false});
+                else this.setState({isDraggablePaintingsHidden: false});
                 this.setFocus(i);
                 // add the focus border
                 that.classList.add(activeClass);
@@ -107,8 +107,8 @@ class Article extends Component {
     render = () => {
         return (
             <article className={this.props.style}>
-                <TwoPaitings
-                    theStyle={this.state.isTwoPaintingsHidden ? this.state.TwoPaintingsHiddenStyle : this.state.TwoPaintingsStyle}
+                <DraggablePaintings
+                    theStyle={this.state.isDraggablePaintingsHidden ? this.state.DraggablePaintingsHiddenStyle : this.state.DraggablePaintingsStyle}
                     painting={this.state.painting}
                     style={this.state.isDraggable ? this.state.resizerStyle : this.state.resizerHiddenStyle}
                     mainStyle={this.state.mainZoomIn}
