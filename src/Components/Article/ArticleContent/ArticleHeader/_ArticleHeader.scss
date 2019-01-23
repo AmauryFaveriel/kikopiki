@@ -17,50 +17,6 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        &__item {
-            width: calc(50% - 50px);
-            margin: 25px;
-            &__desc {
-              text-align: left;
-              width: 221px;
-              height: 45px;
-              font-family: Avenir;
-              font-size: 16px;
-              font-weight: 500;
-              font-style: normal;
-              font-stretch: normal;
-              line-height: normal;
-              letter-spacing: -0.7px;
-              color: #979797;
-            }
-            &__author {
-              text-align: left;
-              width: 221px;
-              height: 20px;
-              font-family: Avenir;
-              font-size: 18px;
-              font-weight: 900;
-              font-style: normal;
-              font-stretch: normal;
-              line-height: normal;
-              letter-spacing: -0.7px;
-              color: #4110c2;
-            }
-            &__date {
-              margin-top: 3%;
-              display: flex;
-              justify-content: left;
-              width: 50px;
-              height: 35px;
-              font-family: Avenir;
-              font-size: 16px;
-              font-weight: 500;
-              font-style: oblique;
-              font-stretch: normal;
-              line-height: normal;
-              letter-spacing: -0.8px;
-              color: #000000;
-            }
-        }
+        
     }
 }

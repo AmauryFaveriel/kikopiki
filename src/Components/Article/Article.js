@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import data from '../../data';
 
-import ArticleHeader from './ArticleContent/ArticleHeader/ArticleHeader';
-import ArticleZooms from './ArticleContent/ArticleZooms/ArticleZooms';
-import ArticleOthers from './ArticleContent/ArticleOthers/ArticleOthers';
 import DraggablePaintings from './DraggablePaintings/DraggablePaintings';
+import ArticleContent from './ArticleContent/ArticleContent'
 
 class Article extends Component {
     constructor(props) {
@@ -15,8 +13,8 @@ class Article extends Component {
             DraggablePaintingsStyle: 'DraggablePaintings',
             DraggablePaintingsHiddenStyle: 'DraggablePaintings hidden',
             isDraggable: true,
-            resizerStyle: 'Article__imgBoxes__imgBox__resizable__resizer',
-            resizerHiddenStyle: 'Article__imgBoxes__imgBox__resizable__resizer--hidden',
+            resizerStyle: 'DraggablePaintings__imgBox__resizable__resizer',
+            resizerHiddenStyle: 'DraggablePaintings__imgBox__resizable__resizer--hidden',
             mainZoomIn: {
                 transformOrigin: '0 0',
                 transform: 'scale(1)'
@@ -36,9 +34,9 @@ class Article extends Component {
         // recove the center height of the window
         const winCenterHeight = window.innerHeight / 2;
         // recove all the texts
-        const DOMzoomsTexts = document.querySelectorAll('.Article__zooms__text');
+        const DOMzoomsTexts = document.querySelectorAll('.scrollFocus');
         // declare the focus css class
-        const activeClass = 'Article__zooms__text--active';
+        const activeClass = 'scrollFocus--active';
         // for every text
         for (let i = 0; i < DOMzoomsTexts.length; i++) {
             
@@ -59,7 +57,7 @@ class Article extends Component {
                 that.classList.add(activeClass);
                 // for the first element, disable drag
                 if (i === 0) {
-                    document.querySelector('.Article__imgBoxes__imgBox__resizable').style.width = '333px';
+                    document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '333px';
                     this.setState({isDraggable: false});
                 };
                 // and if the text's bottom is above the middle of the window, remove the focus border
@@ -115,21 +113,10 @@ class Article extends Component {
                     inspiredStyle={this.state.inspiredZoomIn}
                     otherIndex={this.state.otherIndex}
                 />
-                <article 
-                    className="Article__content"
-                    onScroll={this.focusBorder}
-                >
-                    <ArticleHeader
-                        painting={this.state.painting}
-                    />
-                    <h3 className="Article__intro">{this.state.painting.intro}</h3>
-                    <ArticleZooms
-                        painting={this.state.painting}
-                    />
-                    <ArticleOthers
-                        painting={this.state.painting}
-                    />
-                </article>
+                <ArticleContent
+                    painting={this.state.painting}
+                    onscroll={this.focusBorder}
+                />
             </article>
         );
     };
