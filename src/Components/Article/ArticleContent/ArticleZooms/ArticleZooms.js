@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 class ArticleZooms extends Component {
     render = () => {
         return (
-            <div className="Article__zooms">
+            <div className="ArticleZooms">
                 {this.props.painting.zooms.map((x, i) => <p 
-                    className="Article__zooms__text"
+                    className="ArticleZooms__text scrollFocus"
                     key={i}>{x.desc}
                 </p>)}
             </div>

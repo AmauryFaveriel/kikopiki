@@ -16,13 +16,18 @@
 
 @import '../Components/App/App';
 @import '../Components/Article/Article';
-@import '../Components/ArticleHeader/ArticleHeader';
+@import '../Components/Article/ArticleContent/ArticleContent';
+@import '../Components/Article/ArticleContent/ArticleHeader/ArticleHeader';
+@import '../Components/Article/ArticleContent/ArticleHeader/ArticleHeaderItem/ArticleHeaderItem';
+@import '../Components/Article/ArticleContent/ArticleOthers/ArticleOthers';
+@import '../Components/Article/ArticleContent/ArticleZooms/ArticleZooms';
+@import '../Components/Article/DraggablePaintings/DraggablePaintings';
 @import '../Components/Conclusion/Conclusion';
-@import '../Components/Footer/Footer';
 @import '../Components/Header/Header';
 @import '../Components/Intro/Intro';
 @import '../Components/Menu/Menu';
-@import '../Components/ArticleOthers/OtherPaintings';
-@import '../Components/Painting/Painting';
+@import '../Components/Menu/LittlePaintings/LittlePaintings';
+@import '../Components/Menu/LittlePaintings/LittlePainting/LittlePainting';
 @import '../Components/Paintings/Paintings';
-
+@import '../Components/Paintings/Arrow/Arrow';
+@import '../Components/Paintings/Painting/Painting';

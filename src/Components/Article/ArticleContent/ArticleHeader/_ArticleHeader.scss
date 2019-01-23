@@ -1,0 +1,22 @@
+.ArticleHeader {
+    margin-bottom: 100px;
+    &__title {
+        margin-top: 5%;
+        margin-bottom: 3%;
+        font-size: 50px;
+        width: 400px;
+    }
+    &__line{
+      background-color: #979797;
+      width: 2px;
+      height: 95px;
+      margin-right: 10%;
+    }
+    &__list {
+        margin-left: 7%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import data from '../../data';
+import data from '../../../data';
 
-import checked from "../../assets/imgs/checked.svg"
-import unchecked from "../../assets/imgs/unchecked.svg"
+import checked from "../../../assets/imgs/checked.svg"
+import unchecked from "../../../assets/imgs/unchecked.svg"
 
 class Painting extends Component {
     
@@ -15,7 +15,7 @@ class Painting extends Component {
                 <button onClick={() => {
                     this.props.showArticle(this.props.index)
                 }}>{data.cta}</button>
-                <img className="Painting__checked" alt="checked icon" src={this.props.checkedPaintings.includes(this.props.index) ? checked : unchecked}/>
+                <img className="Painting__checked" alt="checked icon" src={this.props.visitedPaintings.includes(this.props.index) ? checked : unchecked}/>
             </article>
         )
     }
