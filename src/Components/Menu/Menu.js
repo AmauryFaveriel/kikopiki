@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LittlePaiting from '../LittlePaintings/LittlePainting';
+import LittlePaiting from './LittlePainting/LittlePainting';
 import logo from '../../assets/imgs/logo.svg'
 import data from '../../data';
 
