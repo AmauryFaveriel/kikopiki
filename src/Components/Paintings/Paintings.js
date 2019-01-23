@@ -20,18 +20,28 @@ class Paintings extends Component {
         }
     }
     componentDidMount = () => {
-        // document.onmousemove = () =>{
-        //     clearTimeout(timeout);
-        //     const timeout = setTimeout(() => {
-        //         console.log("move your mouse");
-        //     }, 500);
-        // }
+        
 
-        setTimeout(() => {
-            setInterval(() => {
-                document.querySelector('.Paintings').scrollBy(2, 0)
-            }, 16)
-        }, 2000)
+        // setTimeout(() => {
+        //     let isMouseMoving = false;
+        //     if (!isMouseMoving) {
+        //         var autoScroll = setInterval(() => {
+        //             document.querySelector('.App').scrollBy(2, 0);
+                    
+        //         }, 16)
+        //         document.onmousemove = () => {
+        //             isMouseMoving = true;
+        //             clearInterval(autoScroll)
+        //             clearTimeout(timeout);
+        //             timeout = setTimeout(() => setInterval(() => {
+        //                 document.querySelector('.App').scrollBy(2, 0);
+                        
+        //             }, 16), 3000)
+        //         }
+        //     }
+        // }, 5000)
+        // var timeout;
+
     }
     
     updateStyle = () => {
@@ -40,41 +50,18 @@ class Paintings extends Component {
         }
     }
     scrollLeft = () => {
-        let scrollLeftID = scrollLeftID = setInterval(() => {
-            document.querySelector('.App').scrollBy(-3, 0)
-            console.log('mousedown-l');
-            if (!this.state.isScrollingLeft) {
-                console.log('mouseup-l');
-                clearInterval(scrollLeftID);
-            }
-        }, 8)
-            
+        const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8) 
     }
     scrollRight = () => {
-        let scrollRightID = scrollRightID = setInterval(() => {
-            document.querySelector('.App').scrollBy(3, 0)
-            console.log('mousedown-r');
-            if (!this.state.isScrollingRight) {
-                console.log('mouseup-r');
-                clearInterval(scrollRightID);
-            }
-        }, 8)
+        const scrollRightID = setInterval(() => this.state.isScrollingRight ? document.querySelector('.App').scrollBy(2, 0) : clearInterval(scrollRightID), 8)
     }
     render = () => {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
                 <span 
                     className="arrow arrow--left" 
-                    onMouseDown={() => {
-                        this.setState({isScrollingLeft: true})
-                        this.scrollLeft()
-                        
-                    }}
-                    onMouseUp={() => {
-                        this.setState({isScrollingLeft: false})
-                        this.scrollLeft()
-              
-                    }}
+                    onMouseDown={() => this.setState({isScrollingLeft: true}, this.scrollLeft())}
+                    onMouseUp={() => this.setState({isScrollingLeft: false}, this.scrollLeft())}
                     >&#60;</span>
                 {/* <HorizontalScroll 
                     pageLock={true}
@@ -93,14 +80,8 @@ class Paintings extends Component {
                 {/* </HorizontalScroll> */}
                 <span 
                     className="arrow arrow--right" 
-                    onMouseDown={() => {
-                        this.setState({isScrollingRight: true}, this.scrollRight())
-                        
-                    }}
-                    onMouseUp={() => {
-                        this.setState({isScrollingRight: false}, this.scrollRight())
-              
-                    }}
+                    onMouseDown={() => this.setState({isScrollingRight: true}, this.scrollRight())}
+                    onMouseUp={() => this.setState({isScrollingRight: false}, this.scrollRight())}
                 >&#62;</span>
             </section>
         )
