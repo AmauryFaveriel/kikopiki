@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import data from '../../data';
-import Painting from '../Painting/Painting'
+import Painting from './Painting/Painting'
 import HorizontalScroll from 'react-scroll-horizontal'
 
 class Paintings extends Component {
