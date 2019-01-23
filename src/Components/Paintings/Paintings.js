@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../../data';
 import Painting from './Painting/Painting'
+import Arrow from './Arrow/Arrow'
 import HorizontalScroll from 'react-scroll-horizontal'
 
 class Paintings extends Component {
@@ -49,20 +50,20 @@ class Paintings extends Component {
             left: '-200px'
         }
     }
-    scrollLeft = () => {
-        const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8) 
-    }
-    scrollRight = () => {
-        const scrollRightID = setInterval(() => this.state.isScrollingRight ? document.querySelector('.App').scrollBy(2, 0) : clearInterval(scrollRightID), 8)
-    }
+    // scrollLeft = () => {
+    //     const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8) 
+    // }
+    scrollLeft = (bool) => this.setState({isScrollingLeft: bool}, () => {const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8)});
+    scrollRight = (bool) => this.setState({isScrollingRight: bool },() => {const scrollRightID = setInterval(() => this.state.isScrollingRight ? document.querySelector('.App').scrollBy(2, 0) : clearInterval(scrollRightID), 8)});
     render = () => {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
-                <span 
-                    className="arrow arrow--left" 
-                    onMouseDown={() => this.setState({isScrollingLeft: true}, this.scrollLeft())}
-                    onMouseUp={() => this.setState({isScrollingLeft: false}, this.scrollLeft())}
-                    >&#60;</span>
+                
+                <Arrow
+                    isLeft={true}
+                    mousedown={() => this.scrollLeft(true)}
+                    mouseup={() => this.scrollLeft(false)}
+                />
                 {/* <HorizontalScroll 
                     pageLock={true}
                     reverseScroll={true}
@@ -78,11 +79,11 @@ class Paintings extends Component {
                         checkedPaintings={this.props.checkedPaintings}
                     />)}
                 {/* </HorizontalScroll> */}
-                <span 
-                    className="arrow arrow--right" 
-                    onMouseDown={() => this.setState({isScrollingRight: true}, this.scrollRight())}
-                    onMouseUp={() => this.setState({isScrollingRight: false}, this.scrollRight())}
-                >&#62;</span>
+                <Arrow
+                    isLeft={false}
+                    mousedown={() => this.scrollRight(true)}
+                    mouseup={() => this.scrollRight(false)}
+                />
             </section>
         )
     }
