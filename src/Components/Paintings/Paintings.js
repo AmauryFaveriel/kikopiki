@@ -50,15 +50,11 @@ class Paintings extends Component {
             left: '-200px'
         }
     }
-    // scrollLeft = () => {
-    //     const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8) 
-    // }
     scrollLeft = (bool) => this.setState({isScrollingLeft: bool}, () => {const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8)});
     scrollRight = (bool) => this.setState({isScrollingRight: bool },() => {const scrollRightID = setInterval(() => this.state.isScrollingRight ? document.querySelector('.App').scrollBy(2, 0) : clearInterval(scrollRightID), 8)});
     render = () => {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
-                
                 <Arrow
                     isLeft={true}
                     mousedown={() => this.scrollLeft(true)}
@@ -76,7 +72,7 @@ class Paintings extends Component {
                         key={i}
                         index={i}
                         showArticle={(i) => this.props.showArticle(i)}
-                        checkedPaintings={this.props.checkedPaintings}
+                        visitedPaintings={this.props.visitedPaintings}
                     />)}
                 {/* </HorizontalScroll> */}
                 <Arrow

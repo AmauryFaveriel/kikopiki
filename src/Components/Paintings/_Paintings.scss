@@ -6,19 +6,3 @@
     width: auto;
     height: 100vh;
 };
-
-.arrow {
-    font-size: 50px;
-    color: red;
-    position: fixed;
-    top: 50%;
-    transform: translate(0, -50%);
-    z-index: 1;
-    cursor: pointer;
-    &--left {
-        left: 25px;
-    }
-    &--right {
-        right: 25px;
-    }
-}
