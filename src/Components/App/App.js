@@ -55,7 +55,11 @@ class App extends Component {
         return i;
     };
     updateArticle = (i) => {
-        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i);
+        if (!this.state.checkedPaintings.includes(i)) {
+            this.state.checkedPaintings.push(i);
+        }
+        document.querySelector('.Article__content').scrollTo({top: 0, behavior: 'smooth'});
+        console.log('wew')
         localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
         this.setState({index: i});
     };

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class ArticleOthers extends Component {
     render = () => {
         return (

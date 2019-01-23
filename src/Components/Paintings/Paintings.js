@@ -14,22 +14,34 @@ class Paintings extends Component {
                 width: 'auto', 
                 overflow: 'scroll', 
                 position: 'initial'
-            }
+            },
+            isScrollingLeft: false,
+            isScrollingRight: false
         }
     }
     componentDidMount = () => {
-        // document.onmousemove = () =>{
-        //     clearTimeout(timeout);
-        //     const timeout = setTimeout(() => {
-        //         console.log("move your mouse");
-        //     }, 500);
-        // }
+        
 
-        setTimeout(() => {
-            setInterval(() => {
-                document.querySelector('.Paintings').scrollBy(2, 0)
-            }, 16)
-        }, 2000)
+        // setTimeout(() => {
+        //     let isMouseMoving = false;
+        //     if (!isMouseMoving) {
+        //         var autoScroll = setInterval(() => {
+        //             document.querySelector('.App').scrollBy(2, 0);
+                    
+        //         }, 16)
+        //         document.onmousemove = () => {
+        //             isMouseMoving = true;
+        //             clearInterval(autoScroll)
+        //             clearTimeout(timeout);
+        //             timeout = setTimeout(() => setInterval(() => {
+        //                 document.querySelector('.App').scrollBy(2, 0);
+                        
+        //             }, 16), 3000)
+        //         }
+        //     }
+        // }, 5000)
+        // var timeout;
+
     }
     
     updateStyle = () => {
@@ -37,14 +49,25 @@ class Paintings extends Component {
             left: '-200px'
         }
     }
+    scrollLeft = () => {
+        const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8) 
+    }
+    scrollRight = () => {
+        const scrollRightID = setInterval(() => this.state.isScrollingRight ? document.querySelector('.App').scrollBy(2, 0) : clearInterval(scrollRightID), 8)
+    }
     render = () => {
         return (
             <section className='Paintings' style={{color: this.updateStyle()}}>
-                <HorizontalScroll 
+                <span 
+                    className="arrow arrow--left" 
+                    onMouseDown={() => this.setState({isScrollingLeft: true}, this.scrollLeft())}
+                    onMouseUp={() => this.setState({isScrollingLeft: false}, this.scrollLeft())}
+                    >&#60;</span>
+                {/* <HorizontalScroll 
                     pageLock={true}
                     reverseScroll={true}
                     style={this.state.HorizontalScrollStyle}
-                >
+                > */}
                     {data.paintings.map((x, i) => <Painting 
                         author={x.inspired_painting.author}
                         desc={x.inspired_painting.desc}
@@ -54,7 +77,12 @@ class Paintings extends Component {
                         showArticle={(i) => this.props.showArticle(i)}
                         checkedPaintings={this.props.checkedPaintings}
                     />)}
-                </HorizontalScroll>
+                {/* </HorizontalScroll> */}
+                <span 
+                    className="arrow arrow--right" 
+                    onMouseDown={() => this.setState({isScrollingRight: true}, this.scrollRight())}
+                    onMouseUp={() => this.setState({isScrollingRight: false}, this.scrollRight())}
+                >&#62;</span>
             </section>
         )
     }
