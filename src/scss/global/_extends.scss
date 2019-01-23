@@ -11,3 +11,6 @@
     left: 50%;
     @include transform('-50%, -50%');
 }
+%mainTransition {
+    transition: all 0.2s ease;
+}

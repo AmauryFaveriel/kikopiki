@@ -15,7 +15,7 @@ class ArticleContent extends Component {
                 <ArticleHeader
                     painting={this.props.painting}
                 />
-                <h3 className="Article__intro">{this.props.painting.intro}</h3>
+                <h3 className="ArticleContent__intro">{this.props.painting.intro}</h3>
                 <ArticleZooms
                     painting={this.props.painting}
                 />

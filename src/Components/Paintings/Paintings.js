@@ -66,9 +66,7 @@ class Paintings extends Component {
                     style={this.state.HorizontalScrollStyle}
                 > */}
                     {data.paintings.map((x, i) => <Painting 
-                        author={x.inspired_painting.author}
-                        desc={x.inspired_painting.desc}
-                        main_painting={x.inspired_painting.visual}
+                        x={x}
                         key={i}
                         index={i}
                         showArticle={(i) => this.props.showArticle(i)}
