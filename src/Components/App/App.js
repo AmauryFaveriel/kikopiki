@@ -29,24 +29,24 @@ class App extends Component {
             conclusionStyle: 'Conclusion',
             conclusionStyleHidden: 'Conclusion Conclusion--hidden',
             index: 0,
-            checkedPaintings: []
+            visitedPaintings: []
         };
     };
     UNSAFE_componentWillMount = () => {
-        if (localStorage.getItem('checkedPaintings')) this.setState({checkedPaintings: JSON.parse(localStorage.getItem('checkedPaintings'))})
-        else localStorage.setItem('checkedPaintings', JSON.stringify(this.state.checkedPaintings))
+        if (localStorage.getItem('visitedPaintings')) this.setState({visitedPaintings: JSON.parse(localStorage.getItem('visitedPaintings'))})
+        else localStorage.setItem('visitedPaintings', JSON.stringify(this.state.visitedPaintings))
     };
     hideIntro = () => this.setState({
-        introHidden: this.state.introHidden ? false : true,
-        appHidden: this.state.appHidden ? false : true,
+        introHidden: !this.state.introHidden,
+        appHidden: !this.state.appHidden
     });
     hideArticle = () => this.setState({
         articleHidden: false,
         menuHidden: false
     });
     showArticle = (i) => {
-        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i);
-        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings));
+        if (!this.state.visitedPaintings.includes(i)) this.state.visitedPaintings.push(i);
+        localStorage.setItem('visitedPaintings' , JSON.stringify(this.state.visitedPaintings));
         this.setState({
             articleHidden: true,
             menuHidden: true,
@@ -55,14 +55,18 @@ class App extends Component {
         return i;
     };
     updateArticle = (i) => {
-        if (!this.state.checkedPaintings.includes(i)) this.state.checkedPaintings.push(i);
-        localStorage.setItem('checkedPaintings' , JSON.stringify(this.state.checkedPaintings))
+        if (!this.state.visitedPaintings.includes(i)) {
+            this.state.visitedPaintings.push(i);
+        }
+        document.querySelector('.ArticleContent').scrollTo({top: 0, behavior: 'smooth'});
+        console.log('wew')
+        localStorage.setItem('visitedPaintings' , JSON.stringify(this.state.visitedPaintings))
         this.setState({index: i});
     };
     goToConclusion = (e) => {
         e.preventDefault();
-        if (this.state.checkedPaintings.length === data.paintings.length) this.setState({conclusionHidden: false});
-        else alert(`${data.paintings.length - this.state.checkedPaintings.length}/${data.paintings.length} left !`);
+        if (this.state.visitedPaintings.length === data.paintings.length) this.setState({conclusionHidden: false});
+        else alert(`${data.paintings.length - this.state.visitedPaintings.length}/${data.paintings.length} left !`);
     };
     render() {
         return (
@@ -77,7 +81,7 @@ class App extends Component {
                 />
                 <Paintings 
                     showArticle={(i) => this.showArticle(i)}
-                    checkedPaintings={this.state.checkedPaintings}
+                    visitedPaintings={this.state.visitedPaintings}
                 />
                 <Article 
                     style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle}
@@ -85,9 +89,9 @@ class App extends Component {
                 />
                 <Menu
                     style={!this.state.menuHidden ? this.state.menuStyleHidden : this.state.menuStyle}
-                    theIndex={this.state.index}
+                    AppIndex={this.state.index}
                     updateArticle={(i) => this.updateArticle(i)}
-                    checkedPaintings={this.state.checkedPaintings}
+                    visitedPaintings={this.state.visitedPaintings}
                     click={this.goToConclusion}
                 />
                 <Conclusion 

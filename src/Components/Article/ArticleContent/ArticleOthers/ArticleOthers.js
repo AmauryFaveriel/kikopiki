@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+
 class ArticleOthers extends Component {
     render = () => {
         return (
-            <div className="Article__zooms">
+            <div className="ArticleOthers">
                 {this.props.painting.other_paintings.map((x, i) => <p 
-                    className="Article__zooms__text"
+                    className="ArticleOthers__text scrollFocus"
                     key={i}>{x.desc}
                 </p>)}
             </div>

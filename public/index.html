@@ -44,8 +44,8 @@
     <script>
       const makeResizableDiv = () => {
         console.log('go')
-        const DOMimgBox = document.querySelector('.Article__imgBoxes__imgBox__resizable');
-        const DOMresizer = document.querySelector('.Article__imgBoxes__imgBox__resizable__resizer')
+        const DOMimgBox = document.querySelector('.DraggablePaintings__imgBox__resizable');
+        const DOMresizer = document.querySelector('.DraggablePaintings__imgBox__resizable__resizer')
         const minimum_size = 0;
         const maximum_size = 666;
         let width = 333;
@@ -70,7 +70,7 @@
       }
 
       const tick = setInterval(() => {
-        if (document.querySelector('.Article__imgBoxes__imgBox__resizable')) {
+        if (document.querySelector('.DraggablePaintings__imgBox__resizable')) {
           makeResizableDiv();
           clearInterval(tick);
         }
