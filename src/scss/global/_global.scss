@@ -16,10 +16,10 @@ body {
   position: absolute;
   bottom: 25px;
   right: 25px;
-  &--bigPaintings {
-    &:before {
-      content: ''
-    }
+  @extend %mainTransition;
+  &--LittlePaintings {
+    top: -12px;
+    right: -12px;
   }
 }
 
