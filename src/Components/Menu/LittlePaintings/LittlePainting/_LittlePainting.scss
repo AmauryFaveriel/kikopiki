@@ -1,8 +1,14 @@
 .LittlePainting {
     position: relative;
+    cursor: pointer;
+    @extend %mainTransition;
+    &:hover {
+        transform: scale(1.05)
+    }
     img {
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 100px;
         object-fit: cover;
+        margin: 10px;
     }
 }

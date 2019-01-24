@@ -1,12 +1,17 @@
 
 .Arrow {
     font-size: 50px;
-    color: red;
+    color: $lightGrey;
     position: fixed;
     top: 50%;
     transform: translate(0, -50%);
     z-index: 1;
     cursor: pointer;
+    @extend %mainTransition;
+    &:hover {
+        transform: translate(0, -50%) scale(1.1);
+        color: $purple;
+    }
     &--left {
         left: 25px;
     }

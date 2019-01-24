@@ -66,7 +66,7 @@ class App extends Component {
     goToConclusion = (e) => {
         e.preventDefault();
         if (this.state.visitedPaintings.length === data.paintings.length) this.setState({conclusionHidden: false});
-        else alert(`${data.paintings.length - this.state.visitedPaintings.length}/${data.paintings.length} left !`);
+        else this.setState({introHidden: false})
     };
     render() {
         return (
