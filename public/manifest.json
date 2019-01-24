@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kikopiki",
+  "name": "Kikopiki, un web-docummentaire sur les tableaux et leurs similitudes.",
   "icons": [
     {
       "src": "favicon.ico",
