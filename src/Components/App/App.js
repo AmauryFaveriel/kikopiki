@@ -66,7 +66,7 @@ class App extends Component {
     goToConclusion = (e) => {
         e.preventDefault();
         if (this.state.visitedPaintings.length === data.paintings.length) this.setState({conclusionHidden: false});
-        else this.setState({introHidden: false})
+        else this.setState({conclusionHidden: false})
     };
     render() {
         return (
