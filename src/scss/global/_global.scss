@@ -5,7 +5,10 @@ body {
   letter-spacing: -0.7px;
 }
 .hidden {
-  display: none;
+  display: none !important;
+}
+.hiddenX {
+  right: -120px !important;
 }
 .visitedIcon {
   width: 25px !important;
@@ -13,10 +16,10 @@ body {
   position: absolute;
   bottom: 25px;
   right: 25px;
-  &--bigPaintings {
-    &:before {
-      content: ''
-    }
+  @extend %mainTransition;
+  &--LittlePaintings {
+    top: -12px;
+    right: -12px;
   }
 }
 

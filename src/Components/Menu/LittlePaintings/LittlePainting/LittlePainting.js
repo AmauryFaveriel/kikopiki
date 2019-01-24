@@ -15,7 +15,7 @@ class LittlePaiting extends Component {
             <li className={!this.props.isSameIndex ? this.state.style : this.state.hiddenStyle} 
                 onClick={() => this.props.updateArticle(this.props.i)}>
                 <img src={this.props.painting} alt={this.props.title}/>
-                <img className="Painting__checked" alt="checked icon" src={this.props.visitedPaintings.includes(this.props.i) ? checked : unchecked}/>
+                <img className="visitedIcon visitedIcon--LittlePaintings" alt="checked icon" src={this.props.visitedPaintings.includes(this.props.i) ? checked : unchecked}/>
             </li>
         )
     }

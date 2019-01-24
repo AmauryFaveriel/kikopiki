@@ -13,14 +13,17 @@ class Menu extends Component {
     render = () => {
         return (
             <section className={this.props.style}>
-                <img src={logo} alt="logo" className="Menu__logo" onClick={this.hideMenu}/>
-                <nav className="Menu__nav">
+                <div className="Menu__burger" onClick={this.hideMenu}>
+                    <div className="Menu__burger__line"></div>
+                    <div className="Menu__burger__line"></div>
+                    <div className="Menu__burger__line"></div>
+                </div>
+                <nav className={!this.state.isMenuHidden ? 'Menu__nav' : 'Menu__nav hiddenX'}>
                     <LittlePaintings
                         AppIndex={this.props.AppIndex}
                         visitedPaintings={this.props.visitedPaintings}
                         updateArticle={(i) => this.props.updateArticle(i)}
                         click={this.props.click}
-                        isMenuHidden={this.state.isMenuHidden}
                     />
                 </nav>
             </section>

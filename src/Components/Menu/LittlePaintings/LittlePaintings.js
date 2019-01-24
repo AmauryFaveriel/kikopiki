@@ -8,15 +8,15 @@ class LittlePaintings extends Component {
         this.state = {
             LittlePaintingsStyle: 'LittlePaintings',
             LittlePaintingsStyleHidden: 'LittlePaintings hidden',
-            buttonStyle: 'Menu__nav__conclusion',
-            buttonStyleHidden: 'Menu__nav__conclusion hidden',
+            buttonStyle: 'LittlePaintings__button',
+            buttonStyleHidden: 'LittlePaintings__button hidden',
         }
     }
     
     render = () => {
         return (
                 <nav className="Menu__nav">
-                    <ul className={this.props.isMenuHidden ? this.state.LittlePaintingsStyleHidden : this.state.LittlePaintingsStyle}>
+                    <ul className='LittlePaintings'>
                     {data.paintings.map((x, i) =>
                         <LittlePaiting
                             isSameIndex={this.props.AppIndex === i}
@@ -31,9 +31,9 @@ class LittlePaintings extends Component {
                     )}
                     </ul>
                     <button 
-                        className={this.props.isMenuHidden ? this.state.buttonStyleHidden : this.state.buttonStyle}
+                        className='LittlePaintings__button'
                         onClick={this.props.click}
-                    >GO TO CONCLUSION</button>
+                    >Conclusion</button>
                 </nav>
         )
     }
