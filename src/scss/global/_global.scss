@@ -5,7 +5,10 @@ body {
   letter-spacing: -0.7px;
 }
 .hidden {
-  display: none;
+  display: none !important;
+}
+.hiddenX {
+  right: -120px !important;
 }
 .visitedIcon {
   width: 25px !important;
