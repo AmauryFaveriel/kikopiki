@@ -32,7 +32,7 @@
     h2 {
         color: #ffffff;
         margin: 0 15%;
-        @include font-size(55px);
+        @include font-size(60px);
         font-weight: 700;
         position: absolute;
         top: 30%;
@@ -51,7 +51,7 @@
     p {
         color: #ffffff;
         margin: 0 15%;
-        @include font-size(22px);
+        @include font-size(20px);
         font-weight: 400;
         position: absolute;
         top: 55%;
@@ -69,7 +69,7 @@
         border-radius: 6px;
         margin: 0 15%;
         padding: 15px 30px;
-        @include font-size(16px);
+        @include font-size(14px);
         font-weight: 400;
         text-transform: uppercase;
         position: absolute;
