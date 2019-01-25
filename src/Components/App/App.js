@@ -29,6 +29,7 @@ class App extends Component {
             conclusionStyle: 'Conclusion',
             conclusionStyleHidden: 'Conclusion Conclusion--hidden',
             index: 0,
+            otherIndex: 0,
             visitedPaintings: []
         };
     };
@@ -86,6 +87,7 @@ class App extends Component {
                 <Article 
                     style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle}
                     index={this.state.index}
+                    otherIndex={this.state.otherIndex}
                 />
                 <Menu
                     style={!this.state.menuHidden ? this.state.menuStyleHidden : this.state.menuStyle}
