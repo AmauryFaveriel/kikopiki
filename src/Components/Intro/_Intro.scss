@@ -2,20 +2,22 @@
   background: #4110c2;
   width: 500px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  // justify-content: space-around;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 666;
+  margin: 0 auto;
   transition: all 0.5s ease;
   &--hidden {
     left: -505px;
   }
+  &__container {
+    width: 75%;
+    margin: 0 auto;
+  }
   &__title {
-    margin-left: 13.4%;
-    margin-top: 30%;
+    margin-top: 150px;
+    margin-bottom: 43px;
     width: 193px;
     height: 68px;
     font-family: Avenir;
@@ -28,44 +30,23 @@
     color: #ffffff;
   }
   &__desc {
-    text-align: left;
-    width: 75%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 13.4%;
+    margin-bottom: 10%;
+
     font-size: 18px;
     line-height: 30px;
     color: #ffffff;
   }
   &__cta {
-    width: 250px;
     margin-top: 5%;
-    margin-left: 13.4%;
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(0.05, #ffffff),
-      color-stop(1, #ffffff)
-    );
-    background: -moz-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    background: -webkit-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    background: -o-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    background: -ms-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    background: linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
     background-color: #ffffff;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    border-radius: 8px;
-    border: 1px solid #ffffff;
+    border-radius: 6px;
     display: inline-block;
     cursor: pointer;
     color: #000000;
-    font-family: Arial;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 14px 32px;
+    padding: 16px 30px;
     text-decoration: none;
   }
 }

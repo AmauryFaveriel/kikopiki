@@ -1,50 +1,52 @@
 .Painting {
-    width: 500px;
-    position: relative;
-    &:hover {
-        h2, p, button {
-            opacity: 1;
-        }
-    }
-    h2, p, button {
-        opacity: 0;
-        transition: all 0.2s ease;
-    }
-    h2 {
-        color: #ffffff;
-        @include font-size(36px);
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-    p {
-        color: #ffffff;
-        @include font-size(22px);
-        position: absolute;
-        top: 250px;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  &:not(:last-child) {
+    border-right: 2px solid #fff;
+  }
 
-    img {
-        width: 500px;
-        height: 100vh;
-        object-fit: cover;
-    }
+  &:hover {
+    h2,
+    p,
     button {
-        @include font-size(26px);
-        position: absolute;
-        top: 500px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        cursor: pointer;
+      opacity: 1;
     }
-    &__checked {
-        width: 25px !important;
-        height: 25px !important;
-        position: absolute;
-        bottom: 25px;
-        right: 25px;
-    }
+  }
+  img {
+    width: 110%;
+    left: -5%;
+    position: relative;
+  }
+  h2,
+  p,
+  button {
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  h2 {
+    color: #ffffff;
+    @include font-size(36px);
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  p {
+    color: #ffffff;
+    @include font-size(22px);
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  button {
+    border: 2px red solid;
+    @include font-size(26px);
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+  }
 }
