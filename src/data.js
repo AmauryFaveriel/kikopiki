@@ -429,14 +429,17 @@ const data = {
           desc:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?",
           visual: "https://picsum.photos/500/750?image=20"
-        },
-    ],
-    cta: 'Découvrir',
-    conclusion: {
-        title: 'Conclusion',
-        content: 'Here is the conclusion. Special thanks to my computer to make this possible. Fuck it',
-        cta: 'go back to paintings'
+        }
+      ],
+      cta: "Découvrir",
+      conclusion: {
+        title: "Conclusion",
+        content:
+          "Here is the conclusion. Special thanks to my computer to make this possible. Fuck it",
+        cta: "go back to paintings"
+      }
     }
-}
+  ]
+};
 
 export default data;
