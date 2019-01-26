@@ -431,15 +431,15 @@ const data = {
           visual: "https://picsum.photos/500/750?image=20"
         }
       ],
-      cta: "Découvrir",
-      conclusion: {
-        title: "Conclusion",
-        content:
-          "Here is the conclusion. Special thanks to my computer to make this possible. Fuck it",
-        cta: "go back to paintings"
-      }
+      cta: "Découvrir"
     }
   ]
+  // conclusion: {
+  //   title: "Conclusion",
+  //   content:
+  //     "Here is the conclusion. Special thanks to my computer to make this possible. Fuck it",
+  //   cta: "go back to paintings"
+  // }
 };
 
 export default data;
