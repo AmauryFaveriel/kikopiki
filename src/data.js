@@ -16,10 +16,10 @@ const data = {
   intro: {
     title: "Kikopiki",
     intro_1:
-      "Rien ne se perd, rien ne se crée tout se transforme, disait Lavoisier à propos de la matière. Parait-il que dans l'histoire de la peinture, c'est un peu la même chose.",
+      "Rien ne se perd, rien ne se krée tout se transforme, disait Lavoisier à propos de la matière. Parait-il que dans l'histoire de la peinture, c'est un peu la même chose.",
     intro_2:
-      "Découvrez comment les grands noms du XXème siècle se sont appropriés les classiques pour transmettre un tout autre message.",
-    cta: "Choisir une oeuvre"
+      "Découvrez comment les grands noms du XXème siècle se sont appropriés les klassiques pour transmettre un tout autre message.",
+    cta: "Choisir un oeuvre"
   },
   paintings: [
     {
@@ -107,7 +107,7 @@ const data = {
       ]
     },
     {
-      title: "Vegans not allowed ( cc Clara )",
+      title: "Vegans not allowed",
       intro:
         "C’est un tableau particulier dans les oeuvres de Rembrandt, car il s’agit d’une des rares nature morte parmi ses oeuvres. Cette oeuvre a pour portée générale un memento mori, rappelant au spectateur sa proximité avec la mort.",
       main_painting: {
@@ -191,7 +191,7 @@ const data = {
       ]
     },
     {
-      title: "Portrait de femme pensive",
+      title: "Femme pensive",
       intro:
         "En apparence, Ingres n’a rien d’un excentrique : sa peinture est claire, parfaitement maîtrisée les formes sont définies par des contours précis qui cernent les couleurs; rien d’excessif, rien qui ne dépasse. Tout l’opposée de Picasso pourrait-on penser, et pourtant c’est chez lui que l’Espagnol trouve l’une de ses principales sources d’inspirations pour la représentation des femmes.",
       main_painting: {
@@ -275,7 +275,7 @@ const data = {
       ]
     },
     {
-      title: "Je suis une enfant en jupe",
+      title: "Enfant en jupe",
       intro:
         "Francis Bacon est un peintre anglais aussi fameux que le jambon, surtout pour peindre des scènes pleines de sang, de chair, de corps déformés, qui sont ses sujets de prédilection.",
       main_painting: {
@@ -429,17 +429,27 @@ const data = {
           desc:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?",
           visual: "https://picsum.photos/500/750?image=20"
+        },
+        {
+          desc:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?",
+          visual: "https://picsum.photos/500/750?image=21"
+        },
+        {
+          desc:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto nemo voluptatum labore molestiae ducimus vel ut error, eum consequuntur necessitatibus facilis quod a et quaerat harum id ipsum, distinctio accusantium?",
+          visual: "https://picsum.photos/500/750?image=22"
         }
-      ],
-      cta: "Découvrir"
+      ]
     }
-  ]
-  // conclusion: {
-  //   title: "Conclusion",
-  //   content:
-  //     "Here is the conclusion. Special thanks to my computer to make this possible. Fuck it",
-  //   cta: "go back to paintings"
-  // }
+  ],
+  cta: "Découvrir",
+  conclusion: {
+    title: "Conclusion",
+    content:
+      "Here is the conclusion. Special thanks to my computer to make this possible. Fuck it",
+    cta: "go back to paintings"
+  }
 };
 
 export default data;
