@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import data from '../../../data';
 
 import ArticleHeader from './ArticleHeader/ArticleHeader';
 import ArticleZooms from './ArticleZooms/ArticleZooms';

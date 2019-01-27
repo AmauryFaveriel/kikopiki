@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../../assets/imgs/logo.svg'
 import LittlePaintings from './LittlePaintings/LittlePaintings';
 
 class Menu extends Component {
@@ -13,7 +12,10 @@ class Menu extends Component {
     render = () => {
         return (
             <section className={this.props.style}>
-                <div className="Menu__burger" onClick={this.hideMenu}>
+                <div className="Menu__burger" onClick={() => {
+                    this.hideMenu();
+                    // this.props.hideMenu();
+                }}>
                     <div className="Menu__burger__line"></div>
                     <div className="Menu__burger__line"></div>
                     <div className="Menu__burger__line"></div>
