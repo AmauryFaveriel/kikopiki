@@ -1,5 +1,9 @@
 body {
+<<<<<<< HEAD
   font-family: 'Open Sans', sans-serif;
+=======
+  font-family: "Avenir", sans-serif;
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
 
   scroll-behavior: smooth;
   letter-spacing: -0.7px;
@@ -29,7 +33,11 @@ body {
   text-align: justify;
   margin: 0 0 50px;
   padding-left: 10px;
+<<<<<<< HEAD
   border-left: 5px #F1F1F1 solid;
+=======
+  border-left: 5px #f1f1f1 solid;
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
   border-radius: 5px;
   @extend %mainTransition;
   &--active {
@@ -44,7 +52,7 @@ body {
   background: #666;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: $purple
+  background: $purple;
 }
 ::-webkit-scrollbar-track {
   background: #fff;

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import logo from '../../assets/imgs/logo.svg'
+=======
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
 import LittlePaintings from './LittlePaintings/LittlePaintings';
 
 class Menu extends Component {

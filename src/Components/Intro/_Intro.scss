@@ -1,4 +1,5 @@
 .Intro {
+<<<<<<< HEAD
     background: #4110c2;
     width: 500px;
     height: 100vh;
@@ -16,6 +17,24 @@
     &__title{
     margin-left: 13.4%;
     margin-top: 30%;
+=======
+  background: #4110c2;
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: fixed;
+  padding: 150px 40px 100px 68px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: all 0.5s ease;
+  &--hidden {
+    left: -505px;
+  }
+  &__title {
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
     width: 193px;
     height: 68px;
     font-family: Avenir;
@@ -26,52 +45,43 @@
     line-height: 1.36;
     letter-spacing: normal;
     color: #ffffff;
-    }
-    &__desc{
+    margin-bottom: 43px;
+  }
+  &__desc {
     text-align: left;
-    width: 75%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 13.4%;
     font-size: 18px;
     line-height: 30px;
     color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 5%;
     }
-    &__cta{
-      width: 250px;
-      margin-top: 5%;
-      margin-left: 13.4%;
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #ffffff));
-    	background:-moz-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    	background:-webkit-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    	background:-o-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    	background:-ms-linear-gradient(top, #ffffff 5%, #ffffff 100%);
-    	background:linear-gradient(to bottom, #ffffff 5%, #ffffff 100%);
-    	background-color:#ffffff;
-    	-moz-border-radius:8px;
-    	-webkit-border-radius:8px;
-    	border-radius:8px;
-    	border:1px solid #ffffff;
-    	display:inline-block;
-    	cursor:pointer;
-    	color:#000000;
-    	font-family:Arial;
-    	font-size:16px;
-    	font-weight:bold;
-      text-transform: uppercase;
-    	padding:14px 32px;
-    	text-decoration:none;
-    }
+  }
+  &__descContainer {
+    margin-bottom: 100px;
+  }
+  &__cta {
+    width: 250px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    text-decoration: none;
+  }
 }
 .overlay {
-    content: '';
-    background: rgba(0,0,0,0.75);
-    width: calc(100% - 500px);
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 500px;
-    &--hidden {
-        display: none;
-    }
+  content: "";
+  background: rgba(0, 0, 0, 0.75);
+  width: calc(100% - 500px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 500px;
+  &--hidden {
+    display: none;
+  }
 }

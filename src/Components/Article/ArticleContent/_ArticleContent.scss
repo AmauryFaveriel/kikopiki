@@ -1,4 +1,5 @@
 .ArticleContent {
+<<<<<<< HEAD
     background: #ffffff;
     width: calc(100% - 666px - 220px);
     height: calc(100vh - 50vh);
@@ -16,4 +17,22 @@
         margin-bottom: 50px;
     }
     
+=======
+  background: #ffffff;
+  width: calc(100% - 666px - 120px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 666px;
+  overflow: scroll;
+  padding: 80px 50px;
+  padding-bottom: 50vh;
+  &__intro {
+    @include font-size(18px);
+    line-height: 30px;
+    text-align: justify;
+    font-style: italic;
+    margin-bottom: 50px;
+  }
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
 }

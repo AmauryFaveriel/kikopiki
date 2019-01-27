@@ -1,4 +1,5 @@
 .Header {
+<<<<<<< HEAD
     position: fixed;
     top: 40px;
     left: 40px;
@@ -11,5 +12,19 @@
         &:hover {
             transform: rotate(360deg) scale(1.5);
         }
+=======
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 11; // over the intro section
+  img {
+    width: 50px;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transform: rotate(360deg) scale(1.5);
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
     }
+  }
 }

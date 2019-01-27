@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import data from '../../../data';
+=======
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
 
 import ArticleHeader from './ArticleHeader/ArticleHeader';
 import ArticleZooms from './ArticleZooms/ArticleZooms';

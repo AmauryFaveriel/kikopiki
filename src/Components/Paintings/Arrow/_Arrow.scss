@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .Arrow {
     font-size: 50px;
@@ -19,3 +20,29 @@
         right: 25px;
     }
 }
+=======
+.Arrow {
+  font-size: 50px;
+  color: $lightGrey;
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 1;
+  cursor: pointer;
+  @extend %mainTransition;
+  &:hover {
+    transform: translate(0, -50%) scale(1.1);
+    color: $purple;
+  }
+  &--left {
+    left: 25px;
+  }
+  &--right {
+    right: 25px;
+  }
+}
+
+.NotShow {
+  display: none;
+}
+>>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
