@@ -14,7 +14,7 @@ class Menu extends Component {
             <section className={this.props.style}>
                 <div className="Menu__burger" onClick={() => {
                     this.hideMenu();
-                    this.props.hideMenu();
+                    // this.props.hideMenu();
                 }}>
                     <div className="Menu__burger__line"></div>
                     <div className="Menu__burger__line"></div>
