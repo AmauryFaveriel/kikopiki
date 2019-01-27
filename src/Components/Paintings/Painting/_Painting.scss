@@ -1,85 +1,91 @@
 .Painting {
-    width: 500px;
-    position: relative;
+  width: 500px;
+  position: relative;
+  div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 190px 81px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &:before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background: #000;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        @extend %mainTransition;
-    }
-    &:hover {
-        h2, h3, p, button {
-            opacity: 1;
-        }
-        &:before {
-            opacity: 0.5;
-        }
-    }
-    h2, h3, p, button {
-        text-align: left;
-        opacity: 0;
-        @extend %mainTransition;
-    }
-    h2 {
-        color: #ffffff;
-        margin: 0 15%;
-        @include font-size(60px);
-        font-weight: 700;
-        position: absolute;
-        top: 30%;
-        left: 0;
-    }
-    h3 {
-        color: #ffffff;
-        margin: 0 15%;
-        @include font-size(26px);
-        font-weight: 600;
-        font-style: italic;
-        position: absolute;
-        top: 50%;
-        left: 0;
-    }
-    p {
-        color: #ffffff;
-        margin: 0 15%;
-        @include font-size(20px);
-        font-weight: 400;
-        position: absolute;
-        top: 55%;
-        left: 0;
-    }
+    align-items: start;
+    border-right: 2px solid #fff;
+  }
+  h2,
+  h3,
+  p,
+  button {
+    text-align: left;
+    opacity: 0;
+    @extend %mainTransition;
+  }
+  h2 {
+    color: #ffffff;
+    @include font-size(60px);
+    line-height: 68px;
+    font-weight: 700;
+    margin-bottom: 47px;
+  }
+  h3 {
+    color: #ffffff;
+    @include font-size(26px);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  p {
+    color: #ffffff;
+    @include font-size(20px);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
 
-    img {
-        width: 500px;
-        height: 100vh;
-        object-fit: cover;
+  img {
+    width: 500px;
+    height: 100vh;
+    object-fit: cover;
+  }
+  button {
+    color: #ffffff;
+    border: 2px #fff solid;
+    border-radius: 6px;
+    padding: 15px 30px;
+    @include font-size(14px);
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    @extend %mainTransition;
+    &:hover {
+      background: $purple;
+      border: 2px $purple solid;
     }
+  }
+}
+
+.ShowHover {
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    @extend %mainTransition;
+  }
+  &:hover {
+    h2,
+    h3,
+    p,
     button {
-        color: #ffffff;
-        border: 2px #fff solid;
-        border-radius: 6px;
-        margin: 0 15%;
-        padding: 15px 30px;
-        @include font-size(14px);
-        font-weight: 400;
-        text-transform: uppercase;
-        position: absolute;
-        bottom: 25%;
-        left: 0;
-        cursor: pointer;
-        @extend %mainTransition;
-        &:hover {
-            background: $purple;
-            border: 2px $purple solid;
-        }
+      opacity: 1;
     }
+    &:before {
+      opacity: 0.5;
+    }
+  }
 }

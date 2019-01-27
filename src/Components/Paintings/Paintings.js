@@ -1,86 +1,85 @@
-import React, { Component } from 'react';
-import data from '../../data';
-import Painting from './Painting/Painting'
-import Arrow from './Arrow/Arrow'
-import HorizontalScroll from 'react-scroll-horizontal'
+import React, { Component } from "react";
+import get from "lodash/get";
+
+import data from "../../data";
+import Painting from "./Painting/Painting";
+import Arrow from "./Arrow/Arrow";
 
 class Paintings extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            index: "lol",
-            error: '',
-            HorizontalScrollStyle: {
-                height: 'auto', 
-                width: 'auto', 
-                overflow: 'scroll', 
-                position: 'initial'
-            },
-            isScrollingLeft: false,
-            isScrollingRight: false
-        }
-    }
-    componentDidMount = () => {
-        
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: "",
+      HorizontalScrollStyle: {
+        height: "auto",
+        width: "auto",
+        overflow: "scroll",
+        position: "initial"
+      },
+      isScrollingLeft: false,
+      isScrollingRight: false,
+      index: 0
+    };
+    this.paintingsRefs = data.paintings.map(() => React.createRef());
+  }
 
-        // setTimeout(() => {
-        //     let isMouseMoving = false;
-        //     if (!isMouseMoving) {
-        //         var autoScroll = setInterval(() => {
-        //             document.querySelector('.App').scrollBy(2, 0);
-                    
-        //         }, 16)
-        //         document.onmousemove = () => {
-        //             isMouseMoving = true;
-        //             clearInterval(autoScroll)
-        //             clearTimeout(timeout);
-        //             timeout = setTimeout(() => setInterval(() => {
-        //                 document.querySelector('.App').scrollBy(2, 0);
-                        
-        //             }, 16), 3000)
-        //         }
-        //     }
-        // }, 5000)
-        // var timeout;
+  scrollLeft = () => {
+    this.setState({ index: this.state.index - 1 }, () => {
+      const nextPaintingRef = get(this.paintingsRefs, this.state.index);
+      const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
 
-    }
-    
-    updateStyle = () => {
-        return {
-            left: '-200px'
-        }
-    }
-    scrollLeft = (bool) => this.setState({isScrollingLeft: bool}, () => {const scrollLeftID = setInterval(() => this.state.isScrollingLeft ? document.querySelector('.App').scrollBy(-2, 0) : clearInterval(scrollLeftID), 8)});
-    scrollRight = (bool) => this.setState({isScrollingRight: bool },() => {const scrollRightID = setInterval(() => this.state.isScrollingRight ? document.querySelector('.App').scrollBy(2, 0) : clearInterval(scrollRightID), 8)});
-    render = () => {
-        return (
-            <section className='Paintings' style={{color: this.updateStyle()}}>
-                <Arrow
-                    isLeft={true}
-                    mousedown={() => this.scrollLeft(true)}
-                    mouseup={() => this.scrollLeft(false)}
-                />
-                {/* <HorizontalScroll 
-                    pageLock={true}
-                    reverseScroll={true}
-                    style={this.state.HorizontalScrollStyle}
-                > */}
-                    {data.paintings.map((x, i) => <Painting 
-                        x={x}
-                        key={i}
-                        index={i}
-                        showArticle={(i) => this.props.showArticle(i)}
-                        visitedPaintings={this.props.visitedPaintings}
-                    />)}
-                {/* </HorizontalScroll> */}
-                <Arrow
-                    isLeft={false}
-                    mousedown={() => this.scrollRight(true)}
-                    mouseup={() => this.scrollRight(false)}
-                />
-            </section>
-        )
-    }
+      if (goToNextPainting) {
+        goToNextPainting.scrollIntoView({
+          behavior: "smooth",
+          inline: "start"
+        });
+      }
+    });
+  };
+
+  scrollRight = () => {
+    this.setState({ index: this.state.index + 1 }, () => {
+      const nextPaintingRef = get(this.paintingsRefs, this.state.index);
+      const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
+
+      if (goToNextPainting) {
+        goToNextPainting.scrollIntoView({
+          behavior: "smooth",
+          inline: "start"
+        });
+      }
+    });
+  };
+
+  render() {
+    return (
+      <section className="Paintings">
+        <Arrow
+          isLeft={true}
+          goToNextPainting={this.scrollLeft}
+          hideIntro={this.props.hideIntro}
+        />
+
+        {data.paintings.map((x, i) => (
+          <div key={i} ref={this.paintingsRefs[i]}>
+            <Painting
+              x={x}
+              index={i}
+              showHover={this.props.hideIntro}
+              showArticle={i => this.props.showArticle(i)}
+              visitedPaintings={this.props.visitedPaintings}
+            />
+          </div>
+        ))}
+
+        <Arrow
+          isLeft={false}
+          goToNextPainting={this.scrollRight}
+          hideIntro={this.props.hideIntro}
+        />
+      </section>
+    );
+  }
 }
 
 export default Paintings;
