@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import LittlePaintings from './LittlePaintings/LittlePaintings';
+import React, { Component } from "react";
+import LittlePaintings from "./LittlePaintings/LittlePaintings";
 
 class Menu extends Component {
     constructor(props) {

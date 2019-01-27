@@ -1,75 +1,72 @@
 .Menu {
-    width: 120px;
-    height: 100vh;
-    background: #fff;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  width: 120px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  &--hidden {
+    opacity: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__nav {
+    position: relative;
+    height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     right: 0;
-    z-index: 2;
-    overflow: hidden;
-    transition: all 0.2s ease;
-    &--hidden {
+    @extend %mainTransition;
+  }
+  &__burger {
+    width: 120px;
+    height: 120px;
+    background: $purple;
+    position: relative;
+    cursor: pointer;
+    @extend %mainTransition;
+    &:hover {
+      .Menu__burger__line {
         opacity: 0;
-        opacity: 0;
-        pointer-events: none;
-    }
-    &--hiddenX {
-        box-shadow: none;
-    }
-    &__nav {
-        position: relative;
-        height: calc(100vh - 120px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        top: 0;
-        right: 0;
-        @extend %mainTransition;
-    }
-    &__burger {
-        width: 120px;
-        height: 120px;
-        background: $lightGrey;
-        position: relative;
-        cursor: pointer;
-        @extend %mainTransition;
-        &:hover {
-            .Menu__burger__line {
-                opacity: 0;
-                &:first-child {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(45deg);
-                    opacity: 1;
-                }
-                &:last-child {
-                    top: 50%;
-                    transform: translate(-50%, -50%) rotate(-45deg);
-                    opacity: 1;
-                }
-            }
+        &:first-child {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+          opacity: 1;
         }
-        &__line {
-            width: 50px;
-            height: 6px;
-            background: $purple;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 1;
-            @extend %mainTransition;
-            &:first-child {
-                top: 40%;
-            }
-            &:last-child {
-                top: 60%;
-            }
+        &:last-child {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+          opacity: 1;
         }
+      }
     }
+    &__line {
+      width: 40px;
+      height: 3px;
+      background: $lightGrey;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      @extend %mainTransition;
+      &:first-child {
+        top: 40%;
+      }
+      &:last-child {
+        top: 60%;
+      }
+    }
+  }
 }
