@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import data from '../../../data';
-
-import checked from "../../../assets/imgs/checked.svg"
-import unchecked from "../../../assets/imgs/unchecked.svg"
-
-class Painting extends Component {
-    
-    render = () => {
-        return (
-            <article className='Painting'>
-                <h2>{this.props.x.title}</h2>
-                <h3>{this.props.x.inspired_painting.author}</h3>
-                <p>{this.props.x.inspired_painting.desc}</p>
-                <img src={this.props.x.main_painting.visual} alt={this.props.x.author}/>
-                <button onClick={() => {
-                    this.props.showArticle(this.props.index)
-                }}>{data.cta}</button>
-                <img className="visitedIcon" alt="checked icon" src={this.props.visitedPaintings.includes(this.props.index) ? checked : unchecked}/>
-            </article>
-        )
-    }
-}
-
-export default Painting;
-=======
 import React, { Component } from "react";
 import data from "../../../data";
 
@@ -69,4 +42,3 @@ class Painting extends Component {
 }
 
 export default Painting;
->>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012

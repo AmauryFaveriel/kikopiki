@@ -1,23 +1,4 @@
 .Intro {
-<<<<<<< HEAD
-    background: #4110c2;
-    width: 500px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-around;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    transition: all 0.5s ease;
-    &--hidden {
-        left: -505px;
-    }
-    &__title{
-    margin-left: 13.4%;
-    margin-top: 30%;
-=======
   background: #4110c2;
   width: 500px;
   height: 100vh;
@@ -34,7 +15,6 @@
     left: -505px;
   }
   &__title {
->>>>>>> 40f5b52aa7296ac6304a99001878c5819420e012
     width: 193px;
     height: 68px;
     font-family: Avenir;
