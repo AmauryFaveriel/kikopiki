@@ -18,6 +18,9 @@
         opacity: 0;
         pointer-events: none;
     }
+    &--hiddenX {
+        box-shadow: none;
+    }
     &__nav {
         position: relative;
         height: calc(100vh - 120px);

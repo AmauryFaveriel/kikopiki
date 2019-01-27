@@ -66,8 +66,9 @@ class App extends Component {
     goToConclusion = (e) => {
         e.preventDefault();
         if (this.state.visitedPaintings.length === data.paintings.length) this.setState({conclusionHidden: false});
-        else alert(`${data.paintings.length - this.state.visitedPaintings.length}/${data.paintings.length} left !`);
+        else  alert(`${data.paintings.length - this.state.visitedPaintings.length}/${data.paintings.length} left !`);
     };
+    hideMenu = () => this.setState({menuHidden: !this.state.menuHidden});
     render() {
         return (
             <div className={!this.state.appHidden ? this.state.appStyleHidden : this.state.appStyle}>
@@ -93,6 +94,7 @@ class App extends Component {
                     updateArticle={(i) => this.updateArticle(i)}
                     visitedPaintings={this.state.visitedPaintings}
                     click={this.goToConclusion}
+                    hideMenu={this.hideMenu}
                 />
                 <Conclusion 
                     style={this.state.conclusionHidden ? this.state.conclusionStyleHidden : this.state.conclusionStyle}

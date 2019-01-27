@@ -13,7 +13,10 @@ class Menu extends Component {
     render = () => {
         return (
             <section className={this.props.style}>
-                <div className="Menu__burger" onClick={this.hideMenu}>
+                <div className="Menu__burger" onClick={() => {
+                    this.hideMenu();
+                    this.props.hideMenu();
+                }}>
                     <div className="Menu__burger__line"></div>
                     <div className="Menu__burger__line"></div>
                     <div className="Menu__burger__line"></div>
