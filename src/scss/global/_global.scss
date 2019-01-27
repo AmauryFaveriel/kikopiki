@@ -36,14 +36,14 @@ body {
   }
 }
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 1px;
+  height: 1px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #666;
+  background: #fff;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: $purple;
+  background: #fff;
 }
 ::-webkit-scrollbar-track {
   background: #fff;
