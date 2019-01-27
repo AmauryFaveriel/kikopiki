@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../../assets/imgs/logo.svg'
 import LittlePaintings from './LittlePaintings/LittlePaintings';
 
 class Menu extends Component {

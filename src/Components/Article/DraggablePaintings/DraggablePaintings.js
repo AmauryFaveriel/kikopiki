@@ -22,7 +22,7 @@ class DraggablePaintings extends Component {
                     </div>
                 </section>
                 <section className="OtherPaintings">
-                <img src={this.props.painting.other_paintings[this.props.otherIndex].visual} alt="img"/>
+                <img src={this.props.painting.other_paintings[this.props.painting.other_paintings.length <= this.props.otherIndex ? 0 : this.props.otherIndex].visual} alt="img"/>
                 </section>
             </section>
         )

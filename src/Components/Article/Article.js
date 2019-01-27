@@ -23,12 +23,17 @@ class Article extends Component {
                 transformOrigin: '0 0',
                 transform: 'scale(1)'
             },
-            otherIndex: 0
+            otherIndex: this.props.otherIndex
         };
     };
     UNSAFE_componentWillMount = () => this.setState({painting: data.paintings[this.props.index]});
     UNSAFE_componentWillUpdate = (nextProps) => {
         if (nextProps.index !== this.props.index) this.setState({painting: data.paintings[nextProps.index]})
+        if (nextProps.otherIndex !== this.props.otherIndex) {
+            console.log('oeoeo')
+            this.setState({otherIndex: nextProps.otherIndex})
+        }
+
     };
     focusBorder = () => {
         // recove the center height of the window
@@ -47,7 +52,7 @@ class Article extends Component {
             let textBottom = that.getBoundingClientRect().bottom;
             // if the text's top is above the middle of the window
             if (textTop <= winCenterHeight) {
-                if (i >= 3) this.setState({
+                if (i >= this.state.painting.zooms.length) this.setState({
                     isDraggablePaintingsHidden: true,
                     otherIndex: (i - this.state.painting.zooms.length)
                 });
