@@ -2,22 +2,19 @@
   background: #4110c2;
   width: 500px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   position: fixed;
+  padding: 150px 40px 100px 68px;
   top: 0;
   left: 0;
-  z-index: 666;
-  margin: 0 auto;
+  z-index: 10;
   transition: all 0.5s ease;
   &--hidden {
     left: -505px;
   }
-  &__container {
-    width: 68%;
-    margin: 0 auto;
-  }
   &__title {
-    margin-top: 150px;
-    margin-bottom: 43px;
     width: 193px;
     height: 68px;
     font-family: Avenir;
@@ -28,27 +25,32 @@
     line-height: 1.36;
     letter-spacing: normal;
     color: #ffffff;
+    margin-bottom: 43px;
   }
   &__desc {
-    margin-bottom: 10%;
-
+    text-align: left;
     font-size: 18px;
     line-height: 30px;
     color: #ffffff;
+    &:not(:last-child) {
+      margin-bottom: 5%;
+    }
+  }
+  &__descContainer {
+    margin-bottom: 100px;
   }
   &__cta {
-    margin-top: 5%;
-    background-color: #ffffff;
-    border-radius: 6px;
+    width: 250px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
     display: inline-block;
     cursor: pointer;
     color: #000000;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
     text-transform: uppercase;
-    padding: 16px 30px;
+    padding: 14px 32px;
     text-decoration: none;
-    letter-spacing: 0.2px;
   }
 }
 .overlay {

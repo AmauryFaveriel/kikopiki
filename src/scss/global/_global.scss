@@ -1,8 +1,40 @@
 body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Avenir", sans-serif;
+
+  scroll-behavior: smooth;
+  letter-spacing: -0.7px;
 }
 .hidden {
-  display: none;
+  display: none !important;
+}
+.hiddenX {
+  right: -120px !important;
+}
+.visitedIcon {
+  width: 25px !important;
+  height: 25px !important;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  @extend %mainTransition;
+  &--LittlePaintings {
+    top: -12px;
+    right: -12px;
+  }
+}
+
+.scrollFocus {
+  @include font-size(18px);
+  line-height: 40px;
+  text-align: justify;
+  margin: 0 0 50px;
+  padding-left: 10px;
+  border-left: 5px #f1f1f1 solid;
+  border-radius: 5px;
+  @extend %mainTransition;
+  &--active {
+    border-left: 5px darkorchid solid;
+  }
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -12,7 +44,7 @@ body {
   background: #666;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: $purple
+  background: $purple;
 }
 ::-webkit-scrollbar-track {
   background: #fff;

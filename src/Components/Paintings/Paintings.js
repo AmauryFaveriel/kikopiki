@@ -1,63 +1,85 @@
-import React, { Component } from 'react';
-import data from '../../data';
-import Painting from '../Painting/Painting'
-import HorizontalScroll from 'react-scroll-horizontal'
+import React, { Component } from "react";
+import get from "lodash/get";
+
+import data from "../../data";
+import Painting from "./Painting/Painting";
+import Arrow from "./Arrow/Arrow";
 
 class Paintings extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            index: "lol",
-            error: '',
-            HorizontalScrollStyle: {
-                height: 'auto', 
-                width: 'auto', 
-                overflow: 'scroll', 
-                position: 'initial'
-            }
-        }
-    }
-    componentDidMount = () => {
-        // document.onmousemove = () =>{
-        //     clearTimeout(timeout);
-        //     const timeout = setTimeout(() => {
-        //         console.log("move your mouse");
-        //     }, 500);
-        // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: "",
+      HorizontalScrollStyle: {
+        height: "auto",
+        width: "auto",
+        overflow: "scroll",
+        position: "initial"
+      },
+      isScrollingLeft: false,
+      isScrollingRight: false,
+      index: 0
+    };
+    this.paintingsRefs = data.paintings.map(() => React.createRef());
+  }
 
-        setTimeout(() => {
-            setInterval(() => {
-                document.querySelector('.Paintings').scrollBy(2, 0)
-            }, 16)
-        }, 2000)
-    }
-    
-    updateStyle = () => {
-        return {
-            left: '-200px'
-        }
-    }
-    render = () => {
-        return (
-            <section className='Paintings' style={{color: this.updateStyle()}}>
-                <HorizontalScroll 
-                    pageLock={true}
-                    reverseScroll={true}
-                    style={this.state.HorizontalScrollStyle}
-                >
-                    {data.paintings.map((x, i) => <Painting 
-                        author={x.inspired_painting.author}
-                        desc={x.inspired_painting.desc}
-                        main_painting={x.inspired_painting.visual}
-                        key={i}
-                        index={i}
-                        showArticle={(i) => this.props.showArticle(i)}
-                        checkedPaintings={this.props.checkedPaintings}
-                    />)}
-                </HorizontalScroll>
-            </section>
-        )
-    }
+  scrollLeft = () => {
+    this.setState({ index: this.state.index - 1 }, () => {
+      const nextPaintingRef = get(this.paintingsRefs, this.state.index);
+      const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
+
+      if (goToNextPainting) {
+        goToNextPainting.scrollIntoView({
+          behavior: "smooth",
+          inline: "start"
+        });
+      }
+    });
+  };
+
+  scrollRight = () => {
+    this.setState({ index: this.state.index + 1 }, () => {
+      const nextPaintingRef = get(this.paintingsRefs, this.state.index);
+      const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
+
+      if (goToNextPainting) {
+        goToNextPainting.scrollIntoView({
+          behavior: "smooth",
+          inline: "start"
+        });
+      }
+    });
+  };
+
+  render() {
+    return (
+      <section className="Paintings">
+        <Arrow
+          isLeft={true}
+          goToNextPainting={this.scrollLeft}
+          hideIntro={this.props.hideIntro}
+        />
+
+        {data.paintings.map((x, i) => (
+          <div key={i} ref={this.paintingsRefs[i]}>
+            <Painting
+              x={x}
+              index={i}
+              showHover={this.props.hideIntro}
+              showArticle={i => this.props.showArticle(i)}
+              visitedPaintings={this.props.visitedPaintings}
+            />
+          </div>
+        ))}
+
+        <Arrow
+          isLeft={false}
+          goToNextPainting={this.scrollRight}
+          hideIntro={this.props.hideIntro}
+        />
+      </section>
+    );
+  }
 }
 
 export default Paintings;

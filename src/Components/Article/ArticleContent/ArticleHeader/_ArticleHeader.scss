@@ -1,0 +1,15 @@
+.ArticleHeader {
+    margin-bottom: 100px;
+    &__title {
+        margin-bottom: 50px;
+        @include font-size(50px);
+        font-weight: 700;
+        text-align: left;
+        line-height: 60px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

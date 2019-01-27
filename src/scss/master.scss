@@ -2,27 +2,32 @@
 // IMPORT GLOBAL FILES
 // ==============================================
 
-@import './global/reset';
-@import './global/variables';
-@import './global/mixins';
-@import './global/extends';
-@import './global/keyframes';
-@import './global/fonts';
-@import './global/global';
+@import "./global/reset";
+@import "./global/variables";
+@import "./global/mixins";
+@import "./global/extends";
+@import "./global/keyframes";
+@import "./global/fonts";
+@import "./global/global";
 
 // ==============================================
 // IMPORT COMPONENT FILES
 // ==============================================
 
-@import '../Components/App/App';
-@import '../Components/Article/Article';
-@import '../Components/ArticleHeader/ArticleHeader';
-@import '../Components/Conclusion/Conclusion';
-@import '../Components/Footer/Footer';
-@import '../Components/Header/Header';
-@import '../Components/Intro/Intro';
-@import '../Components/Menu/Menu';
-@import '../Components/ArticleOthers/OtherPaintings';
-@import '../Components/Painting/Painting';
-@import '../Components/Paintings/Paintings';
-
+@import "../Components/App/App";
+@import "../Components/Article/Article";
+@import "../Components/Article/ArticleContent/ArticleContent";
+@import "../Components/Article/ArticleContent/ArticleHeader/ArticleHeader";
+@import "../Components/Article/ArticleContent/ArticleHeader/ArticleHeaderItem/ArticleHeaderItem";
+@import "../Components/Article/ArticleContent/ArticleOthers/ArticleOthers";
+@import "../Components/Article/ArticleContent/ArticleZooms/ArticleZooms";
+@import "../Components/Article/DraggablePaintings/DraggablePaintings";
+@import "../Components/Conclusion/Conclusion";
+@import "../Components/Header/Header";
+@import "../Components/Intro/Intro";
+@import "../Components/Menu/Menu";
+@import "../Components/Menu/LittlePaintings/LittlePaintings";
+@import "../Components/Menu/LittlePaintings/LittlePainting/LittlePainting";
+@import "../Components/Paintings/Paintings";
+@import "../Components/Paintings/Arrow/Arrow";
+@import "../Components/Paintings/Painting/Painting";

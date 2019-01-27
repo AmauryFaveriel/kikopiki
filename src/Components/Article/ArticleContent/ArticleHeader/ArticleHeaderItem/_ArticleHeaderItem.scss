@@ -1,0 +1,36 @@
+.ArticleHeaderItem {
+        width: calc(50%);
+        &:first-child {
+          border-right: 2px $grey solid;
+          padding-right: 25px;
+        }
+        &:last-child {
+          padding-left: 25px;
+        }
+        &__desc {
+          color: $grey;
+          min-height: 25px;
+          margin-bottom: 10px;
+          text-align: left;
+          @include font-size(16px);
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: -0.7px;
+        }
+        &__author {
+          color: $purple;
+          margin-bottom: 10px;
+          text-align: left;
+          @include font-size(18px);
+          font-weight: 700;
+        }
+        &__date {
+          display: flex;
+          text-align: left;
+          @include font-size(16px);
+          font-weight: 500;
+          font-style: italic;
+          line-height: normal;
+          letter-spacing: -0.8px;
+        }
+    }

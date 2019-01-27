@@ -1,0 +1,19 @@
+.LittlePaintings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 25px;
+    &__button {
+        background: $lightGrey;
+        color: $purple;
+        width: 120px;
+        height: 120px;
+        @include font-size(16px);
+        font-weight: 700;
+        cursor: pointer;
+        @extend %mainTransition;
+        &:hover {
+            letter-spacing: 1px;
+        }
+    }
+}

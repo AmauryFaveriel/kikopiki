@@ -1,0 +1,71 @@
+.DraggablePaintings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 666px;
+    height: calc(100vh - 20px);
+    &__imgBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &:nth-child(1) {
+            z-index: 2;
+        }
+        &:nth-child(2) {
+            z-index: 1;
+          }
+        &__resizable {
+            position: relative;
+            z-index: -1;
+            &:before {
+                content: '<>';
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                z-index: 6;
+                width: 25px;
+                height: 25px;
+                background: red;
+            }
+            &__resizer {
+                width: 5px;
+                height: 100%;
+                background: $lightGrey;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                cursor: col-resize;
+                &:after {
+                    content:'<   >';
+                    color: #b6b6b6;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                    background: $lightGrey;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include font-size(12px);
+                    position: absolute;
+                    top: 50%;
+                    right: -10px;
+                    z-index: 100000;
+                }
+                z-index: 3;
+                
+                &--hidden {
+                    display: none;
+                }
+            }
+        }
+        &__img {
+            width: 666px;
+            height: 100vh;
+            object-fit: cover;
+            pointer-events: none;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
