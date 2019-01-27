@@ -24,7 +24,7 @@ import other2_4 from './assets/imgs/paintings/2/others/other_4.jpg';
 
 import main3 from './assets/imgs/paintings/3/main.jpg';
 import inspired3 from './assets/imgs/paintings/3/inspired.jpg';
-import other3_0 from './assets/imgs/paintings/3/others/other_0.jpg';
+import other3_0 from './assets/imgs/paintings/3/others/other_0.gif';
 import other3_1 from './assets/imgs/paintings/3/others/other_1.jpg';
 import other3_2 from './assets/imgs/paintings/3/others/other_2.jpg';
 import other3_3 from './assets/imgs/paintings/3/others/other_3.jpg';
