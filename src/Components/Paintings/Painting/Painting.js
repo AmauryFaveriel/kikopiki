@@ -11,7 +11,7 @@ class Painting extends Component {
         className={"Painting " + (this.props.showHover ? "ShowHover" : "")}
       >
         <img
-          src={this.props.x.main_painting.visual}
+          src={this.props.x.inspired_painting.visual}
           alt={this.props.x.author}
         />
         <div>
