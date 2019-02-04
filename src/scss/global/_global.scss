@@ -13,7 +13,7 @@ body {
 .visitedIcon {
   width: 25px !important;
   height: 25px !important;
-  position: absolute;
+  position: absolute !important;
   bottom: 25px;
   right: 25px;
   @extend %mainTransition;
