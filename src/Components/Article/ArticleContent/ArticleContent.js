@@ -21,6 +21,7 @@ class ArticleContent extends Component {
                 <ArticleOthers
                     painting={this.props.painting}
                 />
+                <button onClick={this.props.click}>next article</button>
             </section>
         );
     };

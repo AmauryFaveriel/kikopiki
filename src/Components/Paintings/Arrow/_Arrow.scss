@@ -4,12 +4,11 @@
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
   @extend %mainTransition;
   &:hover {
-    transform: translate(0, -50%) scale(1.1);
-    color: $purple;
+    transform: translate(0, -50%) scale(1.25);
   }
   &--left {
     left: 25px;

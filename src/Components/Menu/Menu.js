@@ -5,7 +5,8 @@ class Menu extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMenuHidden: false
+            isMenuHidden: false,
+            style: 'Menu__burger__line'
         }
     }
     hideMenu = () => this.setState({isMenuHidden: !this.state.isMenuHidden})
@@ -14,11 +15,10 @@ class Menu extends Component {
             <section className={this.props.style}>
                 <div className="Menu__burger" onClick={() => {
                     this.hideMenu();
-                    // this.props.hideMenu();
                 }}>
-                    <div className="Menu__burger__line"></div>
-                    <div className="Menu__burger__line"></div>
-                    <div className="Menu__burger__line"></div>
+                    <div className={this.state.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--1'}></div>
+                    <div className={this.state.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--2'}></div>
+                    <div className={this.state.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--3'}></div>
                 </div>
                 <nav className={!this.state.isMenuHidden ? 'Menu__nav' : 'Menu__nav hiddenX'}>
                     <LittlePaintings
