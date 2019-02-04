@@ -85,6 +85,22 @@ class App extends Component {
         );
         this.setState({ index: i });
     };
+    nextArticle = () => {
+
+        this.setState({ index: this.state.index + 1 }, () => {
+            if (!this.state.visitedPaintings.includes(this.state.index)) {
+                this.state.visitedPaintings.push(this.state.index);
+            }
+            document
+                .querySelector(".ArticleContent")
+                .scrollTo({ top: 0, behavior: "smooth" });
+            localStorage.setItem(
+                "visitedPaintings",
+                JSON.stringify(this.state.visitedPaintings)
+            );
+        });
+        
+    };
 
     goToConclusion = e => {
         e.preventDefault();
@@ -131,6 +147,7 @@ class App extends Component {
                     }
                     index={this.state.index}
                     otherIndex={this.state.otherIndex}
+                    nextArticle={this.nextArticle}
                 />
                 <Menu
                     style={
