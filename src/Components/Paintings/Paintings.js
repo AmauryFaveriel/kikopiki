@@ -24,31 +24,41 @@ class Paintings extends Component {
   }
 
   scrollLeft = () => {
-    this.setState({ index: this.state.index - 1 }, () => {
-      const nextPaintingRef = get(this.paintingsRefs, this.state.index);
-      const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
+      console.log(this.state.index);
+    if (this.state.index > 0) {
 
-      if (goToNextPainting) {
-        goToNextPainting.scrollIntoView({
-          behavior: "smooth",
-          inline: "start"
-        });
-      }
-    });
+      console.log("af");
+        this.setState({ index: this.state.index - 1 }, () => {
+            const nextPaintingRef = get(this.paintingsRefs, this.state.index);
+            const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
+      
+            if (goToNextPainting) {
+              goToNextPainting.scrollIntoView({
+                behavior: "smooth",
+                inline: "start"
+              });
+            }
+          });
+    }
   };
 
   scrollRight = () => {
-    this.setState({ index: this.state.index + 1 }, () => {
-      const nextPaintingRef = get(this.paintingsRefs, this.state.index);
-      const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
+    console.log(this.state.index);
+    if (this.state.index < data.paintings.length - 2) {
 
-      if (goToNextPainting) {
-        goToNextPainting.scrollIntoView({
-          behavior: "smooth",
-          inline: "start"
+      console.log('of');
+        this.setState({ index: this.state.index + 1 }, () => {
+        const nextPaintingRef = get(this.paintingsRefs, this.state.index);
+        const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
+
+        if (goToNextPainting) {
+            goToNextPainting.scrollIntoView({
+            behavior: "smooth",
+            inline: "start"
+            });
+        }
         });
-      }
-    });
+    }
   };
 
   render() {
