@@ -22,9 +22,10 @@ class App extends Component {
             articleHidden: false,
             articleStyle: "Article",
             articleStyleHidden: "Article Article--hidden",
-            menuHidden: false,
+            isMenuHidden: true,
+            isMenuHiddenDOM: true,
             menuStyle: "Menu",
-            menuStyleHidden: "Menu Menu--hidden",
+            menuStyleHidden: "Menu Menu--hiddenDOM",
             conclusionHidden: true,
             conclusionStyle: "Conclusion",
             conclusionStyleHidden: "Conclusion Conclusion--hidden",
@@ -45,6 +46,9 @@ class App extends Component {
             );
     };
 
+    hideMenu = () => this.setState({
+        isMenuHidden: !this.state.isMenuHidden,
+    })
     hideIntro = () =>
         this.setState({
             introHidden: !this.state.introHidden,
@@ -66,7 +70,8 @@ class App extends Component {
         );
         this.setState({
             articleHidden: true,
-            menuHidden: true,
+            isMenuHidden: true,
+            isMenuHiddenDOM: false,
             index: i
         });
         return i;
@@ -159,6 +164,9 @@ class App extends Component {
                     updateArticle={i => this.updateArticle(i)}
                     visitedPaintings={this.state.visitedPaintings}
                     click={this.goToConclusion}
+                    hideMenu={this.hideMenu}
+                    isMenuHidden={this.state.isMenuHidden}
+                    isMenuHiddenDOM={this.state.isMenuHiddenDOM}
                 />
                 <Conclusion
                     style={
