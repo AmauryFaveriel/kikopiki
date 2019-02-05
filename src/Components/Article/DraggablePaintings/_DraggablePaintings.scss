@@ -1,5 +1,5 @@
 .DraggablePaintings {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 666px;
@@ -26,6 +26,7 @@
                 top: 0px;
                 right: 0px;
                 cursor: col-resize;
+                transition: all 0.5s ease;
                 &:before {
                     content:'';
                     width: 5px;
@@ -36,6 +37,7 @@
                     top: 0px;
                     left: 22.5px;
                     cursor: col-resize;
+                    transition: all 0.5s ease;
                 }
                 &:after {
                     content:'';
@@ -54,6 +56,7 @@
                     top: 50%;
                     right: -22px;
                     z-index: 100000;
+                    transition: all 0.5s ease;
                 }
                 z-index: 3;
                 

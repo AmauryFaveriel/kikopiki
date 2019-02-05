@@ -12,10 +12,9 @@
   right: 0;
   z-index: 6;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all 1s ease;
   &--hiddenDOM {
-        opacity: 0;
-        pointer-events: none;
+        top: 100vh;
   }
   &--hidden {
     box-shadow: none;
