@@ -14,7 +14,7 @@ class Intro extends Component {
         <button className="Intro__cta" onClick={this.props.hideIntro}>
           {data.intro.cta}
         </button>
-        {/* <section className={this.props.overlayStyle} /> */}
+        <section className={this.props.overlayStyle}/>
       </section>
     );
   };

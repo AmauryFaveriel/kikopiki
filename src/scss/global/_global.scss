@@ -11,13 +11,17 @@ body {
   right: -120px !important;
 }
 .visitedIcon {
-  width: 25px !important;
-  height: 25px !important;
-  position: absolute !important;
-  bottom: 25px;
-  right: 25px;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 0 0 20px;
+
   @extend %mainTransition;
   &--LittlePaintings {
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21);
+    position: absolute !important;
     top: -12px;
     right: -12px;
   }

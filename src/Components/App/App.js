@@ -130,11 +130,11 @@ class App extends Component {
                             ? this.state.introStyleHidden
                             : this.state.introStyle
                     }
-                    // overlayStyle={
-                    //   !this.state.introHidden
-                    //     ? this.state.overlayStyle
-                    //     : this.state.overlayStyleHidden
-                    // }
+                    overlayStyle={
+                      !this.state.introHidden
+                        ? this.state.overlayStyle
+                        : this.state.overlayStyleHidden
+                    }
                     hideIntro={this.hideIntro}
                 />
                 <Paintings
