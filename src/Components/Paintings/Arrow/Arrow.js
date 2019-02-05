@@ -4,8 +4,8 @@ class Arrow extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      arrowLeftStyle: "Arrow Arrow--left fas fa-arrow-left",
-      arrowRightStyle: "Arrow Arrow--right fas fa-arrow-right"
+      arrowLeftStyle: "Arrow Arrow--left",
+      arrowRightStyle: "Arrow Arrow--right"
     };
   }
   render() {

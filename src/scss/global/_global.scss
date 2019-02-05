@@ -11,13 +11,17 @@ body {
   right: -120px !important;
 }
 .visitedIcon {
-  width: 25px !important;
-  height: 25px !important;
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 0 0 20px;
+
   @extend %mainTransition;
   &--LittlePaintings {
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21);
+    position: absolute !important;
     top: -12px;
     right: -12px;
   }
@@ -25,13 +29,12 @@ body {
 
 .scrollFocus {
   @include font-size(18px);
-  line-height: 40px;
+  line-height: 30px;
   text-align: justify;
   margin: 0 0 50px;
-  padding-left: 10px;
-  border-left: 5px #f1f1f1 solid;
-  border-radius: 5px;
-  @extend %mainTransition;
+  padding-left: 25px;
+  border-left: 2px #f1f1f1 solid;
+  transition: all 0.5s ease;
   &--active {
     border-left: 5px $purple solid;
   }
