@@ -9,7 +9,7 @@
         top: 0;
         bottom: 0;
         right: 0;
-        padding: 190px 81px;
+        padding: 190px 81px 0 81px;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -63,6 +63,9 @@
         @include font-size(14px);
         font-weight: 400;
         text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        opacity: 1 !important;
         cursor: pointer;
         @extend %mainTransition;
 
