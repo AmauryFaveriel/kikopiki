@@ -58,7 +58,7 @@ class App extends Component {
     hideArticle = () =>
         this.setState({
             articleHidden: false,
-            menuHidden: false
+            isMenuHiddenDOM: !this.state.isMenuHiddenDOM,
         });
 
     showArticle = i => {
