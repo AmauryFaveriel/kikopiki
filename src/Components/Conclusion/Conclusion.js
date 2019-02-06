@@ -21,7 +21,7 @@ class Conclusion extends Component {
                 <div>
                     <h3>{data.conclusion.content[0].title}</h3>
                     <section>
-                        <div><img src={data.conclusion.content[0].visual} alt=""/></div>
+                        <video src=""></video>
                         <p>{data.conclusion.content[0].content}</p>
                     </section>
                 </div>
