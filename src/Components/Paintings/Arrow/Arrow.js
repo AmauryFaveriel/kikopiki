@@ -9,7 +9,6 @@ class Arrow extends Component {
     };
   }
   render() {
-    console.log("display", this.props.hideIntro);
     return (
       <span
         className={

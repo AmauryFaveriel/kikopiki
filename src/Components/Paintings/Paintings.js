@@ -24,10 +24,8 @@ class Paintings extends Component {
   }
 
   scrollLeft = () => {
-      console.log(this.state.index);
     if (this.state.index > 0) {
 
-      console.log("af");
         this.setState({ index: this.state.index - 1 }, () => {
             const nextPaintingRef = get(this.paintingsRefs, this.state.index);
             const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;
@@ -43,10 +41,7 @@ class Paintings extends Component {
   };
 
   scrollRight = () => {
-    console.log(this.state.index);
     if (this.state.index < data.paintings.length - 2) {
-
-      console.log('of');
         this.setState({ index: this.state.index + 1 }, () => {
         const nextPaintingRef = get(this.paintingsRefs, this.state.index);
         const goToNextPainting = nextPaintingRef ? nextPaintingRef.current : null;

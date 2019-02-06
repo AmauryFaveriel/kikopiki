@@ -98,7 +98,6 @@ class App extends Component {
             if (!this.state.visitedPaintings.includes(this.state.index)) {
                 this.state.visitedPaintings.push(this.state.index);
             }
-            console.log('wiw')
             document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
             document
                 .querySelector(".ArticleContent")
