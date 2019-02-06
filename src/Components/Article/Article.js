@@ -24,8 +24,18 @@ class Article extends Component {
         transformOrigin: "0 0",
         transform: "scale(1)"
       },
-      otherIndex: this.props.otherIndex
+      downStyle: {
+        transition: 'transform 0.5s ease 0.5s, transform-origin 0.5s ease'
+      },
+      upStyle: {
+        transition: 'transform 0.5s ease, transform-origin 0.5s ease 0.5s'
+      },
+      scrollStyle: {
+        transition: 'transform 0.5s ease 0.5s, transform-origin 0.5s ease'
+      },
+      otherIndex: this.props.otherIndex,
     };
+    this.position = 0
   }
   UNSAFE_componentWillMount = () =>
     this.setState({ painting: data.paintings[this.props.index] });
@@ -37,6 +47,20 @@ class Article extends Component {
     }
   };
   focusBorder = () => {
+    // should start at 0
+   var scroll = document.querySelector('.ArticleContent').scrollTop;
+
+    console.log(scroll)
+    if ((scroll) <= 0) {
+        this.props.hideArticle();
+    }
+    if (scroll > this.position) {
+        this.setState({scrollStyle: this.state.downStyle});
+
+    } else {
+        this.setState({scrollStyle: this.state.upStyle});
+    }
+    this.position = scroll;
     // recove the center height of the window
     const winCenterHeight = window.innerHeight / 2;
     // recove all the texts
@@ -130,11 +154,13 @@ class Article extends Component {
           mainStyle={this.state.mainZoomIn}
           inspiredStyle={this.state.inspiredZoomIn}
           otherIndex={this.state.otherIndex}
+          scrollStyle={this.state.scrollStyle}
         />
         <ArticleContent
           painting={this.state.painting}
           onscroll={this.focusBorder}
           click={this.props.nextArticle}
+          index={this.props.index}
         />
       </article>
     );

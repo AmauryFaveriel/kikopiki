@@ -13,7 +13,7 @@ class Painting extends Component {
                     src={this.props.x.inspired_painting.visual}
                     alt={this.props.x.author}
                 />
-                <div>
+                <div className={`Painting__content ${this.props.last}`}>
                     <h2>{this.props.x.title}</h2>
                     <h3>{this.props.x.inspired_painting.author}</h3>
                     <p>{this.props.x.inspired_painting.desc}</p>

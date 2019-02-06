@@ -22,9 +22,10 @@ class App extends Component {
             articleHidden: false,
             articleStyle: "Article",
             articleStyleHidden: "Article Article--hidden",
-            menuHidden: false,
+            isMenuHidden: true,
+            isMenuHiddenDOM: true,
             menuStyle: "Menu",
-            menuStyleHidden: "Menu Menu--hidden",
+            menuStyleHidden: "Menu Menu--hiddenDOM",
             conclusionHidden: true,
             conclusionStyle: "Conclusion",
             conclusionStyleHidden: "Conclusion Conclusion--hidden",
@@ -45,6 +46,9 @@ class App extends Component {
             );
     };
 
+    hideMenu = () => this.setState({
+        isMenuHidden: !this.state.isMenuHidden,
+    })
     hideIntro = () =>
         this.setState({
             introHidden: !this.state.introHidden,
@@ -54,7 +58,7 @@ class App extends Component {
     hideArticle = () =>
         this.setState({
             articleHidden: false,
-            menuHidden: false
+            isMenuHiddenDOM: !this.state.isMenuHiddenDOM,
         });
 
     showArticle = i => {
@@ -64,9 +68,11 @@ class App extends Component {
             "visitedPaintings",
             JSON.stringify(this.state.visitedPaintings)
         );
+        document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         this.setState({
             articleHidden: true,
-            menuHidden: true,
+            isMenuHidden: true,
+            isMenuHiddenDOM: false,
             index: i
         });
         return i;
@@ -76,9 +82,10 @@ class App extends Component {
         if (!this.state.visitedPaintings.includes(i)) {
             this.state.visitedPaintings.push(i);
         }
+        document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         document
             .querySelector(".ArticleContent")
-            .scrollTo({ top: 0, behavior: "smooth" });
+            .scrollTo({ top: 1, behavior: "smooth" });
         localStorage.setItem(
             "visitedPaintings",
             JSON.stringify(this.state.visitedPaintings)
@@ -91,9 +98,11 @@ class App extends Component {
             if (!this.state.visitedPaintings.includes(this.state.index)) {
                 this.state.visitedPaintings.push(this.state.index);
             }
+            console.log('wiw')
+            document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
             document
                 .querySelector(".ArticleContent")
-                .scrollTo({ top: 0, behavior: "smooth" });
+                .scrollTo({ top: 1, behavior: "smooth" });
             localStorage.setItem(
                 "visitedPaintings",
                 JSON.stringify(this.state.visitedPaintings)
@@ -105,7 +114,11 @@ class App extends Component {
     goToConclusion = e => {
         e.preventDefault();
         if (this.state.visitedPaintings.length === data.paintings.length)
-            this.setState({ conclusionHidden: false });
+            this.setState({ 
+                conclusionHidden: false ,
+                articleHidden: false,
+                isMenuHiddenDOM: true
+            });
         else
             alert(
                 `${data.paintings.length - this.state.visitedPaintings.length}/${
@@ -113,7 +126,9 @@ class App extends Component {
                 } left !`
             );
     };
-
+    hideConclusion = () => this.setState({
+        conclusionHidden: true,
+    })
     render() {
         return (
             <div
@@ -145,6 +160,7 @@ class App extends Component {
                 <Article
                     style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle
                     }
+                    hideArticle={this.hideArticle}
                     index={this.state.index}
                     otherIndex={this.state.otherIndex}
                     nextArticle={this.nextArticle}
@@ -159,6 +175,9 @@ class App extends Component {
                     updateArticle={i => this.updateArticle(i)}
                     visitedPaintings={this.state.visitedPaintings}
                     click={this.goToConclusion}
+                    hideMenu={this.hideMenu}
+                    isMenuHidden={this.state.isMenuHidden}
+                    isMenuHiddenDOM={this.state.isMenuHiddenDOM}
                 />
                 <Conclusion
                     style={
@@ -166,7 +185,7 @@ class App extends Component {
                             ? this.state.conclusionStyleHidden
                             : this.state.conclusionStyle
                     }
-                    click={() => this.setState({ conclusionHidden: true })}
+                    hideConclusion={this.hideConclusion}
                 />
             </div>
         );

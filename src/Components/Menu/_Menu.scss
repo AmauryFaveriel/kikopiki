@@ -10,13 +10,14 @@
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 6;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  &--hiddenDOM {
+        top: 100vh;
+  }
   &--hidden {
-    opacity: 0;
-    opacity: 0;
-    pointer-events: none;
+    box-shadow: none;
   }
   &__nav {
     position: relative;

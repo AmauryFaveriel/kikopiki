@@ -1,18 +1,47 @@
 .ArticleContent {
   background: #ffffff;
-  width: calc(100% - 666px - 120px);
+  width: calc(100% - 615px);
   height: 100vh;
-  position: fixed;
+  position: relative;
   top: 0;
-  left: 666px;
+  left: 0px;
   overflow: scroll;
   padding: 80px 50px;
-  padding-bottom: 50vh;
+  padding-bottom: 25vh;
   &__intro {
     @include font-size(18px);
     line-height: 30px;
     text-align: justify;
     font-style: italic;
     margin-bottom: 50px;
+  }
+  &__nextArticle {
+      background: $lightPurple;
+      padding: 30px 75px;
+      width: calc(100% + 100px);
+      color: #000;
+      font-size: 18px;
+      text-align: left;
+      position: relative;
+      left: -50px;
+      bottom: -40%;
+      span {
+          color: $purple;
+          cursor: pointer;
+          position: relative;
+          &:after {
+              content: '';
+              background: #000;
+              width: 0%;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: 2px;
+              @extend %mainTransition;
+          }
+          &:hover:after {
+            width: 100%;
+          }
+      }
   }
 }

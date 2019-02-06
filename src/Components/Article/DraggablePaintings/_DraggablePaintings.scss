@@ -1,5 +1,5 @@
 .DraggablePaintings {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 666px;
@@ -20,37 +20,43 @@
             z-index: -1;
             width: 544px;
             &__resizer {
-                width: 50px;
+                width: 27px;
                 height: 100%;
                 position: absolute;
                 top: 0px;
                 right: 0px;
                 cursor: col-resize;
+                transition: all 0.5s ease;
                 &:before {
                     content:'';
                     width: 5px;
                     height: 100%;
-                    background: $lightGrey;
+                    background: #fff;
+                    box-shadow: 0 5px 13px 0 rgba(0, 0, 0, 0.59);
                     position: absolute;
                     top: 0px;
                     left: 22.5px;
                     cursor: col-resize;
+                    transition: all 0.5s ease;
                 }
                 &:after {
-                    content:'<   >';
-                    color: #b6b6b6;
+                    content:'';
+                    color: #000;
                     width: 50px;
                     height: 50px;
                     border-radius: 100%;
-                    background: $lightGrey;
+                    background: url('../assets/imgs/arrow-left-black.svg') no-repeat 22% 50% #fff;
+                    background-size: 15px 15px;
+                    box-shadow: 0 5px 13px 0 rgba(0, 0, 0, 0.59);
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     @include font-size(12px);
                     position: absolute;
                     top: 50%;
-                    right: 0;
+                    right: -22px;
                     z-index: 100000;
+                    transition: all 0.5s ease;
                 }
                 z-index: 3;
                 
@@ -64,7 +70,7 @@
             height: 100vh;
             object-fit: cover;
             pointer-events: none;
-            transition: all 0.5s ease;
+            
         }
     }
 }

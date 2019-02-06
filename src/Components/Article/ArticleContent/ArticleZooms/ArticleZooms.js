@@ -5,7 +5,7 @@ class ArticleZooms extends Component {
             <div className="ArticleZooms">
                 {this.props.painting.zooms.map((x, i) => <p 
                     className="ArticleZooms__text scrollFocus"
-                    key={i}>{x.desc}
+                    key={i} dangerouslySetInnerHTML={{__html: x.desc}}>
                 </p>)}
             </div>
         )

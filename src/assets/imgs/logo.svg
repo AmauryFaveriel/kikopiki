@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="38px" height="52px" viewBox="0 0 38 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
-    <title>logo fermé</title>
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="logo-fermé" fill-rule="nonzero" stroke="#FFFFFF">
-            <g>
-                <rect id="Rectangle" x="0.5" y="0.5" width="37" height="51"></rect>
-                <polygon id="Path-5" points="19 1 1 26 19 51 37 26"></polygon>
-                <path d="M19,50.3552773 L19,1.53037575" id="Path-8"></path>
-                <circle id="Oval" cx="19" cy="26" r="8"></circle>
-                <circle id="Oval" fill="#FFFFFF" cx="19" cy="26" r="4"></circle>
-            </g>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" stroke="#FFFFFF">
+            <rect id="Rectangle" x="0.5" y="0.5" width="37" height="51"></rect>
+            <polygon id="Path-5" points="19 1 1 26 19 51 37 26"></polygon>
+            <path d="M19,50.3552773 L19,1.53037575" id="Path-8"></path>
+            <circle id="Oval" cx="19" cy="26" r="8"></circle>
+            <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="19" cy="26" r="4"></circle>
         </g>
     </g>
 </svg>

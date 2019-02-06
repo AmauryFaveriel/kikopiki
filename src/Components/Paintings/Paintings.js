@@ -73,6 +73,7 @@ class Paintings extends Component {
         {data.paintings.map((x, i) => (
           <div key={i} ref={this.paintingsRefs[i]}>
             <Painting
+            last={i === data.paintings.length - 1 ? 'Painting__last' : ''}
               x={x}
               index={i}
               showHover={this.props.hideIntro}

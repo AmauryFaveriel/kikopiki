@@ -9,18 +9,17 @@ class Menu extends Component {
             style: 'Menu__burger__line'
         }
     }
-    hideMenu = () => this.setState({isMenuHidden: !this.state.isMenuHidden})
     render = () => {
         return (
-            <section className={this.props.style}>
+            <section className={this.props.isMenuHiddenDOM ? 'Menu Menu--hiddenDOM' : this.props.isMenuHidden ? 'Menu' : 'Menu Menu--hidden'}>
                 <div className="Menu__burger" onClick={() => {
-                    this.hideMenu();
+                    this.props.hideMenu();
                 }}>
-                    <div className={this.state.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--1'}></div>
-                    <div className={this.state.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--2'}></div>
-                    <div className={this.state.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--3'}></div>
+                    <div className={!this.props.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--1'}></div>
+                    <div className={!this.props.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--2'}></div>
+                    <div className={!this.props.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--3'}></div>
                 </div>
-                <nav className={!this.state.isMenuHidden ? 'Menu__nav' : 'Menu__nav hiddenX'}>
+                <nav className={this.props.isMenuHidden ? 'Menu__nav' : 'Menu__nav hiddenX'}>
                     <LittlePaintings
                         AppIndex={this.props.AppIndex}
                         visitedPaintings={this.props.visitedPaintings}
