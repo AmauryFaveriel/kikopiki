@@ -6,10 +6,4 @@
     width: auto;
     height: 100vh;
     z-index: 4;
-    .div{
-        background: red;
-        &:last-child{
-            background: blue;
-        }
-    }
 };
