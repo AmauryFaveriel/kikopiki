@@ -85,7 +85,7 @@ class App extends Component {
         document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         document
             .querySelector(".ArticleContent")
-            .scrollTo({ top: 0, behavior: "smooth" });
+            .scrollTo({ top: 1, behavior: "smooth" });
         localStorage.setItem(
             "visitedPaintings",
             JSON.stringify(this.state.visitedPaintings)
@@ -102,7 +102,7 @@ class App extends Component {
             document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
             document
                 .querySelector(".ArticleContent")
-                .scrollTo({ top: 0, behavior: "smooth" });
+                .scrollTo({ top: 1, behavior: "smooth" });
             localStorage.setItem(
                 "visitedPaintings",
                 JSON.stringify(this.state.visitedPaintings)
@@ -114,7 +114,11 @@ class App extends Component {
     goToConclusion = e => {
         e.preventDefault();
         if (this.state.visitedPaintings.length === data.paintings.length)
-            this.setState({ conclusionHidden: false });
+            this.setState({ 
+                conclusionHidden: false ,
+                articleHidden: false,
+                isMenuHiddenDOM: true
+            });
         else
             alert(
                 `${data.paintings.length - this.state.visitedPaintings.length}/${
@@ -122,7 +126,9 @@ class App extends Component {
                 } left !`
             );
     };
-    hideConclusion = () => this.setState({conclusionHidden: true})
+    hideConclusion = () => this.setState({
+        conclusionHidden: true,
+    })
     render() {
         return (
             <div
@@ -154,6 +160,7 @@ class App extends Component {
                 <Article
                     style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle
                     }
+                    hideArticle={this.hideArticle}
                     index={this.state.index}
                     otherIndex={this.state.otherIndex}
                     nextArticle={this.nextArticle}

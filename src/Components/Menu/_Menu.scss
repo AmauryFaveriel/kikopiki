@@ -12,7 +12,7 @@
   right: 0;
   z-index: 6;
   overflow: hidden;
-  transition: all 1s ease;
+  transition: all 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
   &--hiddenDOM {
         top: 100vh;
   }
