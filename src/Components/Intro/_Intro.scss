@@ -1,6 +1,7 @@
 .Intro {
   background: #4110c2;
   width: 500px;
+  border-right: 2px solid #fff;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,6 +32,7 @@
     text-align: left;
     font-size: 18px;
     line-height: 30px;
+    letter-spacing: 0.2;
     color: #ffffff;
     &:not(:last-child) {
       margin-bottom: 5%;
@@ -47,7 +49,7 @@
     display: inline-block;
     cursor: pointer;
     color: #000000;
-    font-size: 16px;
+    @include font-size(14px);
     text-transform: uppercase;
     padding: 14px 32px;
     text-decoration: none;
