@@ -6,7 +6,7 @@ class ArticleOthers extends Component {
             <div className="ArticleOthers">
                 {this.props.painting.other_paintings.map((x, i) => <p 
                     className="ArticleOthers__text scrollFocus"
-                    key={i}>{x.desc}
+                    key={i} dangerouslySetInnerHTML={{__html: x.desc}}>
                 </p>)}
             </div>
         )
