@@ -15,7 +15,7 @@ class ArticleContent extends Component {
                 <ArticleHeader
                     painting={this.props.painting}
                 />
-                <h3 className="ArticleContent__intro">{this.props.painting.intro}</h3>
+                <p className="ArticleContent__intro" dangerouslySetInnerHTML={{__html: this.props.painting.intro}}></p>
                 <ArticleZooms
                     painting={this.props.painting}
                 />

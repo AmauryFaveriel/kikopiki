@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     z-index: 5;
-    transition: all 1s ease;
+    transition: all 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
     &--hidden {
         top: 100vh;
     }

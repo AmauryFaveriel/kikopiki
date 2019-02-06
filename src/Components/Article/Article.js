@@ -47,9 +47,13 @@ class Article extends Component {
     }
   };
   focusBorder = () => {
-     // should start at 0
-    var scroll = document.querySelector('.ArticleContent').scrollTop;
+    // should start at 0
+   var scroll = document.querySelector('.ArticleContent').scrollTop;
+
     console.log(scroll)
+    if ((scroll) <= 0) {
+        this.props.hideArticle();
+    }
     if (scroll > this.position) {
         this.setState({scrollStyle: this.state.downStyle});
 
