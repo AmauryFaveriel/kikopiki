@@ -10,14 +10,14 @@ class DraggablePaintings extends Component {
                         <img 
                             className='DraggablePaintings__imgBox__img' 
                             src={this.props.painting.inspired_painting.visual} 
-                            style={this.props.inspiredStyle}
+                            style={{...this.props.inspiredStyle, ...this.props.scrollStyle}}
                             alt=""/>
                     </div>
                     <div className='DraggablePaintings__imgBox'>
                         <img 
                         className='DraggablePaintings__imgBox__img'
                         src={this.props.painting.main_painting.visual}
-                        style={this.props.mainStyle}
+                        style={{...this.props.mainStyle, ...this.props.scrollStyle}}
                         alt=""/>
                     </div>
                 </section>
