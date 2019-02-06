@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ArticleHeader from './ArticleHeader/ArticleHeader';
 import ArticleZooms from './ArticleZooms/ArticleZooms';
 import ArticleOthers from './ArticleOthers/ArticleOthers';
+import data from '../../../data'
 
 class ArticleContent extends Component {
     render = () => {
@@ -21,7 +22,13 @@ class ArticleContent extends Component {
                 <ArticleOthers
                     painting={this.props.painting}
                 />
-                <button onClick={this.props.click}>next article</button>
+                <p className='ArticleContent__nextArticle'>
+                    {this.props.painting.nextArticle}. 
+                    {
+                        this.props.index !== data.paintings.length - 1 ? 
+                        <a onClick={this.props.click} > next article</a> : <p>no more articles</p>
+                    }
+                    </p> 
             </section>
         );
     };

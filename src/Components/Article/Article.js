@@ -135,6 +135,7 @@ class Article extends Component {
           painting={this.state.painting}
           onscroll={this.focusBorder}
           click={this.props.nextArticle}
+          index={this.props.index}
         />
       </article>
     );
