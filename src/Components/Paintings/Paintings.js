@@ -71,7 +71,7 @@ class Paintings extends Component {
         />
 
         {data.paintings.map((x, i) => (
-          <div key={i} ref={this.paintingsRefs[i]}>
+          <div key={i} ref={this.paintingsRefs[i]} className="div">
             <Painting
               x={x}
               index={i}
