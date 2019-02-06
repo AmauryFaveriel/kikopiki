@@ -122,7 +122,7 @@ class App extends Component {
                 } left !`
             );
     };
-
+    hideConclusion = () => this.setState({conclusionHidden: true})
     render() {
         return (
             <div
@@ -178,7 +178,7 @@ class App extends Component {
                             ? this.state.conclusionStyleHidden
                             : this.state.conclusionStyle
                     }
-                    click={() => this.setState({ conclusionHidden: true })}
+                    hideConclusion={this.hideConclusion}
                 />
             </div>
         );
