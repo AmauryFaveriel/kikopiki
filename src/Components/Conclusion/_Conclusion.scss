@@ -1,36 +1,70 @@
 .Conclusion {
-    background: $lightGrey;
+    background: #fff;
     width: 100%;
     height: 100vh;
+    padding: 60px 80px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 6;
+    overflow-y: scroll;
     &--hidden {
         opacity: 0;
         pointer-events: none;
     }
+    &__close {
+        width: 21px;
+        height: 21px;
+        position: fixed;
+        top: 60px;
+        right: 60px;
+        cursor: pointer;
+        img {
+
+            width: 21px;
+            height: 21px;
+        }
+    }
     h2 {
         @include font-size(50px);
+        font-weight: 900;
     }
-    p {
-        margin: 50px 0 100px;
-        @include font-size(22px);
+    h3 {
+        color: #9b9b9b;
+        @include font-size(18px);
+        font-style: italic;
+        padding: 60px 0 40px;
+        font-weight: 500;
+        text-align: left;
     }
-    button {
-        padding: 20px 25px;
-        @include font-size(22px);
-        border: 2px $purple solid;
-        border-radius: 10px;
-        cursor: pointer;
-        @extend %mainTransition;
-        &:hover {
-            background: $purple;
-            color: $lightGrey;
+    &__content {
+        width: 100%;
+        section {
+            display: flex;
+            width: 100%;
+            margin-bottom: 20px;
+            div {
+                width: 50%;
+                height: auto !important;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p {
+                margin: 0 0 0 50px;
+                @include font-size(22px);
+                @include font-size(18px);
+                letter-spacing: 0.2;
+                width: 50%;
+                text-align: left;
+                line-height: 29px;
+            }
         }
     }
 }
