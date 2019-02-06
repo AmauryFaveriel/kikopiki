@@ -1,9 +1,18 @@
 import React, { Component } from "react";
+import YouTube from 'react-youtube';
 import data from "../../data";
 import cross from '../../assets/imgs/cross.svg'
 
 class Conclusion extends Component {
+    _onReady(event) {
+        // access to player in all event handlers via event.target
+        event.target.pauseVideo();
+      }
   render = () => {
+    const opts = {
+        height: '300',
+        width: '600',
+      };
     return (
         <section className={this.props.style}>
             <button className="Conclusion__close" onClick={this.props.hideConclusion}>
@@ -21,7 +30,11 @@ class Conclusion extends Component {
                 <div>
                     <h3>{data.conclusion.content[0].title}</h3>
                     <section>
-                        <video src=""></video>
+                    <YouTube
+                        videoId="xgnxnmqnR7Y"
+                        opts={opts}
+                        onReady={this._onReady}
+                    />
                         <p>{data.conclusion.content[0].content}</p>
                     </section>
                 </div>
