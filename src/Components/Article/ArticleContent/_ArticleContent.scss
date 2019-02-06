@@ -7,7 +7,7 @@
   left: 0px;
   overflow: scroll;
   padding: 80px 50px;
-  padding-bottom: 50vh;
+  padding-bottom: 25vh;
   &__intro {
     @include font-size(18px);
     line-height: 30px;
@@ -24,18 +24,20 @@
       text-align: left;
       position: relative;
       left: -50px;
+      bottom: -40%;
       a {
           color: $purple;
           cursor: pointer;
-          @extend %mainTransition;
+          position: relative;
           &:after {
               content: '';
+              background: #000;
+              width: 0%;
+              height: 2px;
               position: absolute;
               bottom: 0;
-              left: 0;
-              width: 0%;
-              height: 5px;
-
+              left: 2px;
+              @extend %mainTransition;
           }
           &:hover:after {
             width: 100%;

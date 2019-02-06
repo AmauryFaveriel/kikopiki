@@ -68,6 +68,7 @@ class App extends Component {
             "visitedPaintings",
             JSON.stringify(this.state.visitedPaintings)
         );
+        document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         this.setState({
             articleHidden: true,
             isMenuHidden: true,
@@ -81,6 +82,7 @@ class App extends Component {
         if (!this.state.visitedPaintings.includes(i)) {
             this.state.visitedPaintings.push(i);
         }
+        document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         document
             .querySelector(".ArticleContent")
             .scrollTo({ top: 0, behavior: "smooth" });
@@ -96,6 +98,8 @@ class App extends Component {
             if (!this.state.visitedPaintings.includes(this.state.index)) {
                 this.state.visitedPaintings.push(this.state.index);
             }
+            console.log('wiw')
+            document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
             document
                 .querySelector(".ArticleContent")
                 .scrollTo({ top: 0, behavior: "smooth" });
