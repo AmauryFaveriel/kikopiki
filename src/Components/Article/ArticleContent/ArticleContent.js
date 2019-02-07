@@ -26,7 +26,7 @@ class ArticleContent extends Component {
                     {this.props.painting.nextArticle}
                     {
                         this.props.index !== data.paintings.length - 1 ? 
-                        <span onClick={this.props.click} > Article suivant:</span> : `Il n'y a plus d'article à visiter !`
+                        <span onClick={this.props.click} > Découvrir {data.paintings[this.props.index + 1].title}</span> : `Il n'y a plus d'article à visiter !`
                     }
                     </p> 
             </section>
