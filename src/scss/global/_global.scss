@@ -5,7 +5,8 @@ body {
   letter-spacing: -0.7px;
 }
 strong {
-    font-weight: 900;
+    font-weight: 700;
+    @include font-size(20px);
 }
 em {
     font-style: italic;
