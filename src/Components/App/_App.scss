@@ -1,10 +1,10 @@
 .App {
-  width: 100%;
-  height: calc(100vh + 1px);
-  text-align: center;
-  position: fixed;
-  overflow-y: hidden;
-  &--overflow {
-    overflow: hidden;
-  }
+    width: 100%;
+    height: calc(100vh + 1px);
+    text-align: center;
+    position: fixed;
+    overflow-y: hidden;
+    &--overflow {
+        overflow: hidden;
+    }
 }

@@ -10,14 +10,14 @@ class Menu extends Component {
         }
     }
     render = () => {
+        const lines = [];
+        for (let i = 0; i < 3; i++) {
+            lines.push(<div key={i} className={!this.props.isMenuHidden ? this.state.style : `${this.state.style} ${this.state.style}--${i + 1}`}></div>)
+        }
         return (
             <section className={this.props.isMenuHiddenDOM ? 'Menu Menu--hiddenDOM' : this.props.isMenuHidden ? 'Menu' : 'Menu Menu--hidden'}>
-                <div className="Menu__burger" onClick={() => {
-                    this.props.hideMenu();
-                }}>
-                    <div className={!this.props.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--1'}></div>
-                    <div className={!this.props.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--2'}></div>
-                    <div className={!this.props.isMenuHidden ? this.state.style : 'Menu__burger__line Menu__burger__line--3'}></div>
+                <div className="Menu__burger" onClick={this.props.toggle}>
+                    {lines.map((x) => x)}
                 </div>
                 <nav className={this.props.isMenuHidden ? 'Menu__nav' : 'Menu__nav hiddenX'}>
                     <LittlePaintings
@@ -25,9 +25,9 @@ class Menu extends Component {
                         visitedPaintings={this.props.visitedPaintings}
                         updateArticle={(i) => this.props.updateArticle(i)}
                         click={this.props.click}
+                        bool={this.props.bool}
                     />
                 </nav>
-                
             </section>
         )
     }
