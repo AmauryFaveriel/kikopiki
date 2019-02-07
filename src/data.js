@@ -90,13 +90,13 @@ const data = {
             desc: `La personne dans les bras de l’homme portant un chapeau de l’oeuvre de Max Ernst, n’est autre que lui-même, endormi. À la différence de la pietà de Tarascon où il s’agit de Jesus mort.`,
             zoom: {
               main: {
-                scale: 1.01,
-                x: -20000,
+                scale: 1.4,
+                x: -3000,
                 y: 0
               },
               inspired: {
-                  scale: 1.01,
-                  x: 0,
+                  scale: 1.4,
+                  x: 200,
                   y: 0
               }
             }
@@ -130,7 +130,7 @@ const data = {
             visual: other4_5
           }
         ],
-        nextArticle: `this is the next article. wow well congratulation dude your are free to go`
+        nextArticle: `La peinture de Chagall est également imprégnée, de surréalisme et d'onirisme.`
       },
   
       {
@@ -178,7 +178,7 @@ const data = {
               inspired: {
                 scale: 1.5,
                 x: 900,
-                y: 800
+                y: 700
               }
             }
           }
@@ -213,7 +213,7 @@ const data = {
             visual: other1_6
           }
         ],
-        nextArticle: `this is the next article. wow well congratulation dude your are free to go`
+        nextArticle: `À la manière d'un enfant Chagall n'utilise que des couleurs primaires. On retrouve cette naïveté chez Botero à travers ses personnages lisses er ronds.`
       },
   
       {
@@ -274,7 +274,7 @@ const data = {
             visual: other3_5
           }
         ],
-        nextArticle: `this is the next article. wow well congratulation dude your are free to go`
+        nextArticle: `Botero gonfle les corps, Bacon lui les fait fondre.`
       },
       {
         title: `Un portrait horrifiant`,
@@ -376,7 +376,7 @@ const data = {
             visual: other0_5
           }
         ],
-        nextArticle: `this is the next article. wow well congratulation dude your are free to go`
+        nextArticle: `Dans un autre registre découvrez les déformations géométriques de Picasso.`
       },
       
       {
@@ -400,8 +400,8 @@ const data = {
             zoom: {
               main: {
                 scale: 1.1,
-                x: -17000,
-                y: 1000
+                x: -1500,
+                y: 400
               },
               inspired: {
                 scale: 1.01,
@@ -414,13 +414,13 @@ const data = {
             desc: `Similitude de la pose, les deux femmes se tiennent assises, le visage placé de 3/4 et soutenu par la main gauche posée sur la joue, les doigts écartés. Le corps et le décor s’entremêlent.`,
             zoom: {
               main: {
-                scale: 1.1,
-                x: -1800,
+                scale: 1.05,
+                x: -3000,
                 y: 300
               },
               inspired: {
                 scale: 1.1,
-                x: 1000,
+                x: 1200,
                 y: 0
               }
             }
@@ -493,7 +493,7 @@ const data = {
             visual: other2_4
           }
         ],
-        nextArticle: `this is the next article. wow well congratulation dude your are free to go`
+        nextArticle: `Si vous avez consulté tous les tableaux, vous pourrez en apprendre un peu plus sur les possibilités du numérique dans l'art aujourd'hui, en cliquant juste à droite.`
       }
     ],
     cta: `Découvrir`,
@@ -513,5 +513,6 @@ const data = {
       ]
     }
   };
-
-export default data;
+  
+  export default data;
+  
