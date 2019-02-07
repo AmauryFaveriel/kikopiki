@@ -12,7 +12,12 @@ class LittlePaintings extends Component {
       buttonStyleHidden: "LittlePaintings__button hidden"
     };
   }
-
+  onmousedown = () => {
+    console.log('wow');
+}
+onmouseup = () => {
+    console.log('owo');
+}
   render = () => {
     return (
       <nav className="Menu__nav">
@@ -29,9 +34,16 @@ class LittlePaintings extends Component {
             />
           ))}
         </ul>
-        <button className="LittlePaintings__button" onClick={this.props.click}>
-          Conclusion
+        <button 
+            className={this.props.visitedPaintings.length === data.paintings.length ? "LittlePaintings__button" : "LittlePaintings__button LittlePaintings__button--disable"} 
+            onClick={this.props.click}
+            onMouseDown={this.onmousedown}
+            onMouseUp={this.onmouseup}
+        >
+          Aller plus<br></br> loin
+          <div className={this.state.isNoConclusionHidden ? "noConclusion noConclusion--hidden" : "noConclusion"}>Vous ne pourrez accédez au contenu bonus qu’en consultant les 5 tableaux</div>
         </button>
+        
       </nav>
     );
   };

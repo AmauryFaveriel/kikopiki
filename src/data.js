@@ -117,7 +117,7 @@ const data = {
             visual: other4_2
           },
           {
-            desc: `<strong><em> « Si ce sont les plumes qui font le plumage, ce n’est pas la colle qui fait le collage. »</em></strong> a dit Max Ernst.
+            desc: `<strong><em> « Si ce sont les plumes qui font le plumage, ce n’est pas la colle qui fait le collage. »</em></strong> a dit Max Ernst.<br><br>
               Sa fascination pour les oiseaux se retranscrit de plus en plus dans ses oeuvres, allant même crée un alter-ego qu’il nomma Loplop. Loplop fit sa première apparition dans La Femme 100 Têtes tenant un rôle de narrateur et commentateur.`,
             visual: other4_3
           },
@@ -201,7 +201,7 @@ const data = {
             visual: other1_3
           },
           {
-            desc: `Le premier atelier du peintre Russe (de 1911 à 1913) à La Ruche (lieu d’apprentissage, mais aussi de passage pour les artistes de l’époque) était proche des abattoirs de Vaugirard, et il se souvient : <strong><em>« L'aube se lève. Quelque part non loin de là, ils commencent à trancher la gorge du bétail, les vaches mugissent, et je les peins. »</em></strong> La plupart de ses œuvres réalisées à la Ruche présentent de nombreux bovins, à l’image de son huile sur toile Moi et le Village, réalisée en 1911.`,
+            desc: `Le premier atelier du peintre Russe (de 1911 à 1913) à La Ruche (lieu d’apprentissage, mais aussi de passage pour les artistes de l’époque) était proche des abattoirs de Vaugirard, et il se souvient : <br><br><strong><em>« L'aube se lève. Quelque part non loin de là, ils commencent à trancher la gorge du bétail, les vaches mugissent, et je les peins. »</em></strong><br><br> La plupart de ses œuvres réalisées à la Ruche présentent de nombreux bovins, à l’image de son huile sur toile Moi et le Village, réalisée en 1911.`,
             visual: other1_4
           },
           {
@@ -209,7 +209,7 @@ const data = {
             visual: other1_5
           },
           {
-            desc: `Chagall ne peut pas être rattaché à une école. Certains le rapprochent au courant surréaliste, puisque son travail laisse une large part à son imagination et ses rêves. Mais si en deux mots, on pouvait caractériser son œuvre, on parlerait de « chromatisme onirique ». Blaise Cendars disait de Chagall : <strong><em>« Il dort, il est éveillé, il prend une église et il peint avec une église, il prend une vache et il peint avec une vache, Avec une sardine… ».</em></strong> Dans ses oeuvres Chagall dépeint souvent des scènes irréalistes. Comme on peut le voir dans sa peinture du Boeuf écorché, un événement des plus irréalistes qui transforme l'ensemble des figures et des choses, apparemment à mi-chemin du réalisme, en un royaume visionnaire. Un Juif hassidique, arrivant du ciel, les bras tendus, armé d’un couteau ensanglanté comme un messager de la terreur.`,
+            desc: `Chagall ne peut pas être rattaché à une école. Certains le rapprochent au courant surréaliste, puisque son travail laisse une large part à son imagination et ses rêves. Mais si en deux mots, on pouvait caractériser son œuvre, on parlerait de « chromatisme onirique ». Blaise Cendars disait de Chagall : <br><br><strong><em>« Il dort, il est éveillé, il prend une église et il peint avec une église, il prend une vache et il peint avec une vache, Avec une sardine… ».</em></strong><br><br> Dans ses oeuvres Chagall dépeint souvent des scènes irréalistes. Comme on peut le voir dans sa peinture du Boeuf écorché, un événement des plus irréalistes qui transforme l'ensemble des figures et des choses, apparemment à mi-chemin du réalisme, en un royaume visionnaire. Un Juif hassidique, arrivant du ciel, les bras tendus, armé d’un couteau ensanglanté comme un messager de la terreur.`,
             visual: other1_6
           }
         ],
@@ -258,7 +258,7 @@ const data = {
             visual: other3_1
           },
           {
-            desc: `Le style singulier de Botero lui a été inspiré en partie par les fresques Egytiennes, il a déclaré un jour : <strong><em>« Je peins aussi des visages impassibles, sans psychologie, car je veux donner un sentiment d'éternité, comme dans les fresques égyptiennes. »</em></strong>`,
+            desc: `Le style singulier de Botero lui a été inspiré en partie par les fresques Egytiennes, il a déclaré un jour : <br><br><strong><em>« Je peins aussi des visages impassibles, sans psychologie, car je veux donner un sentiment d'éternité, comme dans les fresques égyptiennes. »</em></strong>`,
             visual: other3_2
           },
           {
@@ -270,7 +270,7 @@ const data = {
             visual: other3_4
           },
           {
-            desc: `Fernando Botero veut prendre le contre pied et retrouver le volume que la peinture contemporaine a complètement oublié. C'est ainsi qu'il s'est intéressé à l'histoire de l'art, au trecento et au quattrocento. <strong><em>« En Toscane, j'ai été marqué par Giotto qui le premier a donné l'illusion du volume dans ses fresques. C'était une vraie révolution. Il faut regarder les grands maîtres pour apprendre »</em></strong> a dit Fernando Botero`,
+            desc: `Fernando Botero veut prendre le contre pied et retrouver le volume que la peinture contemporaine a complètement oublié. C'est ainsi qu'il s'est intéressé à l'histoire de l'art, au trecento et au quattrocento. <br><br><strong><em>« En Toscane, j'ai été marqué par Giotto qui le premier a donné l'illusion du volume dans ses fresques. C'était une vraie révolution. Il faut regarder les grands maîtres pour apprendre »</em></strong> a dit Fernando Botero`,
             visual: other3_5
           }
         ],
@@ -345,33 +345,30 @@ const data = {
             visual: other0_0
           },
           {
-            desc: `Crucifixion, 1953.
+            desc: `
             Les sujets religieux sont très chers au peintre comme ce christ fantômatique dont les côtes se confondent avec la lumière, comme si son corps avait déjà rejoins l’au delà.`,
             visual: other0_1
           },
           {
-            desc: `Le cuirassée Potemkine, 1925
+            desc: `
             Sévère mais calme chez le pape de Velazquez, la bouche hurle et devient béante au milieu du visage décharné du pape violet. Elle peut être inspiré par le cri de l’infirmière.
             `,
             visual: other0_2
           },
           {
-            desc: `Portrait du cardinal filippo archinto, 1558
+            desc: `
             Les traits font penser à un rideau comme celui là, qui cacherait sa vison ou notre vision
             `,
             visual: other0_3
           },
           {
-            desc: `Le pape Pie XII et Hitler
-            pape pie XII garde des relations diplomatiques avec l’allemagne nazie.
-            voile devant le pape = oeillère 
-            cri d’effroi étouffé par le voile, ne résonne que pour lui et ne s’étend jamais au reste du monde`,
+            desc: `Le pape Pie XII garde des relations diplomatiques avec l’allemagne nazie. Le voile devant le pape équivaut à une oeillère.
+            Le cri d’effroi étouffé par le voile, ne résonne que pour lui et ne s’étend jamais au reste du monde`,
             visual: other0_4
           },
           {
-            desc: `2ème hypothèse: figure d’autorité paternelle
-            pape = le saint père 
-            Bacon originaire d’une famille catholique d’irlande chassé par son père pour son homosexualité à 16 ans
+            desc: `Une deuxième hypothèse: figure d’autorité paternelle
+            où le pape est le saint père. Bacon originaire d’une famille catholique d’irlande chassé par son père pour son homosexualité à 16 ans
             hurle devant la déviance sexuelle, comprend pas grand chose comme le figure le rideau`,
             visual: other0_5
           }
@@ -481,7 +478,7 @@ const data = {
             visual: other2_1
           },
           {
-            desc: `<strong><em>« Si je connais Cézanne ! Il était mon seul et unique maître ! Vous pensez bien que j’ai regardé ses tableaux… J’ai passé des années à les étudier… »</em></strong> disait Picasso à Brassaï. Cézanne travaillait sur l’aplatissement de l’espace, la simplification et transformation des formes naturelles en formes géométriques essentielles : <strong><em>« Dans la nature, tout est sphères, cônes et cylindres »</em></strong>. C'est donc la forme qui vient en premier et non le sujet ou la couleur.`,
+            desc: `<strong><em>« Si je connais Cézanne ! Il était mon seul et unique maître ! Vous pensez bien que j’ai regardé ses tableaux… J’ai passé des années à les étudier… »</em></strong> disait Picasso à Brassaï.<br><br> Cézanne travaillait sur l’aplatissement de l’espace, la simplification et transformation des formes naturelles en formes géométriques essentielles : <strong><em>« Dans la nature, tout est sphères, cônes et cylindres »</em></strong>. C'est donc la forme qui vient en premier et non le sujet ou la couleur.`,
             visual: other2_2
           },
           {
@@ -489,7 +486,7 @@ const data = {
             visual: other2_3
           },
           {
-            desc: `En écoutant Maurice Princet et en étudiant le travail de Raymond Poincaré, tout deux mathématiciens. Picasso réalise que la géométrie offre un nouveau langage. C'est par le biais de cette réalisation que Pablo Picasso a développé son propre style et est devenu avec Georges Braque, le co-fondateur d'un nouveau mouvement artistique : le cubisme, à la fin des années 30. <strong><em>« J'ai assisté à la naissance du cubisme, à sa croissance, à son déclin. Picasso en fut l'accoucheur, Guillaume Apollinaire la sage-femme, Princet le parrain »</em></strong>, explique Maurice Vlaminck.`,
+            desc: `En écoutant Maurice Princet et en étudiant le travail de Raymond Poincaré, tout deux mathématiciens. Picasso réalise que la géométrie offre un nouveau langage. C'est par le biais de cette réalisation que Pablo Picasso a développé son propre style et est devenu avec Georges Braque, le co-fondateur d'un nouveau mouvement artistique : le cubisme, à la fin des années 30. <br><br><strong><em>« J'ai assisté à la naissance du cubisme, à sa croissance, à son déclin. Picasso en fut l'accoucheur, Guillaume Apollinaire la sage-femme, Princet le parrain »</em></strong>, explique Maurice Vlaminck.`,
             visual: other2_4
           }
         ],
