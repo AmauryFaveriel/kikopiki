@@ -1,11 +1,10 @@
 .Header {
-  position: fixed;
-  top: 30px;
-  left: 30px;
-  z-index: 3; // over the intro section
-  img {
-    width: 36px;
-    height: auto;
-    transition: all 0.5s ease-in-out;
-  }
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 3;
+    img {
+        width: 36px;
+        height: auto;
+    }
 }
