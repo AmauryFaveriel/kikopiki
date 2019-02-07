@@ -91,7 +91,7 @@ const data = {
             zoom: {
               main: {
                 scale: 1.4,
-                x: -3000,
+                x: -300,
                 y: 0
               },
               inspired: {

@@ -11,24 +11,14 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            appHidden: false,
-            appStyle: "App",
-            appStyleHidden: "App App--overflow",
-            introHidden: false,
-            introStyle: "Intro",
-            introStyleHidden: "Intro Intro--hidden",
-            overlayStyle: "overlay",
-            overlayStyleHidden: "overlay overlay--hidden",
-            articleHidden: false,
-            articleStyle: "Article",
-            articleStyleHidden: "Article Article--hidden",
+            isAppHidden: false,
+            isIntroHidden: false,
+            isArticleHidden: false,
             isMenuHidden: true,
             isMenuHiddenDOM: true,
             menuStyle: "Menu",
             menuStyleHidden: "Menu Menu--hiddenDOM",
-            conclusionHidden: true,
-            conclusionStyle: "Conclusion",
-            conclusionStyleHidden: "Conclusion Conclusion--hidden",
+            isConclusionHidden: true,
             index: 0,
             otherIndex: 0,
             visitedPaintings: [],
@@ -36,31 +26,19 @@ class App extends Component {
         };
     }
     UNSAFE_componentWillMount = () => {
-        if (localStorage.getItem("visitedPaintings"))
-            this.setState({
-                visitedPaintings: JSON.parse(localStorage.getItem("visitedPaintings"))
-            });
-        else
-            localStorage.setItem(
-                "visitedPaintings",
-                JSON.stringify(this.state.visitedPaintings)
-            );
+        if (localStorage.getItem("visitedPaintings")) this.setState({visitedPaintings: JSON.parse(localStorage.getItem("visitedPaintings"))});
+        else localStorage.setItem("visitedPaintings", JSON.stringify(this.state.visitedPaintings));
     };
+    toggleMenu = () => this.setState({isMenuHidden: !this.state.isMenuHidden})
+    hideIntro = () => this.setState({
+        isIntroHidden: !this.state.isIntroHidden,
+        isAppHidden: !this.state.isAppHidden
+    });
 
-    hideMenu = () => this.setState({
-        isMenuHidden: !this.state.isMenuHidden,
-    })
-    hideIntro = () =>
-        this.setState({
-            introHidden: !this.state.introHidden,
-            appHidden: !this.state.appHidden
-        });
-
-    hideArticle = () =>
-        this.setState({
-            articleHidden: false,
-            isMenuHiddenDOM: !this.state.isMenuHiddenDOM,
-        });
+    hideArticle = () => this.setState({
+        isArticleHidden: !this.state.isArticleHidden,
+        isMenuHiddenDOM: !this.state.isMenuHiddenDOM,
+    });
 
     showArticle = i => {
         if (!this.state.visitedPaintings.includes(i))
@@ -71,7 +49,7 @@ class App extends Component {
         );
         document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         this.setState({
-            articleHidden: true,
+            isArticleHidden: !this.state.isArticleHidden,
             isMenuHidden: true,
             isMenuHiddenDOM: false,
             index: i
@@ -86,7 +64,7 @@ class App extends Component {
         document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         document
             .querySelector(".ArticleContent")
-            .scrollTo({ top: 1, behavior: "smooth" });
+            .scrollTo({ top: 1});
         localStorage.setItem(
             "visitedPaintings",
             JSON.stringify(this.state.visitedPaintings)
@@ -115,44 +93,33 @@ class App extends Component {
         e.preventDefault();
         if (this.state.visitedPaintings.length === data.paintings.length)
             this.setState({ 
-                conclusionHidden: false ,
-                articleHidden: false,
+                isConclusionHidden: false ,
+                isArticleHidden: !this.state.isArticleHidden,
                 isMenuHiddenDOM: true
             });
     };
     hideConclusion = () => this.setState({
-        conclusionHidden: true,
+        isConclusionHidden: true,
     })
     render() {
         return (
-            <div
-                className={
-                    !this.state.appHidden
-                        ? this.state.appStyleHidden
-                        : this.state.appStyle
-                }
+            <div 
+                className={this.state.isAppHidden ? 'App' : 'App App--overflow'}
             >
-                <Header hideArticle={this.hideArticle} />
+                <Header/>
                 <Intro
-                    style={
-                        this.state.introHidden
-                            ? this.state.introStyleHidden
-                            : this.state.introStyle
-                    }
-                    overlayStyle={
-                      !this.state.introHidden
-                        ? this.state.overlayStyle
-                        : this.state.overlayStyleHidden
-                    }
-                    hideIntro={this.hideIntro}
+                    bool={this.state.isIntroHidden}
+                    click={this.hideIntro}
+                    overlayStyle={this.state.isIntroHidden ? 'Overlay Overlay--hidden' : 'Overlay'}
                 />
                 <Paintings
                     showArticle={i => this.showArticle(i)}
                     visitedPaintings={this.state.visitedPaintings}
-                    hideIntro={this.state.introHidden}
+                    bool={this.state.isIntroHidden}
                 />
                 <Article
-                    style={!this.state.articleHidden ? this.state.articleStyleHidden : this.state.articleStyle
+                    bool={this.state.isArticleHidden}
+                    style={!this.state.isArticleHidden ? this.state.articleStyleHidden : this.state.articleStyle
                     }
                     hideArticle={this.hideArticle}
                     index={this.state.index}
@@ -160,6 +127,7 @@ class App extends Component {
                     nextArticle={this.nextArticle}
                 />
                 <Menu
+                bool={this.state.isNoConclusionHidden}
                     style={
                         !this.state.menuHidden
                             ? this.state.menuStyleHidden
@@ -169,16 +137,12 @@ class App extends Component {
                     updateArticle={i => this.updateArticle(i)}
                     visitedPaintings={this.state.visitedPaintings}
                     click={this.goToConclusion}
-                    hideMenu={this.hideMenu}
+                    toggle={this.toggleMenu}
                     isMenuHidden={this.state.isMenuHidden}
                     isMenuHiddenDOM={this.state.isMenuHiddenDOM}
                 />
                 <Conclusion
-                    style={
-                        this.state.conclusionHidden
-                            ? this.state.conclusionStyleHidden
-                            : this.state.conclusionStyle
-                    }
+                    bool={this.state.isConclusionHidden}
                     hideConclusion={this.hideConclusion}
                 />
                 
