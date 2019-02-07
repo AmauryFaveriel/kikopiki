@@ -1,28 +1,29 @@
 .Arrow {
-  width: 50px;
-  height: 50px;
-  color: $lightGrey;
-  position: fixed;
-  top: 50%;
-  transform: translate(0, -50%);
-  z-index: 2;
-  cursor: pointer;
-  @extend %mainTransition;
-  &:hover {
-    transform: translate(0, -50%) scale(1.25);
-  }
-  &--left {
-    left: 25px;
-    background: url('../assets/imgs/arrow-right.svg') no-repeat center;
-    background-size: cover;
-  }
-  &--right {
-    right: 25px;
-    background: url('../assets/imgs/arrow-left.svg') no-repeat center;
-    background-size: cover;
-  }
+    color: $lightGrey;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    cursor: pointer;
+    @extend %mainTransition;
+    &:hover {
+        transform: translate(0, -50%) scale(1.25);
+    }
+    &--hidden {
+        display: none;
+      }
+    &--left {
+        left: 25px;
+        background: url('../assets/imgs/arrow-right.svg') no-repeat center;
+        background-size: cover;
+    }
+    &--right {
+        right: 25px;
+        background: url('../assets/imgs/arrow-left.svg') no-repeat center;
+        background-size: cover;
+    }
 }
 
-.NotShow {
-  display: none;
-}
+

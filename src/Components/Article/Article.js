@@ -50,7 +50,7 @@ class Article extends Component {
     // should start at 0
    var scroll = document.querySelector('.ArticleContent').scrollTop;
 
-    console.log(scroll)
+
     if ((scroll) <= 0) {
         this.props.hideArticle();
     }

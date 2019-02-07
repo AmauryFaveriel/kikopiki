@@ -5,7 +5,8 @@ body {
   letter-spacing: -0.7px;
 }
 strong {
-    font-weight: 900;
+    font-weight: 600;
+    @include font-size(20px);
 }
 em {
     font-style: italic;
@@ -60,4 +61,42 @@ em {
 }
 ::-webkit-scrollbar-track {
   background: #fff;
+}
+.noConclusion {
+    color: #fff;
+    background: $purple;
+    border-radius: 4px;
+    @include font-size(14px);
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-align: left;
+    width: 208px;
+    padding: 25px;
+    position: fixed;
+    bottom: 15px;
+    right: 140px;
+    z-index: 10;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.31);
+    transform: scale(0);
+    @extend %mainTransition;
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #4210c2;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translate(0, -50%);
+
+    }
+    
+    &--hidden {
+        // display: none;
+    }
+}
+.LittlePaintings__button:hover > .noConclusion {
+    transform: scale(1);
 }

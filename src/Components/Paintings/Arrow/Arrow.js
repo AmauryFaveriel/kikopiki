@@ -1,27 +1,12 @@
 import React, { Component } from "react";
 
 class Arrow extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      arrowLeftStyle: "Arrow Arrow--left",
-      arrowRightStyle: "Arrow Arrow--right"
-    };
-  }
-  render() {
-    console.log("display", this.props.hideIntro);
-    return (
-      <span
-        className={
-          (this.props.isLeft
-            ? this.state.arrowLeftStyle
-            : this.state.arrowRightStyle) +
-          (this.props.hideIntro ? "" : "NotShow")
-        }
-        onClick={this.props.goToNextPainting}
-      />
-    );
-  }
+    render() {
+        return <span
+            className={`Arrow Arrow${(this.props.isLeft ? '--left' : '--right') + (this.props.bool ? '' : '--hidden')}`}
+            onClick={this.props.goScroll}
+        />
+    }
 }
 
 export default Arrow;

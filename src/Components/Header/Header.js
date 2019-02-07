@@ -4,11 +4,9 @@ import data from '../../data';
 
 class Header extends Component {
     render = () => {
-        return (
-            <header className="Header">
-                <img src={logo} alt={data.title} onClick={this.props.hideArticle}/>
-            </header>
-        )
+        return <header className="Header">
+            <img src={logo} alt={data.title}/>
+        </header>
     }
 }
 

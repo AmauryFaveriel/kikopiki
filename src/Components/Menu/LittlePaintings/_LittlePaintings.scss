@@ -15,5 +15,17 @@
         &:hover {
             letter-spacing: 1px;
         }
+        &:hover > .noConclusion {
+            transform: scale(0);
+        }
+        &--disable {
+            color: #fff;
+            cursor: not-allowed;
+            &:hover > .noConclusion {
+                transform: scale(1);
+                transform-origin: 120px 60px;
+            }
+        }
+        
     }
 }

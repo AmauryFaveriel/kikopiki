@@ -27,6 +27,7 @@ class Menu extends Component {
                         click={this.props.click}
                     />
                 </nav>
+                
             </section>
         )
     }

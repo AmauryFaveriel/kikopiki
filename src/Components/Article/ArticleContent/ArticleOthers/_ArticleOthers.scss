@@ -7,9 +7,21 @@
         height: 100vh;
         object-fit: cover;
         @extend %mainTransition;
+        // animation: fade 5s;
     }
 }
 
 .ArticleOthers {
     
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

@@ -31,7 +31,8 @@ class App extends Component {
             conclusionStyleHidden: "Conclusion Conclusion--hidden",
             index: 0,
             otherIndex: 0,
-            visitedPaintings: []
+            visitedPaintings: [],
+            isNoConclusionHidden: true
         };
     }
     UNSAFE_componentWillMount = () => {
@@ -98,7 +99,6 @@ class App extends Component {
             if (!this.state.visitedPaintings.includes(this.state.index)) {
                 this.state.visitedPaintings.push(this.state.index);
             }
-            console.log('wiw')
             document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
             document
                 .querySelector(".ArticleContent")
@@ -119,12 +119,6 @@ class App extends Component {
                 articleHidden: false,
                 isMenuHiddenDOM: true
             });
-        else
-            alert(
-                `${data.paintings.length - this.state.visitedPaintings.length}/${
-                data.paintings.length
-                } left !`
-            );
     };
     hideConclusion = () => this.setState({
         conclusionHidden: true,
@@ -187,6 +181,7 @@ class App extends Component {
                     }
                     hideConclusion={this.hideConclusion}
                 />
+                
             </div>
         );
     }
