@@ -4,12 +4,12 @@ import data from "../../data";
 class Intro extends Component {
     render = () => {
         return <section className={this.props.bool ? 'Intro Intro--hidden' : 'Intro'}>
-            <h1 className="Intro__title">{data.intro.title}</h1>
-            <div className="Intro__descContainer">
-            <p className="Intro__desc">{data.intro.intro_1}</p>
-            <p className="Intro__desc">{data.intro.intro_2}</p>
+            <h1>{data.intro.title}</h1>
+            <div>
+                <p>{data.intro.intro_1}</p>
+                <p>{data.intro.intro_2}</p>
             </div>
-            <button className="Intro__cta" onClick={this.props.click}>{data.intro.cta}</button>
+            <button onClick={this.props.click}>{data.intro.cta}</button>
             <section className={this.props.overlayStyle}/>
         </section>
     };

@@ -1,76 +1,68 @@
 .Intro {
-    background: #4110c2;
-    width: 500px;
+    background: $purple;
     border-right: 2px solid #fff;
+    width: 500px;
     height: 100vh;
+    padding: 150px 68px;
     display: flex;
     flex-direction: column;
     align-items: start;
     position: fixed;
-    padding: 150px 68px;
     top: 0;
     left: 0;
     z-index: 2;
-    transition: all 0.5s ease;
-
+    @extend %mainTransition;
     &--hidden {
         left: -505px;
     }
-
-    &__title {
+    h1 {
+        color: #fff;
+        margin-bottom: 43px;
         width: 193px;
         height: 68px;
         font-family: Avenir;
-        font-size: 50px;
+        @include font-size(50px);
         font-weight: 900;
         font-style: normal;
         font-stretch: normal;
         line-height: 1.36;
         letter-spacing: normal;
-        color: #ffffff;
-        margin-bottom: 43px;
     }
-
-    &__desc {
+    p {
+        color: #fff;
         text-align: left;
         font-size: 18px;
         line-height: 30px;
         letter-spacing: 0.2;
-        color: #ffffff;
-
         &:not(:last-child) {
             margin-bottom: 5%;
         }
     }
-
-    &__descContainer {
+    div {
         margin-bottom: 100px;
     }
-
-    &__cta {
+    button {
+        background: #fff;
+        color: #000;
+        border: 1px solid #fff;
         width: 250px;
-        background: #ffffff;
         border-radius: 8px;
-        border: 1px solid #ffffff;
+        padding: 14px 32px;
         display: inline-block;
-        cursor: pointer;
-        color: #000000;
         @include font-size(14px);
         text-transform: uppercase;
-        padding: 14px 32px;
         text-decoration: none;
+        cursor: pointer;
     }
 }
 
 .Overlay {
-    content: "";
     background: rgba(0, 0, 0, 0.5);
     width: calc(100% - 500px);
     height: 100vh;
     position: fixed;
     top: 0;
     left: 500px;
-
     &--hidden {
         display: none;
     }
