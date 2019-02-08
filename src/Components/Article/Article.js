@@ -121,7 +121,7 @@ class Article extends Component {
     };
     render = () => {
         return (
-        <article className={this.props.bool ? 'Article' : 'Article Article--hidden'}>
+        <article className={this.props.bool ? 'Article Article--hidden' : 'Article'}>
             <DraggablePaintings
                 theStyle={
                     this.state.isDraggablePaintingsHidden

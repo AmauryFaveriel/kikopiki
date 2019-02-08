@@ -22,7 +22,7 @@ class ArticleContent extends Component {
                 <ArticleOthers
                     painting={this.props.painting}
                 />
-                <p className='ArticleContent__nextArticle'>
+                <div className='ArticleContent__nextArticle'>
                     {this.props.painting.nextArticle}<br/><br/>
                     {
                         this.props.index !== paintings.length - 1 ? 
@@ -31,7 +31,7 @@ class ArticleContent extends Component {
                         >{nextArticle.else} {paintings[this.props.index + 1].title}</span> : 
                         <p>{nextArticle.default}</p>
                     }
-                    </p> 
+                    </div> 
             </section>
         );
     };

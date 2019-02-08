@@ -23,12 +23,8 @@ class Paintings extends Component {
         if (goScroll) goScroll.scrollIntoView({behavior: 'smooth', inline: 'start'});
     }
 
-    scrollLeft = () => {
-        if (this.state.index > 0) this.setState({index: this.state.index - 1}, () => this.scroll());
-    }
-    scrollRight = () => {
-        if (this.state.index < paintings.length - 2) this.setState({ index: this.state.index + 1 }, () => this.scroll());
-    }
+    scrollLeft = () => this.state.index > 0 ? this.setState({index: this.state.index - 1}, this.scroll) : null;
+    scrollRight = () => this.state.index < paintings.length - 2 ? this.setState({ index: this.state.index + 1 }, this.scroll) : null;
 
     render() {
         return <section className='Paintings'>

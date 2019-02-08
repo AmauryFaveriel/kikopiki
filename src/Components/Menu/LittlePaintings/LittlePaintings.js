@@ -23,7 +23,7 @@ class LittlePaintings extends Component {
                 className={this.props.visitedPaintings.length === paintings.length ? 'LittlePaintings__button' : 'LittlePaintings__button LittlePaintings__button--disable'} 
                 onClick={this.props.click}
             >{<p dangerouslySetInnerHTML={{__html: conclude.cta.title}}/>}
-                <div className={this.props.bool ? 'noConclusion noConclusion--hidden' : 'noConclusion'}>{conclude.cta.desc}</div>
+                <div className={this.props.bool ? 'noConclusion' : 'noConclusion noConclusion--hidden'}>{conclude.cta.desc}</div>
             </button>
             
         </nav>
