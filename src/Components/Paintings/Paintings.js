@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import get from 'lodash/get';
 
-import data from '../../data';
+import { paintings } from '../../data';
 import Painting from './Painting/Painting';
 import Arrow from './Arrow/Arrow';
 
@@ -13,7 +13,7 @@ class Paintings extends Component {
             isScrollingRight: false,
             index: 0
         };
-        this.paintingsRefs = data.paintings.map(() => React.createRef());
+        this.paintingsRefs = paintings.map(() => React.createRef());
     }
 
     
@@ -23,12 +23,8 @@ class Paintings extends Component {
         if (goScroll) goScroll.scrollIntoView({behavior: 'smooth', inline: 'start'});
     }
 
-    scrollLeft = () => {
-        if (this.state.index > 0) this.setState({index: this.state.index - 1}, () => this.scroll());
-    }
-    scrollRight = () => {
-        if (this.state.index < data.paintings.length - 2) this.setState({ index: this.state.index + 1 }, () => this.scroll());
-    }
+    scrollLeft = () => this.state.index > 0 ? this.setState({index: this.state.index - 1}, this.scroll) : null;
+    scrollRight = () => this.state.index < paintings.length - 2 ? this.setState({ index: this.state.index + 1 }, this.scroll) : null;
 
     render() {
         return <section className='Paintings'>
@@ -37,9 +33,9 @@ class Paintings extends Component {
                 goScroll={this.scrollLeft}
                 bool={this.props.bool}
             />
-            {data.paintings.map((x, i) => <div key={i} ref={this.paintingsRefs[i]}>
+            {paintings.map((x, i) => <div key={i} ref={this.paintingsRefs[i]}>
                 <Painting
-                    last={i === data.paintings.length - 1 ? 'Painting__last' : ''}
+                    last={i === paintings.length - 1 ? 'Painting__last' : ''}
                     x={x}
                     index={i}
                     showHover={this.props.hideIntro}

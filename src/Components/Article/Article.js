@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import data from "../../data";
+import { paintings } from "../../data";
 
 import DraggablePaintings from "./DraggablePaintings/DraggablePaintings";
 import ArticleContent from "./ArticleContent/ArticleContent";
@@ -8,7 +8,7 @@ class Article extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            painting: data.paintings[this.props.index],
+            painting: paintings[this.props.index],
             isDraggablePaintingsHidden: false,
             DraggablePaintingsStyle: "DraggablePaintings",
             DraggablePaintingsHiddenStyle: "DraggablePaintings hidden",
@@ -37,9 +37,9 @@ class Article extends Component {
         };
         this.position = 0;
     }
-    UNSAFE_componentWillMount = () => this.setState({ painting: data.paintings[this.props.index] });
+    UNSAFE_componentWillMount = () => this.setState({ painting: paintings[this.props.index] });
     UNSAFE_componentWillUpdate = nextProps => {
-        if (nextProps.index !== this.props.index) this.setState({ painting: data.paintings[nextProps.index] });
+        if (nextProps.index !== this.props.index) this.setState({ painting: paintings[nextProps.index] });
         if (nextProps.otherIndex !== this.props.otherIndex) {this.setState({ otherIndex: nextProps.otherIndex });
         }
     };
@@ -121,7 +121,7 @@ class Article extends Component {
     };
     render = () => {
         return (
-        <article className={this.props.bool ? 'Article' : 'Article Article--hidden'}>
+        <article className={this.props.bool ? 'Article Article--hidden' : 'Article'}>
             <DraggablePaintings
                 theStyle={
                     this.state.isDraggablePaintingsHidden
