@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import data from "../../data";
+import { paintings } from "../../data";
 import Header from "../Header/Header.js";
 import Intro from "../Intro/Intro";
 import Paintings from "../Paintings/Paintings";
@@ -123,7 +123,7 @@ class App extends Component {
 
     goToConclusion = e => {
         e.preventDefault();
-        if (this.state.visitedPaintings.length === data.paintings.length)
+        if (this.state.visitedPaintings.length === paintings.length)
             this.setState({ 
                 isConclusionHidden: false ,
                 isArticleHidden: !this.state.isArticleHidden,

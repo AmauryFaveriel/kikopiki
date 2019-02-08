@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import YouTube from 'react-youtube';
-import data from "../../data";
+import { conclude } from "../../data";
 import cross from '../../assets/imgs/cross.svg'
 
 class Conclusion extends Component {
@@ -15,24 +15,24 @@ class Conclusion extends Component {
                 >
                     <img alt="cross" src={cross}/>
                 </button>
-                <h2>{data.conclusion.title}</h2>
+                <h2>{conclude.title}</h2>
                 <div className="Conclusion__content">
                     <div>
-                        <h3>{data.conclusion.content[0].title}</h3>
+                        <h3>{conclude.content[0].title}</h3>
                         <section>
-                            <div><img src={data.conclusion.content[0].visual} alt=""/></div>
-                            <p>{data.conclusion.content[0].content}</p>
+                            <div><img src={conclude.content[0].visual} alt=""/></div>
+                            <p>{conclude.content[0].content}</p>
                         </section>
                     </div>
                     <div>
-                        <h3>{data.conclusion.content[0].title}</h3>
+                        <h3>{conclude.content[0].title}</h3>
                         <section>
                             <YouTube
                                 videoId="xgnxnmqnR7Y"
                                 opts={opts}
                                 onReady={this._onReady}
                             />
-                            <p>{data.conclusion.content[0].content}</p>
+                            <p>{conclude.content[0].content}</p>
                         </section>
                     </div>
                 </div>
