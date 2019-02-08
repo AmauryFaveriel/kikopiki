@@ -26,6 +26,38 @@ class App extends Component {
         };
     }
     UNSAFE_componentWillMount = () => {
+        const makeResizableDiv = () => {
+            const DOMimgBox = document.querySelector('.DraggablePaintings__imgBox__resizable');
+            const DOMresizer = document.querySelector('.DraggablePaintings__imgBox__resizable__resizer')
+            const minimum_size = 0;
+            const maximum_size = 666;
+            let width = 600;
+            DOMimgBox.style.width = width + 'px'
+            let original_width = 0;
+            let original_x = 0;
+            let original_mouse_x = 0;
+            DOMresizer.addEventListener('mousedown', (e) => {
+                e.preventDefault()
+                original_width = parseFloat(getComputedStyle(DOMimgBox, null).getPropertyValue('width').replace('px', ''));
+                original_x = DOMimgBox.getBoundingClientRect().left;
+                original_mouse_x = e.pageX;
+                window.addEventListener('mousemove', resize)
+                window.addEventListener('mouseup', stopResize)
+            })
+        
+            const resize = (e) => {
+                width = original_width + (e.pageX - original_mouse_x);
+                if (width > minimum_size && width < maximum_size) DOMimgBox.style.width = width + 'px';
+            }
+            const stopResize = () => window.removeEventListener('mousemove', resize);
+        }
+
+        const tick = setInterval(() => {
+            if (document.querySelector('.DraggablePaintings__imgBox__resizable')) {
+            makeResizableDiv();
+            clearInterval(tick);
+            }
+        }, 200);
         if (localStorage.getItem("visitedPaintings")) this.setState({visitedPaintings: JSON.parse(localStorage.getItem("visitedPaintings"))});
         else localStorage.setItem("visitedPaintings", JSON.stringify(this.state.visitedPaintings));
     };
