@@ -16,31 +16,23 @@
     margin-bottom: 50px;
   }
   &__nextArticle {
-      background: $lightPurple;
+      background: #fff;
       padding: 30px 75px;
       width: calc(100% + 100px);
       min-height: 119px;
       color: #000;
       font-size: 18px;
-      line-height: 22px;
+      line-height: 1.5;
+      font-weight: 600;
       text-align: left;
       position: relative;
       left: -50px;
       bottom: -40%;
-    //   &:after {
-    //       content:'';
-    //       width: 120px;
-    //       height: 120px;
-    //       background: $lightPurple;
-    //       position: absolute;
-    //       top: 0;
-    //       left: 0;
-
-    //   }
       span {
           color: $purple;
           cursor: pointer;
           position: relative;
+          font-style: italic;
           &:after {
               content: '';
               background: #000;

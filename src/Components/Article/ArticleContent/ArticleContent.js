@@ -23,10 +23,13 @@ class ArticleContent extends Component {
                     painting={this.props.painting}
                 />
                 <p className='ArticleContent__nextArticle'>
-                    {this.props.painting.nextArticle}
+                    {this.props.painting.nextArticle}<br/><br/>
                     {
                         this.props.index !== data.paintings.length - 1 ? 
-                        <span onClick={this.props.click} > Découvrir {data.paintings[this.props.index + 1].title}</span> : `Il n'y a plus d'article à visiter !`
+                        <span 
+                            onClick={this.props.click} 
+                        >Découvrir {data.paintings[this.props.index + 1].title}</span> : 
+                        <p>Il n'y a plus d'article à visiter !</p>
                     }
                     </p> 
             </section>

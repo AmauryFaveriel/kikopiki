@@ -14,7 +14,7 @@ class App extends Component {
             isAppHidden: false,
             isIntroHidden: false,
             isArticleHidden: false,
-            isMenuHidden: true,
+            isMenuHidden: false,
             isMenuHiddenDOM: true,
             menuStyle: "Menu",
             menuStyleHidden: "Menu Menu--hiddenDOM",
@@ -50,7 +50,7 @@ class App extends Component {
         document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         this.setState({
             isArticleHidden: !this.state.isArticleHidden,
-            isMenuHidden: true,
+            isMenuHidden: false,
             isMenuHiddenDOM: false,
             index: i
         });
@@ -64,7 +64,7 @@ class App extends Component {
         document.querySelector('.DraggablePaintings__imgBox__resizable').style.width = '600px';
         document
             .querySelector(".ArticleContent")
-            .scrollTo({ top: 1});
+            .scrollTo({ top: 1, behavior: "smooth"});
         localStorage.setItem(
             "visitedPaintings",
             JSON.stringify(this.state.visitedPaintings)
