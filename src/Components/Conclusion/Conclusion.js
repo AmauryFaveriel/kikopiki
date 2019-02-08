@@ -25,14 +25,14 @@ class Conclusion extends Component {
                         </section>
                     </div>
                     <div>
-                        <h3>{conclude.content[0].title}</h3>
+                        <h3>{conclude.content[1].title}</h3>
                         <section>
                             <YouTube
                                 videoId="xgnxnmqnR7Y"
                                 opts={opts}
                                 onReady={this._onReady}
                             />
-                            <p>{conclude.content[0].content}</p>
+                            <p>{conclude.content[1].content}</p>
                         </section>
                     </div>
                 </div>
