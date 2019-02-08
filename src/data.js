@@ -507,9 +507,20 @@ const data = {
           content: `Google a récemment mis au point au sein de son Google lab experiment, un outil qui se base sur le même algorithme qui est utilisé derrière la recherche d’image de Google. Ensuite, toutes les formes importantes des deux images sont repérées et chaque image est connectée à 15 images voisines les plus proches (sur la forme, la couleur, le type, etc.). Une fois ces 15 images trouvées, l’algorithme raffine les images et crée de la même façon le chemin le plus logique entre les deux images.`,
           visual: conclusion
         }
-      ]
+      ],
+      cta: {
+          title: `Aller plus<br/>loin`,
+          desc: `Vous ne pourrez accédez au contenu bonus qu’en consultant les 5 tableaux`
+      }
+    },
+    nextArticle: {
+        default: `Il n'y a plus d'article à visiter !`,
+        else: `Découvrir`
     }
-  };
+};
   
-  export default data;
-  
+export default data;
+export const intro = data.intro;
+export const paintings = data.paintings;
+export const conclude = data.conclusion;
+export const nextArticle = data.nextArticle;
